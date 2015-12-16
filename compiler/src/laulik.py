@@ -4,9 +4,9 @@ import atexit
 import re
 
 class BuildLaulik:
-  def __init__(self, *args, **kwargs):
+  def __init__(self, buildpath, *args, **kwargs):
     self.basepath = os.path.dirname(__file__)
-    self.buildpath = os.path.join(self.basepath, 'build')
+    self.buildpath = buildpath
     self.songspath = os.path.join(self.basepath, 'tex', 'songs')
     self.notespath = os.path.join(self.basepath, 'tex', 'notes')
     self.texprefixpath = os.path.join(self.basepath, 'tex', 'prefix.tex')
@@ -163,5 +163,5 @@ class BuildLaulik:
 """
 
 if __name__ == '__main__':
-  inst = BuildLaulik()
+  inst = BuildLaulik(sys.argv[1])
   inst.run()
