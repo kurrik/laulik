@@ -1,14 +1,16 @@
-import os
-import sys
 import atexit
+import os
 import re
+import sys
+import yaml
 
 class BuildLaulik:
-  def __init__(self, buildpath, *args, **kwargs):
+  def __init__(self, projectpath, buildpath, *args, **kwargs):
     self.basepath = os.path.dirname(__file__)
     self.buildpath = buildpath
     self.songspath = os.path.join(self.basepath, 'tex', 'songs')
     self.notespath = os.path.join(self.basepath, 'tex', 'notes')
+    self.projectpath = projectpath
     self.texprefixpath = os.path.join(self.basepath, 'tex', 'prefix.tex')
     self.texsuffixpath = os.path.join(self.basepath, 'tex', 'suffix.tex')
     self.texoutputpath = os.path.join(self.buildpath, 'laulik.lytex')
@@ -29,11 +31,16 @@ class BuildLaulik:
       with open(path, 'r') as f:
         self.__output(f, name=path)
 
+  def __load_yaml(self, path):
+    with open(path, 'r') as f:
+      return yaml.load(f)
+
   def run(self):
     self.__clear_output()
     self.__output_file(self.texprefixpath)
     self.__output_file(self.texsuffixpath)
 
+    print(self.__load_yaml(self.projectpath))
 """
     dirlisting = os.listdir(songspath)
     dirlisting.sort()
@@ -163,5 +170,5 @@ class BuildLaulik:
 """
 
 if __name__ == '__main__':
-  inst = BuildLaulik(sys.argv[1])
+  inst = BuildLaulik(sys.argv[1], sys.argv[2])
   inst.run()

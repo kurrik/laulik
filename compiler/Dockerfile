@@ -17,11 +17,18 @@ RUN apt-get install -y \
     git \
     make \
     python \
+    python-pip \
     uuid-runtime \
     wget
 
 RUN apt-get install -y \
     xindy
+
+RUN apt-get install -y \
+    python-dev \
+    libyaml-dev
+
+RUN pip install PyYAML
 
 WORKDIR /opt/lilypond
 ADD lib/lilypond-2.19.20-1.linux-64.sh ./

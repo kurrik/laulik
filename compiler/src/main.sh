@@ -8,12 +8,13 @@ set -e
 
 jobname=`uuidgen`
 scriptpath=/opt/laulik
+projectpath=$scriptpath/projects/voluja.yaml
 buildpath=$scriptpath/build/$jobname
 
 mkdir -p $buildpath
 cd $buildpath
 
-python $scriptpath/laulik.py $buildpath
+python $scriptpath/laulik.py $projectpath $buildpath
 output "[main] Running lilypond-book"
 /opt/lilypond/bin/lilypond-book -V laulik.lytex
 output "[main] First latex pass"
