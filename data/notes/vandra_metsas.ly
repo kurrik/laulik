@@ -1,5 +1,5 @@
 ﻿\header{
-	tagline = ""
+  tagline = ""
 }
 
 #(set-global-staff-size 10)
@@ -18,18 +18,18 @@ melody = {
   \cfgSong
   \relative c''{
     a8. g16 f8 d c d c4
-	c8 a' g4 c,8 g' f4
-	a8. g16 f8 d c d c c
-	c8 a' g e f4. r8
-	g8. g16 g8 g g g g4
-	g8 g a b c c c bes
-	a8 f f f a a c4
-	g8 g c c f,4 r8 g16 a
-	g4 r8 g16 a g4 r8 g16 a
-	g8 f e d c4 c'4
-	a8 f f f a a c4
-	g8 g c c f,2
-		\bar "|."
+    c8 a' g4 c,8 g' f4
+    a8. g16 f8 d c d c c
+    c8 a' g e f4. r8
+    g8. g16 g8 g g g g4
+    g8 g a b c c c bes
+    a8 f f f a a c4
+    g8 g c c f,4 r8 g16 a
+    g4 r8 g16 a g4 r8 g16 a
+    g8 f e d c4 c'4
+    a8 f f f a a c4
+    g8 g c c f,2
+    \bar "|."
   }
 }
 
@@ -44,7 +44,7 @@ verseOne = \lyricmode {
   las -- ti va -- na ka -- ru ma -- ha,
   Juh -- hai -- di ja juh -- hai -- da,
   Juh -- hai -- di -- ai da.
-  
+
   %\set stanza = "Ref:"
   Va -- le -- ri, va -- le -- ra, va -- le -- ra -- la -- la -- la -- la, hei!
   Juh -- hai -- di ja juh -- hai -- da,
@@ -60,22 +60,22 @@ songChords = \chordmode {
 
 \score {
   {
-	  <<
-	    \chords { \set chordChanges = ##t \songChords }
-	    { \melody }
-	    \addlyrics { \verseOne }
-	  >>
+    <<
+      \chords { \set chordChanges = ##t \songChords }
+      { \melody }
+      \addlyrics { \verseOne }
+    >>
   }
-  
 
-  
+
+
   \layout {
     indent = #0
-	%ragged-last = ##t
-	\context {
-			\Score
-			\remove "Bar_number_engraver"
-		}	
+  %ragged-last = ##t
+  \context {
+      \Score
+      \remove "Bar_number_engraver"
+    }
   }
   \midi { }
 }

@@ -1,6 +1,6 @@
 ﻿\header{
-	% title="Jää Jumalaga Mann"
-	% composer="COMPOSER"
+  % title="Jää Jumalaga Mann"
+  % composer="COMPOSER"
 }
 
 
@@ -17,11 +17,11 @@ melody = {
   \cfgSong
   \relative c''{
     b16 b b a g g g e d d d e d8 d
-	c'8 c16 b a a a g fis g fis e d8 d16 d
-	b16 d d d d8 d c16 e e e e8 e
-	d16 d fis fis fis fis e fis a8 g g a
-	b16 b b a g8 e c16 e e e e8 e
-	d16 d fis fis fis fis e fis a8 g g4 \bar "|."
+    c'8 c16 b a a a g fis g fis e d8 d16 d
+    b16 d d d d8 d c16 e e e e8 e
+    d16 d fis fis fis fis e fis a8 g g a
+    b16 b b a g8 e c16 e e e e8 e
+    d16 d fis fis fis fis e fis a8 g g4 \bar "|."
   }
 }
 
@@ -48,16 +48,16 @@ verseOne = \lyricmode {
 
 \score {
   {
-	  <<
-	    \chords { \set chordChanges = ##t \songChords }
-	    { \melody }
-	    \addlyrics { \verseOne }
-	  >>
+    <<
+      \chords { \set chordChanges = ##t \songChords }
+      { \melody }
+      \addlyrics { \verseOne }
+    >>
   }
-  
+
   \layout {
     indent = #0
-	ragged-last = ##t
+    ragged-last = ##t
   }
   \midi { \tempo 4 = 90 }
 }
