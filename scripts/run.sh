@@ -9,7 +9,6 @@ docker rm $name
 docker run \
   -it \
   --name=$name \
-  -v `pwd`/tex:/opt/laulik/tex:ro \
-  -v `pwd`/projects:/opt/laulik/projects:ro \
+  -v `pwd`/data:/opt/laulik/data:ro \
   -v `pwd`/build:/opt/laulik/build:rw \
   laulik

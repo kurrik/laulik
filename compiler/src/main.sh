@@ -8,7 +8,7 @@ set -e
 
 jobname=`uuidgen`
 scriptpath=/opt/laulik
-projectpath=$scriptpath/projects/voluja.yaml
+projectpath=$scriptpath/data/projects/voluja.yaml
 buildpath=$scriptpath/build/$jobname
 
 mkdir -p $buildpath

@@ -8,11 +8,11 @@ class BuildLaulik:
   def __init__(self, projectpath, buildpath, *args, **kwargs):
     self.basepath = os.path.dirname(__file__)
     self.buildpath = buildpath
-    self.songspath = os.path.join(self.basepath, 'tex', 'songs')
-    self.notespath = os.path.join(self.basepath, 'tex', 'notes')
+    self.songspath = os.path.join(self.basepath, 'data', 'songs')
+    self.notespath = os.path.join(self.basepath, 'data', 'notes')
     self.projectpath = projectpath
-    self.texprefixpath = os.path.join(self.basepath, 'tex', 'prefix.tex')
-    self.texsuffixpath = os.path.join(self.basepath, 'tex', 'suffix.tex')
+    self.texprefixpath = os.path.join(self.basepath, 'data', 'prefix.tex')
+    self.texsuffixpath = os.path.join(self.basepath, 'data', 'suffix.tex')
     self.texoutputpath = os.path.join(self.buildpath, 'laulik.lytex')
 
   def __clear_output(self):
