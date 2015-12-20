@@ -24,6 +24,7 @@ RUN apt-get update && apt-get install -y --fix-missing \
     uuid-runtime \
     wget
 
+RUN pip3 install Flask
 RUN pip3 install PyYAML
 RUN pip3 install pystache
 
@@ -39,4 +40,4 @@ WORKDIR /opt/laulik
 ADD src/* ./
 RUN chmod +x *.sh
 
-ENTRYPOINT /opt/laulik/main.sh -
+ENTRYPOINT /opt/laulik/server.sh -
