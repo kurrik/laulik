@@ -1,34 +1,34 @@
 FROM ubuntu:14.04
 MAINTAINER Arne Roomann-Kurrik <kurrik@gmail.com>
 
-RUN apt-get update
-
-RUN apt-get install -y \
+# LaTeX stuff.
+RUN apt-get update && apt-get install -y --fix-missing \
     latex-xcolor \
     texlive-fonts-extra \
     texlive-latex-base \
     texlive-latex-extra \
     texlive-math-extra \
-    texlive-xetex
+    texlive-xetex \
+    xindy
 
-RUN apt-get install -y \
+# Python / dev
+RUN apt-get update && apt-get install -y --fix-missing \
     curl \
     fontconfig \
     git \
     make \
-    python \
-    python-pip \
+    libyaml-dev \
+    python3 \
+    python3-dev \
+    python3-pip \
     uuid-runtime \
     wget
 
-RUN apt-get install -y \
-    xindy
+RUN pip3 install PyYAML
+RUN pip3 install pystache
 
-RUN apt-get install -y \
-    python-dev \
-    libyaml-dev
-
-RUN pip install PyYAML
+RUN locale-gen en_US.UTF-8
+RUN dpkg-reconfigure locales
 
 WORKDIR /opt/lilypond
 ADD lib/lilypond-2.19.20-1.linux-64.sh ./

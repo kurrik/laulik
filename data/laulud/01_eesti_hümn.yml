@@ -1,0 +1,14 @@
+--- !Laul
+title: Eesti h\"umn
+composer: Fr. Pacius
+poet: J. V. Jannsen
+margin:
+  verse:
+    l: 0.9in
+    r: 0.1in
+  refrain:
+    l: 0.8in
+    r: 0.2in
+paths:
+  lyrics: 01_eesti_hümn.tex
+  music: 01_eesti_hümn.ly

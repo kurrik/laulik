@@ -1,2 +1,5 @@
-songs:
-  - maailmalaagri_laul_62.tex
+--- !Project
+title: J\"arvemetsa laulik
+subtitle: 2006 V\~oluja Suurlaager
+parts:
+  - laulud/01_eesti_hümn.yml

@@ -6,15 +6,21 @@ function output {
 
 set -e
 
-jobname=`uuidgen`
+jobname=ver-`date +"%Y%m%d-%H%M%S"`-`uuidgen`
 scriptpath=/opt/laulik
 projectpath=$scriptpath/data/projects/voluja.yaml
 buildpath=$scriptpath/build/$jobname
 
+# UTF-8 paths / env everywhere
+export PYTHONIOENCODING=utf_8
+export LC_CTYPE=en_US.UTF-8
+export LANG=en_US.UTF-8
+
 mkdir -p $buildpath
 cd $buildpath
 
-python $scriptpath/laulik.py $projectpath $buildpath
+python3 $scriptpath/laulik.py $projectpath $buildpath
+
 output "[main] Running lilypond-book"
 /opt/lilypond/bin/lilypond-book -V laulik.lytex
 output "[main] First latex pass"
@@ -33,4 +39,8 @@ ps2pdf \
   -dEmbedAllFonts=true \
   -dPDFSETTINGS=/prepress \
   laulik.ps
+output "[main] Copying to latest directory"
+cd ..
+rsync --archive --inplace --delete $jobname/* latest
+echo $jobname > latest/VERSION.txt
 output "[main] Done"

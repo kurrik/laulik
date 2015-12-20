@@ -1,4 +1,50 @@
-;; This is a first example using `xindy'.
+(require "lang/latin/caseisrt.xdy")
+
+(define-letter-groups
+  ("0" "1" "2" "3" "4" "5" "6" "7" "8" "9"
+   "A" "a" "E" "e" "Z" "z"
+   "\~~O" "\~~o" "\~"A" "\~"a" "\~"O" "\~"o" "\~"U" "\~"u" "\~~U" "\~~u"))
+
+   ;;"A" "B" "C" "D" "E" "F" "G" "H" "I" "J" "K" "L" "M" "N" "O" "P" "Q"
+   ;;"R" "S" "T" "U" "V" "W" "X" "Y" "Z"
+   ;;"a" "b" "c" "d" "e" "f" "g" "h" "i" "j" "k" "l" "m" "n" "o" "p" "q"
+   ;;"r" "s" "t" "u" "v" "w" "x" "y" "z"
+
+(merge-rule "0" "0")
+(merge-rule "1" "1")
+(merge-rule "2" "2")
+(merge-rule "3" "3")
+(merge-rule "4" "4")
+(merge-rule "5" "5")
+(merge-rule "6" "6")
+(merge-rule "7" "7")
+(merge-rule "8" "8")
+(merge-rule "9" "9")
+
+(merge-rule "\~~o" "za")
+(merge-rule "\~"a" "zb")
+(merge-rule "\~"o" "zc")
+(merge-rule "\~"u" "zd")
+(merge-rule "\~~u" "ze")
+
+(sort-rule "\~"A" "\~"A")
+(sort-rule "\~"O" "\~"O")
+(sort-rule "\~~O" "\~~O")
+(sort-rule "\~"U" "\~"U")
+(sort-rule "\~~U" "\~~U")
+
+(markup-letter-group :open-head "~n {\bf "
+                     :close-head "}\\~n"
+                     :capitalize)
+(markup-letter-group-list :sep "~n\indexspace~n")
 
 (define-location-class "page-numbers" ("arabic-numbers"))
-(define-attributes (("definition" "usage")))
+
+(markup-index :open  ""
+              :close ""
+              :tree)
+
+
+(markup-locclass-list :open "\dotfill "
+                      :close "\\~n")
+(markup-locref-list :sep ", ")

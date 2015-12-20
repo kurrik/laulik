@@ -1,0 +1,69 @@
+{{#music}}
+\clearpage
+{{/music}}
+
+{
+  \samepage
+  \raggedbottom
+  \raggedright
+  \sloppy
+
+{{#index}}
+  {{= | | =}}
+  \index{|title|}
+  |= {{ }} =|
+{{/index}}
+
+{{#title}}
+  {{= | | =}}
+  \index{|title|}
+  |= {{ }} =|
+  \vspace{0.2in}
+  \centerline{ {\bf {\large {{title}} } } }
+  \nopagebreak[4]
+  \vspace{0.1in}
+  \nopagebreak[4]
+  \hrule height 0.05ex
+  \nopagebreak[4]
+  \vspace{-0.05in}
+{{/title}}
+
+{{#poet_or_composer}}
+  {\footnotesize {{poet}} \hfill {{composer}} }\\
+  \vspace{0.01in}
+{{/poet_or_composer}}
+
+{{#misc}}
+  {\em {\footnotesize {{misc}} } }
+  \vspace{0.01in}
+{{/misc}}
+
+{{#music}}
+  \vspace{0.01in}
+  \nopagebreak[4]
+  \begin[noindent,line-width=3\in, staffsize=9, fontload]{lilypond}
+  {{music}}
+  \end{lilypond}
+{{/music}}
+
+{{#verses}}
+  \pagebreak[1]
+  {{#is_refrain}}
+    \begin{changemargin}{ {{margin.refrain.l}} }{ {{margin.refrain.r}} }
+  {{/is_refrain}}
+  {{^is_refrain}}
+    \begin{changemargin}{ {{margin.verse.l}} }{ {{margin.verse.r}} }
+  {{/is_refrain}}
+  {
+    \small
+    \noindent
+    {{#lines}}
+      \nopagebreak[4] {{.}} \\
+    {{/lines}}
+  }
+  \end{changemargin}
+{{/verses}}
+
+}
+\vskip 0in plus 1in minus 0in
+\pagebreak[3]

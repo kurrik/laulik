@@ -1,46 +1,161 @@
+# -*- coding: utf8 -*-
+
 import atexit
+import io
 import os
+import pystache
 import re
 import sys
 import yaml
 
-class BuildLaulik:
-  def __init__(self, projectpath, buildpath, *args, **kwargs):
-    self.basepath = os.path.dirname(__file__)
+class Verse(object):
+  def __init__(self, is_refrain=False):
+    self.is_refrain = is_refrain
+    self.lines = []
+
+  def add(self, line):
+    self.lines.append(line)
+
+class VerseFactory(object):
+  def __init__(self):
+    self.verses = []
+    self.current = None
+
+  def add(self, line):
+    cleaned = line.strip()
+    if self.current is None:
+      if cleaned == '%REFRAIN':
+        self.current = Verse(True)
+      self.current = Verse()
+    if cleaned == '':
+      self.close()
+    else:
+      self.current.add(cleaned)
+
+  def close(self):
+    self.verses.append(self.current)
+    self.current = None
+
+class Laul(yaml.YAMLObject):
+  yaml_tag = u'!Laul'
+
+  def __init__(
+      self,
+      title=None,
+      composer=None,
+      poet=None,
+      margin=None,
+      index=None,
+      misc=None,
+      paths=None):
+    self.title = title
+    self.composer = composer
+    self.poet = poet
+    self.margin = margin
+    self.index = index
+    self.misc = misc
+    self.paths = paths
+    self.verses = None
+    self.music = None
+
+  def poet_or_composer(self):
+    return self.poet != None or self.composer != None
+
+class Project(yaml.YAMLObject):
+  yaml_tag = u'!Project'
+
+  def __init__(self, title, subtitle, parts):
+    self.title = title
+    self.subtitle = subtitle
+    self.parts = parts
+    self.content = None
+
+class Config(object):
+  def __init__(self, datapath, buildpath):
+    self.datapath = datapath
     self.buildpath = buildpath
-    self.songspath = os.path.join(self.basepath, 'data', 'songs')
-    self.notespath = os.path.join(self.basepath, 'data', 'notes')
+    self.outputpath = os.path.join(self.buildpath, 'laulik.lytex')
+    self.templatespath = os.path.join(self.datapath, 'templates')
+
+    self.stache = pystache.Renderer(
+        escape=lambda u: u,
+        string_encoding='utf8',
+        file_encoding='utf8',
+        search_dirs=[self.templatespath],
+        file_extension='tex')
+
+class BuildLaulik:
+  def __init__(self, projectpath, datapath, buildpath, *args, **kwargs):
     self.projectpath = projectpath
-    self.texprefixpath = os.path.join(self.basepath, 'data', 'prefix.tex')
-    self.texsuffixpath = os.path.join(self.basepath, 'data', 'suffix.tex')
-    self.texoutputpath = os.path.join(self.buildpath, 'laulik.lytex')
+    self.config = Config(datapath, buildpath)
 
   def __clear_output(self):
-    if os.path.isfile(self.texoutputpath):
-      os.remove(self.texoutputpath)
-    print('[laulik] Removed {0}'.format(self.texoutputpath))
+    if os.path.isfile(self.config.outputpath):
+      os.remove(self.config.texoutputpath)
+    print('[laulik] Removed {0}'.format(self.config.outputpath))
 
   def __output(self, lines, name=''):
-    with open(self.texoutputpath, 'a') as f:
+    with open(self.config.outputpath, 'a') as f:
       for line in lines:
         f.write(line)
-    print('[laulik] Wrote {0} to {1}'.format(name, self.texoutputpath))
+    print('[laulik] Wrote {0} to {1}'.format(name, self.config.outputpath))
 
   def __output_file(self, path):
     if os.path.isfile(path):
-      with open(path, 'r') as f:
+      with open(path, 'r', encoding='utf8') as f:
         self.__output(f, name=path)
 
   def __load_yaml(self, path):
-    with open(path, 'r') as f:
+    with open(path, 'r', encoding='utf8') as f:
       return yaml.load(f)
+
+  def __print(self, output):
+    sys.stdout.buffer.write(output)
+
+  def __render(self, path, obj):
+    if os.path.isfile(path):
+      with open(path, 'r', encoding='utf8') as f:
+        template = f.read()
+        return self.config.stache.render(template, obj)
+    print('[laulik] Warning - {0} is not a file'.format(path))
+    return None
+
+  def __parselyrics(self, lyrics):
+    factory = VerseFactory()
+    for line in lyrics.split('\n'):
+      factory.add(line)
+    factory.close()
+    return factory.verses
 
   def run(self):
     self.__clear_output()
-    self.__output_file(self.texprefixpath)
-    self.__output_file(self.texsuffixpath)
+    #self.__output_file(self.texprefixpath)
+    #self.__output_file(self.texsuffixpath)
 
-    print(self.__load_yaml(self.projectpath))
+    rendered = io.StringIO()
+    project = self.__load_yaml(self.projectpath)
+    for part in project.parts:
+      partpath = os.path.join(self.config.datapath, part)
+      partdir = os.path.dirname(partpath)
+      if not os.path.isfile(partpath):
+        print('[laulik] Warning - {0} is not a real file'.format(partpath))
+        continue
+      _, ext = os.path.splitext(partpath)
+      if ext == '.yml':
+        print('[laulik] Processing yaml config at {0}'.format(partpath))
+        laul = self.__load_yaml(partpath)
+        lyricspath = os.path.join(partdir, laul.paths['lyrics'])
+        musicpath = os.path.join(partdir, laul.paths['music'])
+        laul.verses = self.__parselyrics(self.__render(lyricspath, laul))
+        laul.music = self.__render(musicpath, laul)
+        rendered.write(self.config.stache.render(laul))
+      else:
+        print('[laulik] Warning - {0} was not processed'.format(partpath))
+    project.content = rendered.getvalue()
+    rendered.close()
+    self.__output(self.config.stache.render(project))
+
+
 """
     dirlisting = os.listdir(songspath)
     dirlisting.sort()
@@ -170,5 +285,8 @@ class BuildLaulik:
 """
 
 if __name__ == '__main__':
-  inst = BuildLaulik(sys.argv[1], sys.argv[2])
+  datapath = os.path.join(os.path.dirname(__file__), 'data')
+  projectpath = sys.argv[1]
+  buildpath = sys.argv[2]
+  inst = BuildLaulik(projectpath, datapath, buildpath)
   inst.run()
