@@ -8,7 +8,8 @@ set -e
 
 jobname=ver-`date +"%Y%m%d-%H%M%S"`-`uuidgen`
 scriptpath=/opt/laulik
-projectpath=$scriptpath/data/projects/voluja.yaml
+projectname=voluja
+projectpath=$scriptpath/data/projects/${projectname}.yaml
 buildpath=$scriptpath/build/$jobname
 
 # UTF-8 paths / env everywhere
@@ -43,4 +44,9 @@ output "[main] Copying to latest directory"
 cd ..
 rsync --archive --inplace --delete $jobname/* latest
 echo $jobname > latest/VERSION.txt
+output "[main] Copying to project output"
+mkdir -p projects
+cp $jobname/laulik.pdf projects/${projectname}.pdf
+cp $jobname/laulik.tex projects/${projectname}.tex
+echo $jobname > projects/${projectname}.version.txt
 output "[main] Done"

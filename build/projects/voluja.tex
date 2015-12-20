@@ -1,0 +1,149 @@
+\documentclass[10pt]{book}
+\usepackage{layout}
+\usepackage[margin=.20in, bindingoffset=.4in, papersize={4in, 6in},  top=0.25in,  includefoot]{geometry}
+\usepackage{makeidx}
+\usepackage{pslatex}
+\usepackage[utf8]{inputenc}
+\usepackage{multicol}
+\newenvironment{changemargin}[2]{
+  \begin{list}{}{
+    \setlength{\topsep}{0pt}
+    \setlength{\leftmargin}{#1}
+    \setlength{\rightmargin}{#2}
+    \setlength{\listparindent}{\parindent}
+    \setlength{\itemindent}{\parindent}
+    \setlength{\parsep}{\parskip}
+  }
+  \item[]
+}{
+  \end{list}
+}
+
+\makeindex
+\special{papersize=6.00in, 9.00000in}
+\parskip .07in
+\pagestyle{plain}
+\widowpenalty=1000
+\clubpenalty=1000
+\raggedbottom
+\sloppy
+
+\usepackage{graphics}
+\begin{document}
+\rmfamily
+
+\begin{titlepage}
+  \null
+  \begin{center}
+    \vspace{1.5in}
+    {\LARGE J\"arvemetsa laulik }\\
+    { 2006 V\~oluja Suurlaager }
+    \vfill
+  \end{center}
+\end{titlepage}
+
+\clearpage
+
+{
+  \samepage
+  \raggedbottom
+  \raggedright
+  \sloppy
+
+
+  \index{Eesti h\"umn}
+  \vspace{0.2in}
+  \centerline{ {\bf {\large Eesti h\"umn } } }
+  \nopagebreak[4]
+  \vspace{0.1in}
+  \nopagebreak[4]
+  \hrule height 0.05ex
+  \nopagebreak[4]
+  \vspace{-0.05in}
+
+  {\footnotesize J. V. Jannsen \hfill Fr. Pacius }\\
+  \vspace{0.01in}
+
+
+  \vspace{0.01in}
+  \nopagebreak[4]
+  {%
+\parindent 0pt
+\noindent
+\ifx\preLilyPondExample \undefined
+\else
+  \expandafter\preLilyPondExample
+\fi
+\def\lilypondbook{}%
+\input{45/lily-f95c2686-systems.tex}
+\ifx\postLilyPondExample \undefined
+\else
+  \expandafter\postLilyPondExample
+\fi
+}
+
+  \pagebreak[1]
+    \begin{changemargin}{ 0.9in }{ 0.1in }
+  {
+    \small
+    \noindent
+      \nopagebreak[4] Mu isamaa, mu \~onn ja r\~o\~om, \\
+      \nopagebreak[4] kui kaunis oled sa! \\
+      \nopagebreak[4] Ei leia mina iial teal \\
+      \nopagebreak[4] see suure laia ilma peal, \\
+      \nopagebreak[4] mis mull' nii armas oleks ka \\
+      \nopagebreak[4] kui sa, mu isamaa! \\
+  }
+  \end{changemargin}
+  \pagebreak[1]
+    \begin{changemargin}{ 0.9in }{ 0.1in }
+  {
+    \small
+    \noindent
+      \nopagebreak[4] Sa oled mind ju s\"unnitand \\
+      \nopagebreak[4] ja \"ules kasvatand! \\
+      \nopagebreak[4] Sind t\"anan mina alati \\
+      \nopagebreak[4] ja j\"a\"an sul truuiks surmani! \\
+      \nopagebreak[4] Mull' k\~oige armsam oled sa. \\
+      \nopagebreak[4] mu kallis isamaa! \\
+  }
+  \end{changemargin}
+  \pagebreak[1]
+    \begin{changemargin}{ 0.9in }{ 0.1in }
+  {
+    \small
+    \noindent
+      \nopagebreak[4] Su \"ule Jumal valvaku, \\
+      \nopagebreak[4] mu armas isamaa! \\
+      \nopagebreak[4] Ta olgu sinu kaitseja \\
+      \nopagebreak[4] ja v\~otku rohkest' \~onnista', \\
+      \nopagebreak[4] mis iial ette v\~otad sa, \\
+      \nopagebreak[4] mu kallis isamaa! \\
+  }
+  \end{changemargin}
+  \pagebreak[1]
+    \begin{changemargin}{ 0.9in }{ 0.1in }
+  {
+    \small
+    \noindent
+  }
+  \end{changemargin}
+
+}
+\vskip 0in plus 1in minus 0in
+\pagebreak[3]
+
+
+\begin{flushleft}
+\begin{onecolumn}
+  {
+    \sloppy
+    \centerline{ {\bf {\large Sisukord } } }
+    \vspace{0.1in}
+    \hrule height 0.05ex
+  }
+\printindex
+\end{onecolumn}
+\end{flushleft}
+
+\end{document}
