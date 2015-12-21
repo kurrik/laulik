@@ -40,4 +40,4 @@ WORKDIR /opt/laulik
 ADD src/* ./
 RUN chmod +x *.sh
 
-ENTRYPOINT /opt/laulik/server.sh -
+ENTRYPOINT /opt/laulik/main.sh
