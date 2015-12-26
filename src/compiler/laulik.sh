@@ -5,13 +5,14 @@ source ./common/common.sh
 jobname=ver-`date +"%Y%m%d-%H%M%S"`-`uuidgen`
 scriptpath=/opt/laulik/compiler
 projectname=voluja
-projectpath=/opt/laulik/data/projects/${projectname}.yaml
+datapath=/opt/laulik/data
+projectpath=$datapath/projects/${projectname}.yaml
 buildpath=/opt/laulik/build/$jobname
 
 mkdir -p $buildpath
 cd $buildpath
 
-python3 $scriptpath/laulik.py $projectpath $buildpath
+python3 $scriptpath/laulik.py $projectpath $datapath $buildpath
 
 output "[laulik] Running lilypond-book"
 /opt/lilypond/bin/lilypond-book -V laulik.lytex

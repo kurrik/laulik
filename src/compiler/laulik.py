@@ -154,8 +154,8 @@ class BuildLaulik:
     self.__output(self.config.stache.render(project))
 
 if __name__ == '__main__':
-  datapath = os.path.join(os.path.dirname(__file__), 'data')
   projectpath = sys.argv[1]
-  buildpath = sys.argv[2]
+  datapath = sys.argv[2]
+  buildpath = sys.argv[3]
   inst = BuildLaulik(projectpath, datapath, buildpath)
   inst.run()
