@@ -37,9 +37,11 @@ RUN chmod +x *.sh
 RUN ./lilypond-2.19.20-1.linux-64.sh --batch --prefix /opt/lilypond
 
 WORKDIR /opt/laulik
-ADD src/* ./
-ADD src/static ./static
-ADD src/templates ./templates
-RUN chmod +x *.sh
-
+ADD common ./common
+ADD compiler ./compiler
+ADD server ./server
+ADD *.* ./
+RUN chmod +x main.sh
+RUN chmod +x server/server.sh
+RUN chmod +x compiler/laulik.sh
 ENTRYPOINT /opt/laulik/main.sh

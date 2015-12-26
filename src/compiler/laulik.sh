@@ -1,12 +1,12 @@
 #!/usr/bin/env bash
 
-source ./common.sh
+source ./common/common.sh
 
 jobname=ver-`date +"%Y%m%d-%H%M%S"`-`uuidgen`
-scriptpath=/opt/laulik
+scriptpath=/opt/laulik/compiler
 projectname=voluja
-projectpath=$scriptpath/data/projects/${projectname}.yaml
-buildpath=$scriptpath/build/$jobname
+projectpath=/opt/laulik/data/projects/${projectname}.yaml
+buildpath=/opt/laulik/build/$jobname
 
 mkdir -p $buildpath
 cd $buildpath

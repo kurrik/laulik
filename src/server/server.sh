@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 
-source ./common.sh
+source ./common/common.sh
 
-scriptpath=/opt/laulik
+scriptpath=/opt/laulik/server
 cd $scriptpath
 output "[server] Running server"
 python3 ./server.py
