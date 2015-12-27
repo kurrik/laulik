@@ -2,14 +2,7 @@
 
 source ./common/common.sh
 
-scriptpath=/opt/laulik/server
-commonpath=/opt/laulik/common
-datapath=/opt/laulik/data
-rootpath=/opt/laulik
-
-export PYTHONPATH=$PYTHONPATH:$commonpath
-
-cd $scriptpath
+cd $SERVERPATH
 output "[server] Running server"
-python3 ./server.py --debug $datapath $rootpath
+python3 ./server.py --debug $ROOTPATH
 output "[server] Done"

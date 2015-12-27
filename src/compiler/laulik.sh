@@ -3,30 +3,44 @@
 source ./common/common.sh
 
 jobname=ver-`date +"%Y%m%d-%H%M%S"`-`uuidgen`
-scriptpath=/opt/laulik/compiler
-commonpath=/opt/laulik/common
 projectname=voluja
-datapath=/opt/laulik/data
-projectpath=$datapath/projects/${projectname}.yaml
-buildpath=/opt/laulik/build/$jobname
+projectpath=$DATAPATH/projects/${projectname}.yaml
+jobbuildpath=$BUILDPATH/$jobname
 
-export PYTHONPATH=$PYTHONPATH:$commonpath
+mkdir -p $jobbuildpath
+cd $jobbuildpath
 
-mkdir -p $buildpath
-cd $buildpath
-
-python3 $scriptpath/laulik.py $projectpath $datapath $buildpath
+python3 $COMPILERPATH/laulik.py $projectpath $DATAPATH $jobbuildpath
 
 output "[laulik] Running lilypond-book"
-/opt/lilypond/bin/lilypond-book -V laulik.lytex
+/opt/lilypond/bin/lilypond-book \
+  -V \
+  laulik.lytex
+
 output "[laulik] First latex pass"
-latex -interaction=nonstopmode laulik.tex
+latex \
+  -interaction=nonstopmode \
+  laulik.tex
+
 output "[laulik] Running xindy to generate index"
-xindy -M numeric-sort -M latex-loc-fmts -I latex -L estonian -t ex1.xlg -M $scriptpath/laulik.xdy laulik.idx
+xindy \
+  -M numeric-sort \
+  -M latex-loc-fmts \
+  -I latex \
+  -L estonian \
+  -t ex1.xlg \
+  -M $COMPILERPATH/laulik.xdy \
+  laulik.idx
+
 output "[laulik] Second latex pass"
-latex -interaction=nonstopmode laulik.tex
+latex \
+  -interaction=nonstopmode \
+  laulik.tex
+
 output "[laulik] Running dvips"
-dvips laulik.dvi
+dvips \
+  laulik.dvi
+
 output "[laulik] Running ps2pdf"
 ps2pdf \
   -dMaxSubsetPct=100 \
@@ -35,10 +49,16 @@ ps2pdf \
   -dEmbedAllFonts=true \
   -dPDFSETTINGS=/prepress \
   laulik.ps
+
 output "[laulik] Copying to latest directory"
-cd ..
-rsync --archive --inplace --delete $jobname/* latest
+cd $BUILDPATH
+rsync \
+  --archive \
+  --inplace \
+  --delete $jobname/* \
+  latest
 echo $jobname > latest/VERSION.txt
+
 output "[laulik] Copying to project output"
 mkdir -p projects
 cp $jobname/laulik.pdf projects/${projectname}.pdf

@@ -2,9 +2,9 @@ import os
 import subprocess
 
 class API(object):
-  def __init__(self, datapath, rootpath):
-    self.__datapath = datapath
+  def __init__(self, rootpath):
     self.__rootpath = rootpath
+    self.__datapath = os.path.join(rootpath, 'data')
 
   def projects(self):
     projectpath = os.path.join(self.__datapath, 'projects')

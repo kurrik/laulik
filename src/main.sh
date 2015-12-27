@@ -14,6 +14,6 @@ case "$METHOD" in
     ./compiler/laulik.sh
     ;;
   *)
-    output "[main] Unknown method $method"
+    output "[main] Unknown method $METHOD"
     exit 1
 esac
