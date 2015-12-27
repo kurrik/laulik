@@ -4,10 +4,13 @@ source ./common/common.sh
 
 jobname=ver-`date +"%Y%m%d-%H%M%S"`-`uuidgen`
 scriptpath=/opt/laulik/compiler
+commonpath=/opt/laulik/common
 projectname=voluja
 datapath=/opt/laulik/data
 projectpath=$datapath/projects/${projectname}.yaml
 buildpath=/opt/laulik/build/$jobname
+
+export PYTHONPATH=$PYTHONPATH:$commonpath
 
 mkdir -p $buildpath
 cd $buildpath

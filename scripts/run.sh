@@ -15,4 +15,5 @@ docker run \
   --name=$name \
   -v `pwd`/data:/opt/laulik/data:ro \
   -v `pwd`/build:/opt/laulik/build:rw \
+  -v `pwd`/src/server:/opt/laulik/server:ro \
   laulik
