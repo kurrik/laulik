@@ -1,3 +1,4 @@
+import os
 import yaml
 
 class Laul(yaml.YAMLObject):
@@ -33,3 +34,36 @@ class Project(yaml.YAMLObject):
     self.subtitle = subtitle
     self.parts = parts
     self.content = None
+
+class ProjectMeta(object):
+  def __init__(
+      self,
+      key,
+      project,
+      paths):
+    self.key = key
+    self.project = project
+    self.paths = paths
+    self.__version = False
+
+  @property
+  def version(self):
+    if self.__version is False:
+      if os.path.isfile(self.paths.version):
+        with open(self.paths.version) as f:
+          self.__version = f.read()
+      else:
+        self.__version = None
+    return self.__version
+
+class ProjectPaths(object):
+  def __init__(
+      self,
+      config,
+      latex=None,
+      pdf=None,
+      version=None):
+    self.config = config
+    self.latex = latex
+    self.pdf = pdf
+    self.version = version

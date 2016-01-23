@@ -2,18 +2,62 @@
 <html lang="en">
   <head>
     <link rel="stylesheet" href="/static/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="/static/css/bootstrap-theme.min.css" />
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/static/css/site.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="UTF-8" />
   </head>
   <body>
+    <div class="jumbotron">
+      <div class="container-fluid">
+        <h1>Laulik</h1>
+        <p><a class="btn btn-primary btn-lg" href="https://github.com/kurrik/laulik" role="button">View / Edit on Github</a></p>
+      </div>
+    </div>
     <div class="container-fluid">
+      {% if msg %}
+        <div class="alert alert-info">
+          {{ msg }}
+        </div>
+      {% endif %}
+      {% if output %}
+        <div class="Output">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h3 class="panel-title">Build output</h3>
+            </div>
+            <div class="panel-body Output-content">
+              {{ output }}
+            </div>
+          </div>
+        </div>
+      {% endif %}
       <div class="row">
         <div class="col-md-12">
-          {{msg}}!!
-          {{projects}}
-          <form method="POST">
-            <button class="btn">Submit</button>
-          </form>
+          <table class="table">
+            <thead>
+              <tr>
+                <th>Key</th>
+                <th>Title</th>
+                <th>Subtitle</th>
+                <th>Version</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            {% for meta in projects %}
+              <tr>
+                <td>{{ meta.key }}</td>
+                <td>{{ meta.project.title }}</td>
+                <td>{{ meta.project.subtitle }}</td>
+                <td>{{ meta.version }}</td>
+                <td>
+                  <form method="POST">
+                    <input type="hidden" name="key" value="{{ meta.key }}" />
+                    <button class="btn btn-default btn-sm">Build</button>
+                  </form>
+                </td>
+              </tr>
+            {% endfor %}
+          </table>
         </div>
       </div>
     </div>

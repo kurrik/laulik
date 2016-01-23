@@ -1,0 +1,15 @@
+.Output {
+}
+
+.Output span[id^="line-"] {
+  display: block;
+}
+
+.Output span.ansi1 {
+  font-weight: bold;
+}
+
+.Output-content {
+  max-height: 500px;
+  overflow-y: scroll;
+}

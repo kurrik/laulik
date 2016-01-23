@@ -1,4 +1,4 @@
-#/usr/bin/env bash
+#!/usr/bin/env bash
 
 source `git rev-parse --show-toplevel`/scripts/common.sh
 
@@ -16,4 +16,5 @@ docker run \
   -v `pwd`/data:/opt/laulik/data:ro \
   -v `pwd`/build:/opt/laulik/build:rw \
   -v `pwd`/src/server:/opt/laulik/server:ro \
+  -v `pwd`/src/common:/opt/laulik/common:ro \
   laulik

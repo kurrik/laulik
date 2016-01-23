@@ -1,19 +1,24 @@
+from ansi2html import Ansi2HTMLConverter
 import argparse
 import compiler
 from flask import Flask
+from flask import Markup
 from flask import render_template
 from flask import request
 
 app = Flask(__name__)
 api = None
+conv = Ansi2HTMLConverter(markup_lines=True)
 
 @app.route('/', methods=['GET', 'POST'])
 def root():
   data = {}
   if request.method == 'POST':
-    data['msg'] = 'Post'
-    data['projects'] = api.projects()
-    api.build()
+    key = request.form['key']
+    result = api.build(key)
+    data['msg'] = Markup('Built project <strong>{0}</strong>'.format(key))
+    data['output'] = Markup(conv.convert(result.stdout, full=False))
+  data['projects'] = api.projects()
   return render_template('index.html', **data)
 
 if __name__ == '__main__':

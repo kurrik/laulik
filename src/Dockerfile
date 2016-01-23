@@ -27,6 +27,7 @@ RUN apt-get update && apt-get install -y --fix-missing \
 RUN pip3 install Flask
 RUN pip3 install PyYAML
 RUN pip3 install pystache
+RUN pip3 install ansi2html
 
 RUN locale-gen en_US.UTF-8
 RUN dpkg-reconfigure locales

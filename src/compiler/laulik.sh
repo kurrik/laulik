@@ -3,9 +3,14 @@
 source ./common/common.sh
 
 jobname=ver-`date +"%Y%m%d-%H%M%S"`-`uuidgen`
-projectname=voluja
+projectname=$1
 projectpath=$DATAPATH/projects/${projectname}.yaml
 jobbuildpath=$BUILDPATH/$jobname
+
+if [ ! -e "$projectpath" ]; then
+  output "[laulik] No project file found at $projectpath!"
+  exit 1
+fi
 
 mkdir -p $jobbuildpath
 cd $jobbuildpath
