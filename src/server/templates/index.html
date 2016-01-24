@@ -20,39 +20,61 @@
         </div>
       {% endif %}
       {% if output %}
-        <div class="Output">
+        <div class="Output" id="Output1">
           <div class="panel panel-default">
             <div class="panel-heading">
-              <h3 class="panel-title">Build output</h3>
+              <h3 class="panel-title">
+                <a data-toggle="collapse" data-target="#Collapse1" data-parent="#Output" href="#Output">
+                  Build output
+                  <span class="glyphicon glyphicon-chevron-down" aria-hidden="true"></span>
+                </a>
+              </h3>
             </div>
-            <div class="panel-body Output-content">
-              {{ output }}
+            <div class="panel-collapse collapse" id="Collapse1">
+              <div class="panel-body Output-content">
+                {{ output }}
+              </div>
             </div>
           </div>
         </div>
       {% endif %}
       <div class="row">
         <div class="col-md-12">
-          <table class="table">
+          <table class="table Table">
+            <colgroup>
+              <col class="col-md-2">
+              <col class="col-md-4">
+              <col class="col-md-2">
+              <col class="col-md-2">
+              <col class="col-md-2">
+            </col>
             <thead>
               <tr>
                 <th>Key</th>
                 <th>Title</th>
-                <th>Subtitle</th>
                 <th>Version</th>
+                <th>Download</th>
                 <th>Action</th>
               </tr>
             </thead>
             {% for meta in projects %}
               <tr>
                 <td>{{ meta.key }}</td>
-                <td>{{ meta.project.title }}</td>
-                <td>{{ meta.project.subtitle }}</td>
-                <td>{{ meta.version }}</td>
+                <td>{{ meta.project.title }} <span class="text-muted">{{ meta.project.subtitle }}</span></td>
+                <td class="Table-cell--nowrap">{{ meta.version }}</td>
+                <td>
+                  <a class="btn btn-default btn-xs" href="/build/{{ meta.key }}/{{ meta.version }}.pdf">
+                    <span class="glyphicon glyphicon-book" aria-hidden="true"></span> PDF</a>
+                  <a class="btn btn-default btn-xs" href="/build/{{ meta.key }}/{{ meta.version }}.tex">
+                    <span class="glyphicon glyphicon-save-file" aria-hidden="true"></span> LaTeX</a>
+                </td>
                 <td>
                   <form method="POST">
                     <input type="hidden" name="key" value="{{ meta.key }}" />
-                    <button class="btn btn-default btn-sm">Build</button>
+                    <button class="btn btn-default btn-xs">
+                      <span class="glyphicon glyphicon-hourglass" aria-hidden="true"></span>
+                      Build
+                    </button>
                   </form>
                 </td>
               </tr>

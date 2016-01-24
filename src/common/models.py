@@ -51,7 +51,7 @@ class ProjectMeta(object):
     if self.__version is False:
       if os.path.isfile(self.paths.version):
         with open(self.paths.version) as f:
-          self.__version = f.read()
+          self.__version = f.read().strip()
       else:
         self.__version = None
     return self.__version
