@@ -2,3 +2,4 @@ build/*
 !build/projects
 !build/projects/*
 .DS_Store
+__pycache__

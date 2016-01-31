@@ -60,7 +60,7 @@ class API(object):
 
   def build(self, key):
     proc = subprocess.Popen(
-        [ './compiler/laulik.sh', key ],
+        [ './src/compiler/laulik.sh', key ],
         cwd=self.__rootpath,
         stdout=subprocess.PIPE,
         stderr=subprocess.PIPE,

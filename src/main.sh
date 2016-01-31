@@ -1,17 +1,17 @@
 #!/usr/bin/env bash
 
-source ./common/common.sh
+source ./src/common/common.sh
 
 METHOD=${METHOD:-server}
 
 case "$METHOD" in
   server)
     output "[main] Running server"
-    ./server/server.sh
+    ./src/server/server.sh
     ;;
   laulik)
     output "[main] Running laulik"
-    ./compiler/laulik.sh
+    ./src/compiler/laulik.sh
     ;;
   *)
     output "[main] Unknown method $METHOD"

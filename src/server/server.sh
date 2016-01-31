@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-source ./common/common.sh
+source ./src/common/common.sh
 
 cd $SERVERPATH
 output "[server] Running server"

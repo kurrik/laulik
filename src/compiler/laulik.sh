@@ -1,11 +1,13 @@
 #!/usr/bin/env bash
 
-source ./common/common.sh
+source ./src/common/common.sh
 
 jobname=ver-`date +"%Y%m%d-%H%M%S"`-`uuidgen`
 projectname=$1
 projectpath=$DATAPATH/projects/${projectname}.yaml
 jobbuildpath=$BUILDPATH/$jobname
+
+output "[laulik] Starting"
 
 if [ ! -e "$projectpath" ]; then
   output "[laulik] No project file found at $projectpath!"

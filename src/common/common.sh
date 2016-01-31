@@ -7,10 +7,10 @@ set -e
 ROOTPATH=/opt/laulik
 
 BUILDPATH=$ROOTPATH/build
-COMMONPATH=$ROOTPATH/common
-COMPILERPATH=$ROOTPATH/compiler
+COMMONPATH=$ROOTPATH/src/common
+COMPILERPATH=$ROOTPATH/src/compiler
 DATAPATH=$ROOTPATH/data
-SERVERPATH=$ROOTPATH/server
+SERVERPATH=$ROOTPATH/src/server
 
 # UTF-8 paths / env everywhere
 export PYTHONIOENCODING=utf_8

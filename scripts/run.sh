@@ -13,8 +13,5 @@ docker run \
   -p 80:5000 \
   -e "METHOD=$method" \
   --name=$name \
-  -v `pwd`/data:/opt/laulik/data:ro \
-  -v `pwd`/build:/opt/laulik/build:rw \
-  -v `pwd`/src/server:/opt/laulik/server:ro \
-  -v `pwd`/src/common:/opt/laulik/common:ro \
+  -v `pwd`:/opt/laulik:rw \
   laulik
