@@ -8,3 +8,9 @@ Running
 Build the Docker container and then build the `voluja.yml` project.
 
     ./scripts/build.sh && ./scripts/run.sh
+
+Deploying
+---------
+Upload image with:
+
+    ./scripts/upload.sh
