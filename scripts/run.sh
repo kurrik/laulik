@@ -13,8 +13,7 @@ if [ "${MAP_SRC:-yes}" == "yes" ]; then
 fi
 if [ "${MAP_DATA:-yes}" == "yes" ]; then
   green "[run]" "Mapping data and build paths"
-  args="$args -v `pwd`/build:/opt/laulik-repo/build:rw"
-  args="$args -v `pwd`/data:/opt/laulik-repo/data:rw"
+  args="$args -v `pwd`:/opt/laulik-repo:rw"
 fi
 
 docker rm -f $name

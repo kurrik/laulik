@@ -18,6 +18,7 @@ conv = Ansi2HTMLConverter(markup_lines=True)
 @app.route('/', methods=['GET', 'POST'])
 def root():
   data = {}
+  data['git_info'] = github_api.info()
   if request.method == 'POST':
     key = request.form['key']
     result = laulik_api.build(key)

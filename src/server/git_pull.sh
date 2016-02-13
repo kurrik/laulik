@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
-
 source ./src/common/common.sh
 
 output "[pull] Pulling repo at $REPOPATH"

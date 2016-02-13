@@ -26,4 +26,10 @@ class API(object):
     )
 
   def pull(self):
-    return proc.Process.run(['./src/server/pull.sh'])
+    return proc.Process.run(['./src/server/git_pull.sh'])
+
+  def info(self):
+    result = proc.Process.run(['./src/server/git_info.sh'])
+    if result.success:
+      return result.stdout
+    return "Could not parse current git version (development mode?)"
