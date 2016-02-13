@@ -2,4 +2,6 @@
 source ./src/common/common.sh
 
 cd $REPOPATH
-git log --pretty="[%h] %s - %an %ar" -n1
+output "[info] Writing git info to $INFOPATH"
+git log --pretty="[%h] %s - %an %ai" -n1 > $INFOPATH
+output "[info] Done"

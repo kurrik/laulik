@@ -3,3 +3,4 @@ build/*
 !build/projects/*
 .DS_Store
 __pycache__
+gitinfo.txt

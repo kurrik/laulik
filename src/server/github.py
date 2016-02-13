@@ -12,9 +12,7 @@ class Request(object):
 
 class API(object):
   def __init__(self, repopath):
-    datapath = os.path.join(repopath, 'data')
-    buildpath = os.path.join(repopath, 'build')
-    self.__cwdpath = os.path.join(os.path.dirname(__file__), '..', '..')
+    self.__infopath = os.path.join(repopath, 'gitinfo.txt')
 
   def parse_webhook(self, decoded):
     return Request(
@@ -29,7 +27,7 @@ class API(object):
     return proc.Process.run(['./src/server/git_pull.sh'])
 
   def info(self):
-    result = proc.Process.run(['./src/server/git_info.sh'])
-    if result.success:
-      return result.stdout
+    if os.path.exists(self.__infopath):
+      with open(self.__infopath, 'r', encoding='utf8') as f:
+        return f.read()
     return "Could not parse current git version (development mode?)"

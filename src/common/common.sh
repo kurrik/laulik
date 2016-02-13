@@ -9,6 +9,7 @@ REPOPATH=/opt/laulik-repo
 
 BUILDPATH=$REPOPATH/build
 DATAPATH=$REPOPATH/data
+INFOPATH=$REPOPATH/gitinfo.txt
 
 COMMONPATH=$ROOTPATH/src/common
 COMPILERPATH=$ROOTPATH/src/compiler
