@@ -50,8 +50,16 @@ def tex(key, version):
 
 @app.route('/webhook', methods=['POST'])
 def webhook():
-  print(github_api.parse_webhook(request.get_json(force=True)))
-  return make_response('Done!', 200)
+  data = {}
+  if request.headers.get('X-GitHub-Event') == 'push':
+    data['req'] = github_api.parse_webhook(request.get_json(force=True))
+    result = github_api.pull()
+    data['stdout'] = result.stdout
+    data['stderr'] = result.stderr
+    data['action'] = 'Pulled git repo'
+  resp = make_response(render_template('webhook.txt', **data), 200)
+  resp.headers['Content-Type'] = 'text/plain'
+  return resp
 
 if __name__ == '__main__':
   parser = argparse.ArgumentParser(description='Web frontend')

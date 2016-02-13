@@ -1,9 +1,9 @@
 import io
 import os
 import os.path
+import proc
 import models
 import re
-import subprocess
 import yaml
 
 KEY_PATTERN = re.compile('\W+', re.UNICODE)
@@ -61,29 +61,4 @@ class API(object):
     return None
 
   def build(self, key):
-    proc = subprocess.Popen(
-        [ './src/compiler/laulik.sh', key ],
-        cwd=self.__cwdpath,
-        stdout=subprocess.PIPE,
-        stderr=subprocess.PIPE,
-        universal_newlines=True)
-    stdout = io.StringIO()
-    stderr = io.StringIO()
-    success = True
-    try:
-      outs, errs = proc.communicate(timeout=30)
-      stdout.write(outs)
-      stderr.write(errs)
-      success = proc.returncode == 0
-    except subprocess.TimeoutExpired:
-      stdout.write(outs)
-      stderr.write(errs)
-      proc.kill()
-      outs, errs = proc.communicate(timeout=5)
-      stdout.write(outs)
-      stderr.write(errs)
-      success = False
-    result = Result(success, stdout.getvalue(), stderr.getvalue())
-    stdout.close()
-    stderr.close()
-    return result
+    return proc.Process.run(['./src/compiler/laulik.sh', key])

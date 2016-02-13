@@ -9,5 +9,5 @@ curl $url \
   --header "Content-Type: application/json" \
   --header "User-Agent: GitHub-Hookshot/21f57ba" \
   --header "X-GitHub-Delivery: 9f9a3b00-d280-11e5-8c98-c4066a813c3e" \
-  --header "X-GitHub-Event: ping" \
+  --header "X-GitHub-Event: push" \
    -d @scripts/test_webhook_payload.txt

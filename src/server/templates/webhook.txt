@@ -1,0 +1,15 @@
+Req:
+ - Commit: {{ req.commit }}
+ - Ref: {{ req.ref }}
+ - User Name: {{ req.user_name }}
+ - User Email: {{ req.user_email }}
+ - User Login: {{ req.user_login }}
+Action: {{ action }}
+
+Stdout:
+-------
+{{ stdout }}
+
+Stderr:
+-------
+{{ stderr }}
