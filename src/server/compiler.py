@@ -1,5 +1,6 @@
 import io
 import os
+import os.path
 import models
 import re
 import subprocess
@@ -15,11 +16,12 @@ class Result(object):
     self.stderr = stderr
 
 class API(object):
-  def __init__(self, rootpath):
-    self.__rootpath = rootpath
-    self.__datapath = os.path.join(rootpath, 'data')
-    self.__projectpath = os.path.join(rootpath, 'data', 'projects')
-    self.__latestbuildpath = os.path.join(rootpath, 'build', 'projects')
+  def __init__(self, repopath):
+    datapath = os.path.join(repopath, 'data')
+    buildpath = os.path.join(repopath, 'build')
+    self.__cwdpath = os.path.join(os.path.dirname(__file__), '..', '..')
+    self.__projectpath = os.path.join(datapath, 'projects')
+    self.__latestbuildpath = os.path.join(buildpath, 'projects')
 
   def __load_yaml(self, path):
     with open(path, 'r', encoding='utf8') as f:
@@ -61,7 +63,7 @@ class API(object):
   def build(self, key):
     proc = subprocess.Popen(
         [ './src/compiler/laulik.sh', key ],
-        cwd=self.__rootpath,
+        cwd=self.__cwdpath,
         stdout=subprocess.PIPE,
         stderr=subprocess.PIPE,
         universal_newlines=True)

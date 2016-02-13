@@ -49,14 +49,14 @@ def tex(key, version):
 if __name__ == '__main__':
   parser = argparse.ArgumentParser(description='Web frontend')
   parser.add_argument(
-      'rootpath',
-      metavar='PATH',
+      'repopath',
+      metavar='REPO_PATH',
       type=str,
-      help='Path to the root directory')
+      help='Path to the repository containing data and build dirs')
   parser.add_argument(
       '--debug',
       action='store_true',
       help='Launch in debug mode with hot reload')
   args = parser.parse_args()
-  api = compiler.API(args.rootpath)
+  api = compiler.API(repopath=args.repopath)
   app.run(host='0.0.0.0', debug=args.debug)

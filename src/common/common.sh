@@ -5,11 +5,13 @@ function output {
 set -e
 
 ROOTPATH=/opt/laulik
+REPOPATH=/opt/laulik-repo
 
-BUILDPATH=$ROOTPATH/build
+BUILDPATH=$REPOPATH/build
+DATAPATH=$REPOPATH/data
+
 COMMONPATH=$ROOTPATH/src/common
 COMPILERPATH=$ROOTPATH/src/compiler
-DATAPATH=$ROOTPATH/data
 SERVERPATH=$ROOTPATH/src/server
 
 # UTF-8 paths / env everywhere
