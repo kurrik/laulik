@@ -36,7 +36,7 @@
   \null
   \begin{center}
     \vspace{1.5in}
-    {\LARGE Järvemetsa laulik TEST }\\
+    {\LARGE Järvemetsa laulik }\\
     { 2006 Võluja Suurlaager }
     \vfill
   \end{center}
@@ -83,49 +83,185 @@
 }
 
   \pagebreak[1]
+  % VERSE {'lines': ['Mu isamaa, mu õnn ja rõõm,', 'kui kaunis oled sa!', 'Ei leia mina iial teal', 'see suure laia ilma peal,', "mis mull' nii armas oleks ka", 'kui sa, mu isamaa!'], 'is_refrain': False}
+  % FOO
+  % REFRAIN False
     \begin{changemargin}{ 0.9in }{ 0.1in }
   {
     \small
-    \noindent
-      \nopagebreak[4] Mu isamaa, mu õnn ja rõõm, \\
-      \nopagebreak[4] kui kaunis oled sa! \\
-      \nopagebreak[4] Ei leia mina iial teal \\
-      \nopagebreak[4] see suure laia ilma peal, \\
-      \nopagebreak[4] mis mull' nii armas oleks ka \\
-      \nopagebreak[4] kui sa, mu isamaa! \\
+      \noindent \nopagebreak[4] Mu isamaa, mu õnn ja rõõm, \\
+      \noindent \nopagebreak[4] kui kaunis oled sa! \\
+      \noindent \nopagebreak[4] Ei leia mina iial teal \\
+      \noindent \nopagebreak[4] see suure laia ilma peal, \\
+      \noindent \nopagebreak[4] mis mull' nii armas oleks ka \\
+      \noindent \nopagebreak[4] kui sa, mu isamaa! \\
   }
   \end{changemargin}
   \pagebreak[1]
+  % VERSE {'lines': ['Sa oled mind ju sünnitand', 'ja üles kasvatand!', 'Sind tänan mina alati', 'ja jään sul truuiks surmani!', "Mull' kõige armsam oled sa.", 'mu kallis isamaa!'], 'is_refrain': False}
+  % FOO
+  % REFRAIN False
     \begin{changemargin}{ 0.9in }{ 0.1in }
   {
     \small
-    \noindent
-      \nopagebreak[4] Sa oled mind ju sünnitand \\
-      \nopagebreak[4] ja üles kasvatand! \\
-      \nopagebreak[4] Sind tänan mina alati \\
-      \nopagebreak[4] ja jään sul truuiks surmani! \\
-      \nopagebreak[4] Mull' kõige armsam oled sa. \\
-      \nopagebreak[4] mu kallis isamaa! \\
+      \noindent \nopagebreak[4] Sa oled mind ju sünnitand \\
+      \noindent \nopagebreak[4] ja üles kasvatand! \\
+      \noindent \nopagebreak[4] Sind tänan mina alati \\
+      \noindent \nopagebreak[4] ja jään sul truuiks surmani! \\
+      \noindent \nopagebreak[4] Mull' kõige armsam oled sa. \\
+      \noindent \nopagebreak[4] mu kallis isamaa! \\
   }
   \end{changemargin}
   \pagebreak[1]
+  % VERSE {'lines': ['Su üle Jumal valvaku,', 'mu armas isamaa!', 'Ta olgu sinu kaitseja', "ja võtku rohkest' õnnista',", 'mis iial ette võtad sa,', 'mu kallis isamaa!'], 'is_refrain': False}
+  % FOO
+  % REFRAIN False
     \begin{changemargin}{ 0.9in }{ 0.1in }
   {
     \small
-    \noindent
-      \nopagebreak[4] Su üle Jumal valvaku, \\
-      \nopagebreak[4] mu armas isamaa! \\
-      \nopagebreak[4] Ta olgu sinu kaitseja \\
-      \nopagebreak[4] ja võtku rohkest' õnnista', \\
-      \nopagebreak[4] mis iial ette võtad sa, \\
-      \nopagebreak[4] mu kallis isamaa! \\
+      \noindent \nopagebreak[4] Su üle Jumal valvaku, \\
+      \noindent \nopagebreak[4] mu armas isamaa! \\
+      \noindent \nopagebreak[4] Ta olgu sinu kaitseja \\
+      \noindent \nopagebreak[4] ja võtku rohkest' õnnista', \\
+      \noindent \nopagebreak[4] mis iial ette võtad sa, \\
+      \noindent \nopagebreak[4] mu kallis isamaa! \\
   }
   \end{changemargin}
   \pagebreak[1]
+  % VERSE {'composer': 'Fr. Pacius', 'poet': 'J. V. Jannsen', 'music': '\\header{\n  tagline = ""\n}\n\n#(set-global-staff-size 10)\n\nmBreak = {  }\n\ncfgSong = {\n  \\key a \\major\n  \\time 3/4\n  \\autoBeamOff\n  \\partial 4.\n}\n\ncfgText = {\n  \\set fontSize = #-2\n}\n\nmelody = {\n  \\cfgSong\n  \\relative c\'{\n    e8 cis d |\n    e4. a8 b8. e,16 | cis\'2 a4\n      \\mBreak\n    fis8. b16 a4 gis | a2 e4 |\n    b\'8. a16 gis8[fis] e[d]\n      \\mBreak\n    cis8 fis e4 e | b\'8. a16 gis8[fis] e[d] |\n    cis8 fis e4 r8 e8\n      \\mBreak\n    a8. e16 cis8 e a b | cis2 a4 |\n    fis8. b16 a4 gis | a4.\\fermata\n      \\bar "|."\n  }\n}\n\nsongChords = \\chordmode {\n  %CHORDS GO HERE\n}\n\nverseOne = \\lyricmode {\n  %\\cfgText\n  %\\set stanza = "1."\n  Mu i -- sa -- maa, mu õnn ja rõõm,\n  kui kau -- nis o -- led sa!\n  Ei lei -- a mi -- na ii -- al teal\n  see suu -- re lai -- a il -- ma peal,\n  mis mull\' nii ar -- mas o -- leks ka,\n  kui sa, mu i -- sa -- maa!\n}\n\n\\score {\n  {\n    <<\n      %\\chords { \\set chordChanges = ##t \\songChords }\n      { \\melody }\n      \\addlyrics { \\verseOne }\n    >>\n  }\n\n  \\layout {\n    indent = #0\n    %ragged-last = ##t\n    \\context {\n      \\Score\n      \\remove "Bar_number_engraver"\n    }\n    \\context {\n      \\Lyrics\n      fontSize = #-2\n    }\n  }\n  \\midi { \\tempo 4 = 90 }\n}\n\n\\version "2.8.1"\n', 'verses': [<__main__.Verse object at 0x7f652d7f9240>, <__main__.Verse object at 0x7f652d7f5eb8>, <__main__.Verse object at 0x7f652d381828>, None], 'margin': {'refrain': {'r': '0.2in', 'l': '0.8in'}, 'verse': {'r': '0.1in', 'l': '0.9in'}}, 'title': 'Eesti h\\"umn', 'paths': {'lyrics': '01_eesti_hümn.tex', 'music': '01_eesti_hümn.ly'}}
+  % FOO
+  % REFRAIN 
     \begin{changemargin}{ 0.9in }{ 0.1in }
   {
     \small
-    \noindent
+  }
+  \end{changemargin}
+
+}
+\vskip 0in plus 1in minus 0in
+\pagebreak[3]
+\clearpage
+
+{
+  \samepage
+  \raggedbottom
+  \raggedright
+  \sloppy
+
+
+  \index{Vanasõna}
+  \vspace{0.2in}
+  \centerline{ {\bf {\large Vanasõna } } }
+  \nopagebreak[4]
+  \vspace{0.1in}
+  \nopagebreak[4]
+  \hrule height 0.05ex
+  \nopagebreak[4]
+  \vspace{-0.05in}
+
+  {\footnotesize M. Kuhn \hfill M. Kuhn }\\
+  \vspace{0.01in}
+
+  {\em {\footnotesize (2005 ,,Vanas\~ona{``} laagrilaul) } }
+  \vspace{0.01in}
+
+  \vspace{0.01in}
+  \nopagebreak[4]
+  {%
+\parindent 0pt
+\noindent
+\ifx\preLilyPondExample \undefined
+\else
+  \expandafter\preLilyPondExample
+\fi
+\def\lilypondbook{}%
+\input{2f/lily-9114324c-systems.tex}
+\ifx\postLilyPondExample \undefined
+\else
+  \expandafter\postLilyPondExample
+\fi
+}
+
+  \pagebreak[1]
+  % VERSE {'lines': ['Kes otsib, see leiab, ja muidu ei saa;', 'otsime skaut/gaidlikku teed!', 'Iga matk algab \\"uhe sammuga,', 'astu julgelt ja vaata mis on ees.'], 'is_refrain': False}
+  % FOO
+  % REFRAIN False
+    \begin{changemargin}{ 0.7in }{ 0.1in }
+  {
+    \small
+      \noindent \nopagebreak[4] Kes otsib, see leiab, ja muidu ei saa; \\
+      \noindent \nopagebreak[4] otsime skaut/gaidlikku teed! \\
+      \noindent \nopagebreak[4] Iga matk algab \"uhe sammuga, \\
+      \noindent \nopagebreak[4] astu julgelt ja vaata mis on ees. \\
+  }
+  \end{changemargin}
+  \pagebreak[1]
+  % VERSE {'lines': ['%REFRAIN', 'Vanas\\~ona, esiisa \\~opetus,', 'kostab meile l\\"abi aegade.'], 'is_refrain': True}
+  % FOO
+  % REFRAIN True
+    \begin{changemargin}{ 0.8in }{ 0.2in }
+  {
+    \small
+      \noindent \nopagebreak[4] %REFRAIN \\
+      \noindent \nopagebreak[4] Vanas\~ona, esiisa \~opetus, \\
+      \noindent \nopagebreak[4] kostab meile l\"abi aegade. \\
+  }
+  \end{changemargin}
+  \pagebreak[1]
+  % VERSE {'lines': ['Vanal teel vana s\\~obra leiad sa,', 'istu ja tee l\\~oket koos.', 'R\\"a\\"agi oma jutte ja ela edasi,', 'ainult p\\"u\\"udlikud on muinasloos.'], 'is_refrain': False}
+  % FOO
+  % REFRAIN False
+    \begin{changemargin}{ 0.7in }{ 0.1in }
+  {
+    \small
+      \noindent \nopagebreak[4] Vanal teel vana s\~obra leiad sa, \\
+      \noindent \nopagebreak[4] istu ja tee l\~oket koos. \\
+      \noindent \nopagebreak[4] R\"a\"agi oma jutte ja ela edasi, \\
+      \noindent \nopagebreak[4] ainult p\"u\"udlikud on muinasloos. \\
+  }
+  \end{changemargin}
+  \pagebreak[1]
+  % VERSE {'lines': ['%REFRAIN', 'Vanas\\~ona, esiisa \\~opetus \\ldots'], 'is_refrain': True}
+  % FOO
+  % REFRAIN True
+    \begin{changemargin}{ 0.8in }{ 0.2in }
+  {
+    \small
+      \noindent \nopagebreak[4] %REFRAIN \\
+      \noindent \nopagebreak[4] Vanas\~ona, esiisa \~opetus \ldots \\
+  }
+  \end{changemargin}
+  \pagebreak[1]
+  % VERSE {'lines': ['\\"Utle mulle, kes sinu s\\~obrad on,', 'siis tean kes sina oled ka --', '\\"utle mulle, et J\\"arvemetsas k\\"aid,', 'siis tean et mu s\\~ober oled sa.'], 'is_refrain': False}
+  % FOO
+  % REFRAIN False
+    \begin{changemargin}{ 0.7in }{ 0.1in }
+  {
+    \small
+      \noindent \nopagebreak[4] \"Utle mulle, kes sinu s\~obrad on, \\
+      \noindent \nopagebreak[4] siis tean kes sina oled ka -- \\
+      \noindent \nopagebreak[4] \"utle mulle, et J\"arvemetsas k\"aid, \\
+      \noindent \nopagebreak[4] siis tean et mu s\~ober oled sa. \\
+  }
+  \end{changemargin}
+  \pagebreak[1]
+  % VERSE {'lines': ['%REFRAIN', 'Vanas\\~ona, esiisa \\~opetus \\ldots'], 'is_refrain': True}
+  % FOO
+  % REFRAIN True
+    \begin{changemargin}{ 0.8in }{ 0.2in }
+  {
+    \small
+      \noindent \nopagebreak[4] %REFRAIN \\
+      \noindent \nopagebreak[4] Vanas\~ona, esiisa \~opetus \ldots \\
+  }
+  \end{changemargin}
+  \pagebreak[1]
+  % VERSE {'composer': 'M. Kuhn', 'poet': 'M. Kuhn', 'misc': '(2005 ,,Vanas\\~ona{``} laagrilaul)', 'music': '\ufeff\\header{\n  tagline = ""\n}\n\n#(set-global-staff-size 10)\n\ncfgSong = {\n  \\key c \\major\n  \\time 4/4\n}\n\ncfgText = {\n  \\set fontSize = #-2\n}\n\nmelody = {\n  \\cfgSong\n  \\relative c\'{\n    \\partial 8\n  e8 e4 e8 f8 g4 a8 g g f-. f8 g8-. f2\n  e4 e8 f g4 a8 g g2 r2\n  r4 e8 f g4 a8 g g f-.f g-. f4\n  <f a>8 <f a> <e g>4 f8 e d f16 e8. d8 c2. r4\n  r4 f8 f a4. a8 a g g f f e e4\n  r4 f8 f a4. a8 g g g a b2\n    \\bar "|."\n  }\n}\n\nverseOne = \\lyricmode {\n  \\cfgText\n  %\\set stanza = "1."\n  Kes ot -- sib, see lei -- ab, ja mu -- i -- du ei saa,\n  Ot -- si -- me Skaut -- lik -- ku teed!\n  I -- ga matk al -- gab ü -- he sam -- mu -- ga,\n  As -- tu jul -- gelt ja vaa -- ta mis on ees.\n\n  \\set stanza = "Ref:"\n  Va -- na -- sõ -- na, e -- si -- i -- sa õ -- pe -- tus,\n  kos -- tab mei -- le lä -- bi ae -- ga -- de!\n}\n\nsongChords = \\chordmode {\n  s8 c1 f1 c1 g2 g2:7 c2 c2:7 f2 gis2 c g c c:7\n  f1 c f g\n}\n\n\\score {\n  {\n    %\\time 4/4\n    <<\n      \\chords { \\songChords }\n      { \\melody }\n      \\addlyrics { \\verseOne }\n    >>\n  }\n  \\layout {\n    indent = #0\n  %ragged-last = ##t\n  \\context {\n      \\Score\n      \\remove "Bar_number_engraver"\n    }\n  }\n  \\midi { }\n}\n\n\\version "2.8.1"\n', 'verses': [<__main__.Verse object at 0x7f652d7f9240>, <__main__.Verse object at 0x7f652d7f94a8>, <__main__.Verse object at 0x7f652d381828>, <__main__.Verse object at 0x7f652d7f5ef0>, <__main__.Verse object at 0x7f652d7f5eb8>, <__main__.Verse object at 0x7f652d2b9198>, None], 'margin': {'refrain': {'r': '0.2in', 'l': '0.8in'}, 'verse': {'r': '0.1in', 'l': '0.7in'}}, 'addlindex': '2005 Vanas\\~ona laagrilaul', 'title': 'Vanasõna', 'paths': {'image': '2005_vanasõna.jpg', 'lyrics': '2005_vanasõna.tex', 'music': '2005_vanasõna.ly'}}
+  % FOO
+  % REFRAIN 
+    \begin{changemargin}{ 0.7in }{ 0.1in }
+  {
+    \small
   }
   \end{changemargin}
 

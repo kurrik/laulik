@@ -25,7 +25,8 @@ class VerseFactory(object):
     if self.current is None:
       if cleaned == '%REFRAIN':
         self.current = Verse(True)
-      self.current = Verse()
+      else:
+        self.current = Verse()
     if cleaned == '':
       self.close()
     else:

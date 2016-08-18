@@ -48,6 +48,9 @@
 
 {{#verses}}
   \pagebreak[1]
+  % VERSE {{__dict__}}
+  % FOO
+  % REFRAIN {{is_refrain}}
   {{#is_refrain}}
     \begin{changemargin}{ {{margin.refrain.l}} }{ {{margin.refrain.r}} }
   {{/is_refrain}}
@@ -56,9 +59,8 @@
   {{/is_refrain}}
   {
     \small
-    \noindent
     {{#lines}}
-      \nopagebreak[4] {{.}} \\
+      \noindent \nopagebreak[4] {{.}} \\
     {{/lines}}
   }
   \end{changemargin}
