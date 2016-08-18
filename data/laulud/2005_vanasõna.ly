@@ -41,7 +41,7 @@ verseOne = \lyricmode {
 }
 
 songChords = \chordmode {
-  r8 c1 f1 c1 g2 g2:7 c2 c2:7 f2 gis2 c g c c:7
+  s8 c1 f1 c1 g2 g2:7 c2 c2:7 f2 gis2 c g c c:7
   f1 c f g
 }
 
