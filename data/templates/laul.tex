@@ -10,7 +10,7 @@
 
 {{#index}}
   {{= | | =}}
-  \index{|title|}
+  \index{|.|}
   |= {{ }} =|
 {{/index}}
 
@@ -49,8 +49,6 @@
 {{#verses}}
   \pagebreak[1]
   % VERSE {{__dict__}}
-  % FOO
-  % REFRAIN {{is_refrain}}
   {{#is_refrain}}
     \begin{changemargin}{ {{margin.refrain.l}} }{ {{margin.refrain.r}} }
   {{/is_refrain}}

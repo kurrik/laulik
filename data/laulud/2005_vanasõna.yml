@@ -3,7 +3,8 @@ title: Vanasõna
 composer: M. Kuhn
 poet: M. Kuhn
 misc: (2005 ,,Vanas\~ona{``} laagrilaul)
-addlindex: 2005 Vanas\~ona laagrilaul
+index:
+  - 2005 Vanas\~ona laagrilaul
 margin:
   verse:
     l: 0.7in
