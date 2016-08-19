@@ -2,8 +2,8 @@
 [latex]: https://www.latex-project.org/help/documentation/usrguide.pdf
 [lilypond]: http://lilypond.org/doc/v2.19/Documentation/notation/index
 [mustache]: https://mustache.github.io/mustache.5.html
-[model-laul]: blob/master/src/common/models.py
-[model-project]: blob/master/src/common/models.py
+[model-laul]: src/common/models.py
+[model-project]: src/common/models.py
 
 # Laulik Reference
 
