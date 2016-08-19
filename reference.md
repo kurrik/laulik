@@ -1,5 +1,9 @@
 [yaml]: https://en.wikipedia.org/wiki/YAML
 [latex]: https://www.latex-project.org/help/documentation/usrguide.pdf
+[lilypond]: http://lilypond.org/doc/v2.19/Documentation/notation/index
+[mustache]: https://mustache.github.io/mustache.5.html
+[model-laul]: blob/master/src/common/models.py
+[model-project]: blob/master/src/common/models.py
 
 # Laulik Reference
 
@@ -11,14 +15,13 @@ The `data/laulud` directory contains all song information.  The following types 
 
 ### Yaml files
 
-The song information is defined by a `.yml` file in this directory.  These files must start with the header:
+The song information is defined by a `.yml` file in the `data/laulud` directory.  These files must start with the header:
 
 ```
 --- !Laul
 ```
 
-Followed by a set of keys / values, in standard
-[Yaml format][yaml].
+Followed by a set of keys / values, in standard [Yaml format][yaml].
 The following keys are supported:
 
 #### `title` - String
@@ -73,6 +76,7 @@ index:
 ```
 
 #### `paths` - Associative array
+<a name="yaml-paths"></a>
 Paths to the other files associated with this song.
 Paths are relative to the `.yml` file location.
 
@@ -82,11 +86,13 @@ paths:
   music: 01_eesti_hümn.ly
 ```
 
-### Tex files
-Lyrics are defined in files based off of a modified [LaTeX][latex]
-syntax.  Structurally, it is sufficient to format a file as a set of
-lines in a plain text format (using LaTeX modifiers for accents,
-etc as needed).
+### Lyric files
+
+Lyrics are specified by adding a `lyrics` entry under the [paths](#yaml-paths) portion of the Yaml file.
+
+The lyric file typically has a `.tex` extension.  Its syntax is based off of a modified [LaTeX][latex] syntax.  Structurally, it is sufficient to format a file as a set of lines in a plain text format (using LaTeX modifiers for accents, etc as needed).
+
+The lyric file is passed through a [mustache][mustache] renderer and passed a [Laul][model-laul] object in case you need to render templated data into the lyrics.
 
 ```
 Mu isamaa, mu õnn ja rõõm,
@@ -133,8 +139,58 @@ R\"a\"agi oma jutte ja ela edasi,
 ainult p\"u\"udlikud on muinasloos.
 ```
 
-### Ly files
+### Music files
+
+Musical notes are specified by adding a `music` entry under the [paths](#yaml-paths) portion of the Yaml file.
+
+The lyric file typically has a `.ly` extension.  The file should be formatted according to the [lilypond][lilypond] syntax.
+
+The lyric file is passed through a [mustache][mustache] renderer and passed a [Laul][model-laul] object in case you need to render templated data into the lyrics.
 
 ## Projects
 
+The songbook information is defined by a `.yml` file in the `data/projects` directory.  These files must start with the header:
+
+```
+--- !Project
+```
+
+Followed by a set of keys / values, in standard
+[Yaml format][yaml].
+The following keys are supported:
+
+#### `title` - String
+Name of the book.  
+Supports [LaTeX][latex] markup.
+```
+title: Järvemetsa laulik
+```
+
+#### `subtitle` - String
+Subtitle for the title page.
+Supports [LaTeX][latex] markup.
+```
+subtitle: 2006 Võluja Suurlaager
+```
+
+#### `parts` - List
+A list of paths to include as songs in this project. These paths are relative to the `data` directory, not the project file.
+
+Order is important as the songs will be included in the same order they appear in this list.
+
+**TODO: Support linking to .latex files in order to include supplemental text, etc in the project.**
+
+```
+parts:
+  - laulud/01_eesti_hümn.yml
+  - laulud/2005_vanasõna.yml
+```
+
 ## Templates
+Templates are located in the `data/templates` directory, typically with a `.tex` extension.
+
+These are [mustache][mustache] templates which render `.tex` output.
+
+Songs are rendered into the `laul.tex` template and are passed a [Laul][model-laul] object.
+
+Projects are rendered into the `project.tex` template and are passed a [Project][model-project] object.  The Project object contains a `content` attribute containing a rendered copy of all the song data associated with the project.
