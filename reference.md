@@ -147,6 +147,12 @@ The lyric file typically has a `.ly` extension.  The file should be formatted ac
 
 The lyric file is passed through a [mustache][mustache] renderer and passed a [Laul][model-laul] object in case you need to render templated data into the lyrics.
 
+### Image files
+
+An image can be associated with a song by adding an `image` entry under the [paths](#yaml-paths) portion of the Yaml file.
+
+This will be rendered next to the header for the associated song.
+
 ## Projects
 
 The songbook information is defined by a `.yml` file in the `data/projects` directory.  These files must start with the header:
