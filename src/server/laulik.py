@@ -64,6 +64,6 @@ class API(object):
     return proc.Process.run(['./src/compiler/laulik.sh', key])
 
   def server_version(self):
-    versionpath = os.path.join(repopath, 'VERSION')
+    versionpath = os.path.join(self.__cwdpath, 'VERSION')
     with open(versionpath, 'r', encoding='utf8') as f:
       return f.read().strip()
