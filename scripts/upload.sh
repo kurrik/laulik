@@ -62,7 +62,7 @@ green "OK"
 
 echo -n "Comitting changes... "
 git add VERSION release
-git commit -m "New release - $NEW_VER"
+git commit -m "New release - $NEW_TAG"
 green "OK"
 
 echo -n "Updating tag... "
