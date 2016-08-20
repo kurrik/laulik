@@ -22,6 +22,7 @@ class Laul(yaml.YAMLObject):
     self.paths = paths
     self.verses = None
     self.music = None
+    self.image = None
 
   def poet_or_composer(self):
     return self.poet != None or self.composer != None

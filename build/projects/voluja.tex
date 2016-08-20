@@ -5,6 +5,11 @@
 \usepackage{pslatex}
 \usepackage[utf8]{inputenc}
 \usepackage{multicol}
+\usepackage{graphicx}
+\usepackage{bmpsize}
+\usepackage{wrapfig}
+\usepackage[export]{adjustbox}
+\usepackage{grffile}
 \newenvironment{changemargin}[2]{
   \begin{list}{}{
     \setlength{\topsep}{0pt}
@@ -18,6 +23,9 @@
 }{
   \end{list}
 }
+\newcommand{\vcenteredinclude}[1]{\begingroup
+  \setbox0=\hbox{\includegraphics[height=0.1\textheight,keepaspectratio]{#1}}%
+\parbox{\wd0}{\box0}\endgroup}
 
 \makeindex
 \special{papersize=6.00in, 9.00000in}
@@ -53,7 +61,19 @@
 
   \index{Eesti h\"umn}
   \vspace{0.2in}
-  \centerline{ {\bf {\large Eesti h\"umn } } }
+
+  \noindent\begin{minipage}{.1\textwidth}
+    \hfill\vspace{0.1in}
+  \end{minipage}%
+  \noindent\begin{minipage}{.8\textwidth}
+    \centering
+    \bfseries
+    \large Eesti h\"umn
+  \end{minipage}%
+  \noindent\begin{minipage}{.1\textwidth}
+      \hfill\vspace{0.1in}
+  \end{minipage}
+
   \nopagebreak[4]
   \vspace{0.1in}
   \nopagebreak[4]
@@ -122,7 +142,7 @@
   }
   \end{changemargin}
   \pagebreak[1]
-  % VERSE {'paths': {'lyrics': '01_eesti_hümn.tex', 'music': '01_eesti_hümn.ly'}, 'poet': 'J. V. Jannsen', 'composer': 'Fr. Pacius', 'music': '\\header{\n  tagline = ""\n}\n\n#(set-global-staff-size 10)\n\nmBreak = {  }\n\ncfgSong = {\n  \\key a \\major\n  \\time 3/4\n  \\autoBeamOff\n  \\partial 4.\n}\n\ncfgText = {\n  \\set fontSize = #-2\n}\n\nmelody = {\n  \\cfgSong\n  \\relative c\'{\n    e8 cis d |\n    e4. a8 b8. e,16 | cis\'2 a4\n      \\mBreak\n    fis8. b16 a4 gis | a2 e4 |\n    b\'8. a16 gis8[fis] e[d]\n      \\mBreak\n    cis8 fis e4 e | b\'8. a16 gis8[fis] e[d] |\n    cis8 fis e4 r8 e8\n      \\mBreak\n    a8. e16 cis8 e a b | cis2 a4 |\n    fis8. b16 a4 gis | a4.\\fermata\n      \\bar "|."\n  }\n}\n\nsongChords = \\chordmode {\n  %CHORDS GO HERE\n}\n\nverseOne = \\lyricmode {\n  %\\cfgText\n  %\\set stanza = "1."\n  Mu i -- sa -- maa, mu õnn ja rõõm,\n  kui kau -- nis o -- led sa!\n  Ei lei -- a mi -- na ii -- al teal\n  see suu -- re lai -- a il -- ma peal,\n  mis mull\' nii ar -- mas o -- leks ka,\n  kui sa, mu i -- sa -- maa!\n}\n\n\\score {\n  {\n    <<\n      %\\chords { \\set chordChanges = ##t \\songChords }\n      { \\melody }\n      \\addlyrics { \\verseOne }\n    >>\n  }\n\n  \\layout {\n    indent = #0\n    %ragged-last = ##t\n    \\context {\n      \\Score\n      \\remove "Bar_number_engraver"\n    }\n    \\context {\n      \\Lyrics\n      fontSize = #-2\n    }\n  }\n  \\midi { \\tempo 4 = 90 }\n}\n\n\\version "2.8.1"\n', 'margin': {'refrain': {'r': '0.2in', 'l': '0.8in'}, 'verse': {'r': '0.1in', 'l': '0.9in'}}, 'verses': [<__main__.Verse object at 0x7f1ddb982860>, <__main__.Verse object at 0x7f1ddbdf6eb8>, <__main__.Verse object at 0x7f1ddbdfa208>, None], 'title': 'Eesti h\\"umn'}
+  % VERSE {'verses': [<__main__.Verse object at 0x7fb575c509b0>, <__main__.Verse object at 0x7fb575c50f60>, <__main__.Verse object at 0x7fb5757c3be0>, None], 'title': 'Eesti h\\"umn', 'music': '\\header{\n  tagline = ""\n}\n\n#(set-global-staff-size 10)\n\nmBreak = {  }\n\ncfgSong = {\n  \\key a \\major\n  \\time 3/4\n  \\autoBeamOff\n  \\partial 4.\n}\n\ncfgText = {\n  \\set fontSize = #-2\n}\n\nmelody = {\n  \\cfgSong\n  \\relative c\'{\n    e8 cis d |\n    e4. a8 b8. e,16 | cis\'2 a4\n      \\mBreak\n    fis8. b16 a4 gis | a2 e4 |\n    b\'8. a16 gis8[fis] e[d]\n      \\mBreak\n    cis8 fis e4 e | b\'8. a16 gis8[fis] e[d] |\n    cis8 fis e4 r8 e8\n      \\mBreak\n    a8. e16 cis8 e a b | cis2 a4 |\n    fis8. b16 a4 gis | a4.\\fermata\n      \\bar "|."\n  }\n}\n\nsongChords = \\chordmode {\n  %CHORDS GO HERE\n}\n\nverseOne = \\lyricmode {\n  %\\cfgText\n  %\\set stanza = "1."\n  Mu i -- sa -- maa, mu õnn ja rõõm,\n  kui kau -- nis o -- led sa!\n  Ei lei -- a mi -- na ii -- al teal\n  see suu -- re lai -- a il -- ma peal,\n  mis mull\' nii ar -- mas o -- leks ka,\n  kui sa, mu i -- sa -- maa!\n}\n\n\\score {\n  {\n    <<\n      %\\chords { \\set chordChanges = ##t \\songChords }\n      { \\melody }\n      \\addlyrics { \\verseOne }\n    >>\n  }\n\n  \\layout {\n    indent = #0\n    %ragged-last = ##t\n    \\context {\n      \\Score\n      \\remove "Bar_number_engraver"\n    }\n    \\context {\n      \\Lyrics\n      fontSize = #-2\n    }\n  }\n  \\midi { \\tempo 4 = 90 }\n}\n\n\\version "2.8.1"\n', 'composer': 'Fr. Pacius', 'paths': {'music': '01_eesti_hümn.ly', 'lyrics': '01_eesti_hümn.tex'}, 'poet': 'J. V. Jannsen', 'margin': {'refrain': {'l': '0.8in', 'r': '0.2in'}, 'verse': {'l': '0.9in', 'r': '0.1in'}}}
     \begin{changemargin}{ 0.9in }{ 0.1in }
   {
     \small
@@ -144,7 +164,19 @@
 
   \index{Vanasõna}
   \vspace{0.2in}
-  \centerline{ {\bf {\large Vanasõna } } }
+
+  \noindent\begin{minipage}{.1\textwidth}
+    \hfill\vspace{0.1in}
+  \end{minipage}%
+  \noindent\begin{minipage}{.8\textwidth}
+    \centering
+    \bfseries
+    \large Vanasõna
+  \end{minipage}%
+  \noindent\begin{minipage}{.1\textwidth}
+      \includegraphics[width=1.0\textwidth,keepaspectratio,right]{/opt/laulik-repo/build/ver-20160820-040616-5fc93e7b-7c85-400c-a49a-2c9985aa1da8/tmp2pw5ir4c.jpg}
+  \end{minipage}
+
   \nopagebreak[4]
   \vspace{0.1in}
   \nopagebreak[4]
@@ -237,7 +269,7 @@
   }
   \end{changemargin}
   \pagebreak[1]
-  % VERSE {'index': ['2005 Vanas\\~ona laagrilaul'], 'paths': {'image': '2005_vanasõna.jpg', 'lyrics': '2005_vanasõna.tex', 'music': '2005_vanasõna.ly'}, 'poet': 'M. Kuhn', 'composer': 'M. Kuhn', 'music': '\ufeff\\header{\n  tagline = ""\n}\n\n#(set-global-staff-size 10)\n\ncfgSong = {\n  \\key c \\major\n  \\time 4/4\n}\n\ncfgText = {\n  \\set fontSize = #-2\n}\n\nmelody = {\n  \\cfgSong\n  \\relative c\'{\n    \\partial 8\n  e8 e4 e8 f8 g4 a8 g g f-. f8 g8-. f2\n  e4 e8 f g4 a8 g g2 r2\n  r4 e8 f g4 a8 g g f-.f g-. f4\n  <f a>8 <f a> <e g>4 f8 e d f16 e8. d8 c2. r4\n  r4 f8 f a4. a8 a g g f f e e4\n  r4 f8 f a4. a8 g g g a b2\n    \\bar "|."\n  }\n}\n\nverseOne = \\lyricmode {\n  \\cfgText\n  %\\set stanza = "1."\n  Kes ot -- sib, see lei -- ab, ja mu -- i -- du ei saa,\n  Ot -- si -- me Skaut -- lik -- ku teed!\n  I -- ga matk al -- gab ü -- he sam -- mu -- ga,\n  As -- tu jul -- gelt ja vaa -- ta mis on ees.\n\n  \\set stanza = "Ref:"\n  Va -- na -- sõ -- na, e -- si -- i -- sa õ -- pe -- tus,\n  kos -- tab mei -- le lä -- bi ae -- ga -- de!\n}\n\nsongChords = \\chordmode {\n  s8 c1 f1 c1 g2 g2:7 c2 c2:7 f2 gis2 c g c c:7\n  f1 c f g\n}\n\n\\score {\n  {\n    %\\time 4/4\n    <<\n      \\chords { \\songChords }\n      { \\melody }\n      \\addlyrics { \\verseOne }\n    >>\n  }\n  \\layout {\n    indent = #0\n  %ragged-last = ##t\n  \\context {\n      \\Score\n      \\remove "Bar_number_engraver"\n    }\n  }\n  \\midi { }\n}\n\n\\version "2.8.1"\n', 'misc': '(2005 ,,Vanas\\~ona{``} laagrilaul)', 'margin': {'refrain': {'r': '0.2in', 'l': '0.8in'}, 'verse': {'r': '0.1in', 'l': '0.7in'}}, 'verses': [<__main__.Verse object at 0x7f1ddbdf6eb8>, <__main__.Verse object at 0x7f1ddb982908>, <__main__.Verse object at 0x7f1ddb982860>, <__main__.Verse object at 0x7f1ddbdfa208>, <__main__.Verse object at 0x7f1ddbdfa128>, <__main__.Verse object at 0x7f1ddb8bafd0>, None], 'title': 'Vanasõna'}
+  % VERSE {'image': '/opt/laulik-repo/build/ver-20160820-040616-5fc93e7b-7c85-400c-a49a-2c9985aa1da8/tmp2pw5ir4c.jpg', 'title': 'Vanasõna', 'misc': '(2005 ,,Vanas\\~ona{``} laagrilaul)', 'music': '\ufeff\\header{\n  tagline = ""\n}\n\n#(set-global-staff-size 10)\n\ncfgSong = {\n  \\key c \\major\n  \\time 4/4\n}\n\ncfgText = {\n  \\set fontSize = #-2\n}\n\nmelody = {\n  \\cfgSong\n  \\relative c\'{\n    \\partial 8\n  e8 e4 e8 f8 g4 a8 g g f-. f8 g8-. f2\n  e4 e8 f g4 a8 g g2 r2\n  r4 e8 f g4 a8 g g f-.f g-. f4\n  <f a>8 <f a> <e g>4 f8 e d f16 e8. d8 c2. r4\n  r4 f8 f a4. a8 a g g f f e e4\n  r4 f8 f a4. a8 g g g a b2\n    \\bar "|."\n  }\n}\n\nverseOne = \\lyricmode {\n  \\cfgText\n  %\\set stanza = "1."\n  Kes ot -- sib, see lei -- ab, ja mu -- i -- du ei saa,\n  Ot -- si -- me Skaut -- lik -- ku teed!\n  I -- ga matk al -- gab ü -- he sam -- mu -- ga,\n  As -- tu jul -- gelt ja vaa -- ta mis on ees.\n\n  \\set stanza = "Ref:"\n  Va -- na -- sõ -- na, e -- si -- i -- sa õ -- pe -- tus,\n  kos -- tab mei -- le lä -- bi ae -- ga -- de!\n}\n\nsongChords = \\chordmode {\n  s8 c1 f1 c1 g2 g2:7 c2 c2:7 f2 gis2 c g c c:7\n  f1 c f g\n}\n\n\\score {\n  {\n    %\\time 4/4\n    <<\n      \\chords { \\songChords }\n      { \\melody }\n      \\addlyrics { \\verseOne }\n    >>\n  }\n  \\layout {\n    indent = #0\n  %ragged-last = ##t\n  \\context {\n      \\Score\n      \\remove "Bar_number_engraver"\n    }\n  }\n  \\midi { }\n}\n\n\\version "2.8.1"\n', 'composer': 'M. Kuhn', 'index': ['2005 Vanas\\~ona laagrilaul'], 'verses': [<__main__.Verse object at 0x7fb575c509b0>, <__main__.Verse object at 0x7fb5757c3f60>, <__main__.Verse object at 0x7fb5757c3d68>, <__main__.Verse object at 0x7fb5757c3da0>, <__main__.Verse object at 0x7fb5757c3cc0>, <__main__.Verse object at 0x7fb5757c3f98>, None], 'margin': {'refrain': {'l': '0.8in', 'r': '0.2in'}, 'verse': {'l': '0.7in', 'r': '0.1in'}}, 'paths': {'image': '2005_vanasõna.jpg', 'music': '2005_vanasõna.ly', 'lyrics': '2005_vanasõna.tex'}, 'poet': 'M. Kuhn'}
     \begin{changemargin}{ 0.7in }{ 0.1in }
   {
     \small

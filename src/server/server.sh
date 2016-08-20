@@ -15,7 +15,12 @@ if [ ! -e "$INFOPATH" ]; then
   ./src/server/git_info.sh
 fi
 
+if [ "$DEBUG" == "true" ]; then
+  output "[server] Running in debug mode"
+  ADDL_FLAGS="--debug"
+fi
+
 cd $SERVERPATH
 output "[server] Running server"
-python3 ./server.py $REPOPATH # --debug
+python3 ./server.py $REPOPATH $ADDL_FLAGS
 output "[server] Done"

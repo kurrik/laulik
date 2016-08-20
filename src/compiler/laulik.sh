@@ -17,7 +17,7 @@ fi
 mkdir -p $jobbuildpath
 cd $jobbuildpath
 
-python3 $COMPILERPATH/laulik.py $projectpath $DATAPATH $jobbuildpath
+python3 $COMPILERPATH/laulik.py $projectpath $DATAPATH $jobbuildpath 2>&1
 
 output "[laulik] Running lilypond-book"
 /opt/lilypond/bin/lilypond-book \
@@ -25,7 +25,7 @@ output "[laulik] Running lilypond-book"
   laulik.lytex
 
 output "[laulik] First latex pass"
-latex \
+pdflatex \
   -interaction=nonstopmode \
   laulik.tex
 
@@ -40,22 +40,9 @@ xindy \
   laulik.idx
 
 output "[laulik] Second latex pass"
-latex \
+pdflatex \
   -interaction=nonstopmode \
   laulik.tex
-
-output "[laulik] Running dvips"
-dvips \
-  laulik.dvi
-
-output "[laulik] Running ps2pdf"
-ps2pdf \
-  -dMaxSubsetPct=100 \
-  -dCompatibilityLevel=1.2 \
-  -dSubsetFonts=true \
-  -dEmbedAllFonts=true \
-  -dPDFSETTINGS=/prepress \
-  laulik.ps
 
 output "[laulik] Copying to latest directory"
 cd $BUILDPATH

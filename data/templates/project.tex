@@ -5,6 +5,11 @@
 \usepackage{pslatex}
 \usepackage[utf8]{inputenc}
 \usepackage{multicol}
+\usepackage{graphicx}
+\usepackage{bmpsize}
+\usepackage{wrapfig}
+\usepackage[export]{adjustbox}
+\usepackage{grffile}
 \newenvironment{changemargin}[2]{
   \begin{list}{}{
     \setlength{\topsep}{0pt}
@@ -18,6 +23,9 @@
 }{
   \end{list}
 }
+\newcommand{\vcenteredinclude}[1]{\begingroup
+  \setbox0=\hbox{\includegraphics[height=0.1\textheight,keepaspectratio]{#1}}%
+\parbox{\wd0}{\box0}\endgroup}
 
 \makeindex
 \special{papersize=6.00in, 9.00000in}

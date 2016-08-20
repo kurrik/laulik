@@ -19,7 +19,26 @@
   \index{|title|}
   |= {{ }} =|
   \vspace{0.2in}
-  \centerline{ {\bf {\large {{title}} } } }
+
+  \noindent\begin{minipage}{.1\textwidth}
+    \hfill\vspace{0.1in}
+  \end{minipage}%
+  \noindent\begin{minipage}{.8\textwidth}
+    \centering
+    \bfseries
+    \large {{title}}
+  \end{minipage}%
+  \noindent\begin{minipage}{.1\textwidth}
+    {{#image}}
+      {{= | | =}}
+      \includegraphics[width=1.0\textwidth,keepaspectratio,right]{|.|}
+      |= {{ }} =|
+    {{/image}}
+    {{^image}}
+      \hfill\vspace{0.1in}
+    {{/image}}
+  \end{minipage}
+
   \nopagebreak[4]
   \vspace{0.1in}
   \nopagebreak[4]

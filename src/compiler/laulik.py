@@ -6,6 +6,8 @@ import pystache
 import re
 import sys
 import yaml
+import shutil
+import tempfile
 
 class Verse(object):
   def __init__(self, is_refrain=False):
@@ -110,6 +112,13 @@ class BuildLaulik:
         laul = self.__load_yaml(partpath)
         lyricspath = os.path.join(partdir, laul.paths['lyrics'])
         musicpath = os.path.join(partdir, laul.paths['music'])
+        if 'image' in laul.paths:
+          src = os.path.join(partdir, laul.paths['image'])
+          _, ext = os.path.splitext(src)
+          (_, dst) = tempfile.mkstemp(suffix=ext, dir=self.config.buildpath)
+          shutil.copyfile(src, dst)
+          laul.image = dst
+          print('[laulik] Copied image {0} to {1}'.format(src, dst))
         laul.verses = self.__parselyrics(self.__render(lyricspath, laul))
         laul.music = self.__render(musicpath, laul)
         rendered.write(self.config.stache.render(laul))

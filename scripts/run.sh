@@ -22,6 +22,7 @@ docker run \
   -it \
   -p 80:5000 \
   -e "METHOD=$method" \
+  -e "DEBUG=true" \
   --name=$name \
   $args \
   laulik
