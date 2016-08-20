@@ -45,8 +45,8 @@ Supports [LaTeX][latex] markup.
 poet: J. V. Jannsen
 ```
 
-#### `margin` - Associative array
 <a name="yaml-margin"></a>
+#### `margin` - Associative array
 Sets the margin for indenting the song.
 Units are LaTex units.  Supports `verse` and `refrain` values.
 **NOTE: This format will need to change in order to make laulik pages resizable, right now it is tied to a fixed page size**
@@ -75,8 +75,8 @@ index:
   - 2005 Vanas\~ona laagrilaul
 ```
 
-#### `paths` - Associative array
 <a name="yaml-paths"></a>
+#### `paths` - Associative array
 Paths to the other files associated with this song.
 Paths are relative to the `.yml` file location.
 
