@@ -1,0 +1,1 @@
+46cbb41 Support images associated with songs.  Fixes #2
