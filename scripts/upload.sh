@@ -47,8 +47,8 @@ source ./scripts/build.sh
 green "OK"
 
 echo -n "Pushing docker container... "
-docker tag -f laulik gcr.io/kurrik-apps/laulik:${NEW_TAG} gcr.io/kurrik-apps/laulik:latest
-gcloud docker push gcr.io/kurrik-apps/laulik:${NEW_TAG} gcr.io/kurrik-apps/laulik:latest
+docker tag -f laulik gcr.io/kurrik-apps/laulik:${NEW_TAG}
+gcloud docker push gcr.io/kurrik-apps/laulik:${NEW_TAG}
 green "OK"
 
 echo -n "Creating release dir if it doesn't exist... "
