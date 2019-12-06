@@ -24,5 +24,4 @@ deploy:
 		--region us-central1 \
 		--allow-unauthenticated \
 		--image gcr.io/${PROJECT}/${SERVICE} \
-		--platform managed \
-		--update-env-vars ${ENV}
+		--platform managed
