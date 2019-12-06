@@ -13,7 +13,7 @@ develop-docker:
 build:
 	gcloud builds submit \
 		--project ${PROJECT} \
-		--timeout "10m" \
+		--timeout "20m" \
 		--tag gcr.io/${PROJECT}/${SERVICE} \
 		.
 
