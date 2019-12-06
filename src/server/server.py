@@ -9,10 +9,13 @@ from flask import request
 from flask import send_file
 import github
 import laulik
+import os
 
 app = Flask(__name__)
-laulik_api = None
-github_api = None
+repopath = os.environ.get('REPOPATH')
+app.logger.info("Repo path: ", repopath)
+laulik_api = laulik.API(repopath=repopath)
+github_api = github.API(repopath=repopath)
 conv = Ansi2HTMLConverter(markup_lines=True)
 
 @app.route('/', methods=['GET', 'POST'])
@@ -64,17 +67,4 @@ def webhook():
   return resp
 
 if __name__ == '__main__':
-  parser = argparse.ArgumentParser(description='Web frontend')
-  parser.add_argument(
-      'repopath',
-      metavar='REPO_PATH',
-      type=str,
-      help='Path to the repository containing data and build dirs')
-  parser.add_argument(
-      '--debug',
-      action='store_true',
-      help='Launch in debug mode with hot reload')
-  args = parser.parse_args()
-  laulik_api = laulik.API(repopath=args.repopath)
-  github_api = github.API(repopath=args.repopath)
-  app.run(host='0.0.0.0', debug=args.debug)
+  app.run(host='0.0.0.0', debug=True, port=int(os.environ.get('PORT', 8080)))

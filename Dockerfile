@@ -37,10 +37,13 @@ ADD lib/lilypond-2.19.20-1.linux-64.sh ./
 RUN chmod +x *.sh
 RUN ./lilypond-2.19.20-1.linux-64.sh --batch --prefix /opt/lilypond
 
+RUN pip3 install Flask gunicorn
+
 WORKDIR /opt/laulik
 ADD src ./src
 ADD VERSION VERSION
 RUN chmod +x ./src/main.sh
 RUN chmod +x ./src/server/*.sh
 RUN chmod +x ./src/compiler/laulik.sh
+
 ENTRYPOINT /opt/laulik/src/main.sh

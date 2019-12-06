@@ -5,7 +5,7 @@ function output {
 set -e
 
 ROOTPATH=/opt/laulik
-REPOPATH=/opt/laulik-repo
+export REPOPATH=/opt/laulik-repo
 
 BUILDPATH=$REPOPATH/build
 DATAPATH=$REPOPATH/data

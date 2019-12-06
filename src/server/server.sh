@@ -17,10 +17,10 @@ fi
 
 if [ "$DEBUG" == "true" ]; then
   output "[server] Running in debug mode"
-  ADDL_FLAGS="--debug"
+  export DEBUG=true
 fi
 
 cd $SERVERPATH
 output "[server] Running server"
-python3 ./server.py $REPOPATH $ADDL_FLAGS
+gunicorn --bind :$PORT --workers 1 --threads 8 server:app
 output "[server] Done"
