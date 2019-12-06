@@ -11,7 +11,11 @@ develop-docker:
 		gcr.io/${PROJECT}/${SERVICE}
 
 build:
-	gcloud builds submit --project ${PROJECT} --tag gcr.io/${PROJECT}/${SERVICE} .
+	gcloud builds submit \
+		--project ${PROJECT} \
+		--timeout "10m" \
+		--tag gcr.io/${PROJECT}/${SERVICE} \
+		.
 
 deploy:
 	gcloud beta run deploy \
