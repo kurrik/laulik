@@ -5,6 +5,10 @@ A songbook generator.
 ## Prereq
 Install Docker Desktop.
 
+Install `gcloud`.
+
+Run `gcloud auth configure-docker`.
+
 ## Running
 ### Build
 Build the docker container:
