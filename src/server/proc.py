@@ -22,6 +22,8 @@ class Process(object):
     stdout = io.StringIO()
     stderr = io.StringIO()
     success = True
+    outs = ""
+    errs = ""
     try:
       outs, errs = proc.communicate(timeout=30)
       stdout.write(outs)

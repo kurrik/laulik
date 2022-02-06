@@ -75,7 +75,7 @@ class BuildLaulik:
 
   def __load_yaml(self, path):
     with open(path, 'r', encoding='utf8') as f:
-      return yaml.load(f)
+      return yaml.full_load(f)
 
   def __print(self, output):
     sys.stdout.buffer.write(output)

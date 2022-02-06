@@ -25,7 +25,7 @@ class API(object):
 
   def __load_yaml(self, path):
     with open(path, 'r', encoding='utf8') as f:
-      return yaml.load(f)
+      return yaml.full_load(f)
 
   def __load_project_paths(self, projectfile):
     key, _ = os.path.splitext(os.path.basename(projectfile))

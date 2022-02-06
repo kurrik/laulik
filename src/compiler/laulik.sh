@@ -20,8 +20,9 @@ cd $jobbuildpath
 python3 $COMPILERPATH/laulik.py $projectpath $DATAPATH $jobbuildpath 2>&1
 
 output "[laulik] Running lilypond-book"
-/opt/lilypond/bin/lilypond-book \
+lilypond-book \
   -V \
+  --pdf \
   laulik.lytex
 
 output "[laulik] First latex pass"

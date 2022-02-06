@@ -1,26 +1,35 @@
-Laulik
-======
+# Laulik
 
 A songbook generator.
 
-Prereq
-------
-Start the docker machine:
+## Prereq
+Install Docker Desktop.
 
-    docker-machine start default
+## Running
+### Build
+Build the docker container:
 
-Running
--------
-Build the Docker container and then build the `voluja.yml` project.
+    ./scripts/build.sh
 
-    ./scripts/build.sh && ./scripts/run.sh
+### Run server
 
-Access at port 80 of the docker machine IP.
+    ./scripts/run.sh server
 
-    http://192.168.99.100/
+Access at port 8080:
 
-Deploying
----------
+    http://localhost:8080/
+
+### Build laulik
+Build a single project:
+
+    ./scripts/run.sh laulik voluja
+
+### Shell access
+Get a shell in the docker container with:
+
+    ./scripts/run.sh shell
+
+## Deploying
 Upload image with:
 
     ./scripts/upload.sh

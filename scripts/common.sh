@@ -12,6 +12,6 @@ function yellow {
 
 ROOT=`git rev-parse --show-toplevel`
 
-eval "$(docker-machine env default)"
+# eval "$(docker-machine env default)"
 
 cd $ROOT
