@@ -48,7 +48,7 @@ green "OK"
 
 echo -n "Pushing docker container... "
 docker tag laulik gcr.io/kurrik-apps/laulik:${NEW_TAG}
-gcloud docker -- push gcr.io/kurrik-apps/laulik:${NEW_TAG}
+docker push gcr.io/kurrik-apps/laulik:${NEW_TAG}
 green "OK"
 
 echo -n "Creating release dir if it doesn't exist... "
