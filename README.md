@@ -34,6 +34,10 @@ Get a shell in the docker container with:
     ./scripts/run.sh shell
 
 ## Deploying
-Upload image with:
+Deploy to prod with:
+
+    ./scripts/deploy.sh
+
+Upload locally-built image (this isn't generally needed!):
 
     ./scripts/upload.sh
