@@ -47,7 +47,7 @@ source ./scripts/build.sh
 green "OK"
 
 echo -n "Pushing docker container... "
-docker tag -f laulik gcr.io/kurrik-apps/laulik:${NEW_TAG}
+docker tag laulik gcr.io/kurrik-apps/laulik:${NEW_TAG}
 gcloud docker push gcr.io/kurrik-apps/laulik:${NEW_TAG}
 green "OK"
 
