@@ -5,4 +5,5 @@ parts:
   - content/voluja/00001_intro.yml
   - content/voluja/00002_ametlikud_laulud.yml
   - laulud/01_eesti_hümn.yml
+  - laulud/02_eesti_lipp.yml
   - laulud/2005_vanasõna.yml

@@ -101,7 +101,6 @@ class BuildLaulik:
 
   def __process_laul(self, laul, partdir, output):
     lyricspath = os.path.join(partdir, laul.paths['lyrics'])
-    musicpath = os.path.join(partdir, laul.paths['music'])
     if 'image' in laul.paths:
       src = os.path.join(partdir, laul.paths['image'])
       _, ext = os.path.splitext(src)
@@ -110,7 +109,9 @@ class BuildLaulik:
       laul.image = dst
       print('[laulik] Copied image {0} to {1}'.format(src, dst))
     laul.verses = self.__parselyrics(self.__render(lyricspath, laul))
-    laul.music = self.__render(musicpath, laul)
+    if 'music' in laul.paths:
+      musicpath = os.path.join(partdir, laul.paths['music'])
+      laul.music = self.__render(musicpath, laul)
     output.write(self.config.stache.render(laul))
 
   def __process_content(self, content, partdir, output):

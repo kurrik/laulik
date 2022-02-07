@@ -436,10 +436,97 @@ Jyri Kork, nskm.
   }
   \end{changemargin}
   \pagebreak[1]
-  % VERSE {'title': 'Eesti h\\"umn', 'composer': 'Fr. Pacius', 'poet': 'J. V. Jannsen', 'margin': {'verse': {'l': '0.9in', 'r': '0.1in'}, 'refrain': {'l': '0.8in', 'r': '0.2in'}}, 'paths': {'lyrics': '01_eesti_hümn.tex', 'music': '01_eesti_hümn.ly'}, 'verses': [<__main__.Verse object at 0xffffa1f96b50>, <__main__.Verse object at 0xffffa1ddda30>, <__main__.Verse object at 0xffffa1ddd940>, None], 'music': '\\header{\n  tagline = ""\n}\n\n#(set-global-staff-size 10)\n\nmBreak = {  }\n\ncfgSong = {\n  \\key a \\major\n  \\time 3/4\n  \\autoBeamOff\n  \\partial 4.\n}\n\ncfgText = {\n  \\set fontSize = #-2\n}\n\nmelody = {\n  \\cfgSong\n  \\relative c\'{\n    e8 cis d |\n    e4. a8 b8. e,16 | cis\'2 a4\n      \\mBreak\n    fis8. b16 a4 gis | a2 e4 |\n    b\'8. a16 gis8[fis] e[d]\n      \\mBreak\n    cis8 fis e4 e | b\'8. a16 gis8[fis] e[d] |\n    cis8 fis e4 r8 e8\n      \\mBreak\n    a8. e16 cis8 e a b | cis2 a4 |\n    fis8. b16 a4 gis | a4.\\fermata\n      \\bar "|."\n  }\n}\n\nsongChords = \\chordmode {\n  %CHORDS GO HERE\n}\n\nverseOne = \\lyricmode {\n  %\\cfgText\n  %\\set stanza = "1."\n  Mu i -- sa -- maa, mu õnn ja rõõm,\n  kui kau -- nis o -- led sa!\n  Ei lei -- a mi -- na ii -- al teal\n  see suu -- re lai -- a il -- ma peal,\n  mis mull\' nii ar -- mas o -- leks ka,\n  kui sa, mu i -- sa -- maa!\n}\n\n\\score {\n  {\n    <<\n      %\\chords { \\set chordChanges = ##t \\songChords }\n      { \\melody }\n      \\addlyrics { \\verseOne }\n    >>\n  }\n\n  \\layout {\n    indent = #0\n    %ragged-last = ##t\n    \\context {\n      \\Score\n      \\remove "Bar_number_engraver"\n    }\n    \\context {\n      \\Lyrics\n      fontSize = #-2\n    }\n  }\n  \\midi { \\tempo 4 = 90 }\n}\n\n\\version "2.8.1"\n'}
+  % VERSE {'title': 'Eesti h\\"umn', 'composer': 'Fr. Pacius', 'poet': 'J. V. Jannsen', 'margin': {'verse': {'l': '0.9in', 'r': '0.1in'}, 'refrain': {'l': '0.8in', 'r': '0.2in'}}, 'paths': {'lyrics': '01_eesti_hümn.tex', 'music': '01_eesti_hümn.ly'}, 'verses': [<__main__.Verse object at 0xffff98fbdb50>, <__main__.Verse object at 0xffff98e04a30>, <__main__.Verse object at 0xffff98e04940>, None], 'music': '\\header{\n  tagline = ""\n}\n\n#(set-global-staff-size 10)\n\nmBreak = {  }\n\ncfgSong = {\n  \\key a \\major\n  \\time 3/4\n  \\autoBeamOff\n  \\partial 4.\n}\n\ncfgText = {\n  \\set fontSize = #-2\n}\n\nmelody = {\n  \\cfgSong\n  \\relative c\'{\n    e8 cis d |\n    e4. a8 b8. e,16 | cis\'2 a4\n      \\mBreak\n    fis8. b16 a4 gis | a2 e4 |\n    b\'8. a16 gis8[fis] e[d]\n      \\mBreak\n    cis8 fis e4 e | b\'8. a16 gis8[fis] e[d] |\n    cis8 fis e4 r8 e8\n      \\mBreak\n    a8. e16 cis8 e a b | cis2 a4 |\n    fis8. b16 a4 gis | a4.\\fermata\n      \\bar "|."\n  }\n}\n\nsongChords = \\chordmode {\n  %CHORDS GO HERE\n}\n\nverseOne = \\lyricmode {\n  %\\cfgText\n  %\\set stanza = "1."\n  Mu i -- sa -- maa, mu õnn ja rõõm,\n  kui kau -- nis o -- led sa!\n  Ei lei -- a mi -- na ii -- al teal\n  see suu -- re lai -- a il -- ma peal,\n  mis mull\' nii ar -- mas o -- leks ka,\n  kui sa, mu i -- sa -- maa!\n}\n\n\\score {\n  {\n    <<\n      %\\chords { \\set chordChanges = ##t \\songChords }\n      { \\melody }\n      \\addlyrics { \\verseOne }\n    >>\n  }\n\n  \\layout {\n    indent = #0\n    %ragged-last = ##t\n    \\context {\n      \\Score\n      \\remove "Bar_number_engraver"\n    }\n    \\context {\n      \\Lyrics\n      fontSize = #-2\n    }\n  }\n  \\midi { \\tempo 4 = 90 }\n}\n\n\\version "2.8.1"\n'}
     \begin{changemargin}{ 0.9in }{ 0.1in }
   {
     \small
+  }
+  \end{changemargin}
+
+}
+\vskip 0in plus 1in minus 0in
+\pagebreak[3]
+
+{
+  \samepage
+  \raggedbottom
+  \raggedright
+  \sloppy
+
+  \index{2005 Vanas\~ona laagrilaul}
+
+  \index{Eesti lipp}
+  \vspace{0.2in}
+
+  \noindent\begin{minipage}{.1\textwidth}
+    \hfill\vspace{0.1in}
+  \end{minipage}%
+  \noindent\begin{minipage}{.8\textwidth}
+    \centering
+    \bfseries
+    \large Eesti lipp
+  \end{minipage}%
+  \noindent\begin{minipage}{.1\textwidth}
+      \hfill\vspace{0.1in}
+  \end{minipage}
+
+  \nopagebreak[4]
+  \vspace{0.1in}
+  \nopagebreak[4]
+  \hrule height 0.05ex
+  \nopagebreak[4]
+  \vspace{-0.05in}
+
+  {\footnotesize M. Lipp \hfill E. V\~ork }\\
+  \vspace{0.01in}
+
+  {\em {\footnotesize (2005 ,,Vanas\~ona{``} laagrilaul) } }
+  \vspace{0.01in}
+
+
+  \pagebreak[1]
+  % VERSE {'is_refrain': False, 'lines': ['Kaunistagem eesti kojad', 'kolme koduv\\"arviga,', 'mille alla eesti pojad', '\\"uhiselt v\\~oiks koonduda;', '\\"uhine neil olgu p\\"u\\"ue', '\\"uhes venna armuga,', 'kostku v\\~oimsalt meie h\\"u\\"ue:', ',,Eesti, Eesti, ela sa!{``}']}
+    \begin{changemargin}{ 0.95in }{ 0.1in }
+  {
+    \small
+      \noindent \nopagebreak[4] Kaunistagem eesti kojad \\
+      \noindent \nopagebreak[4] kolme koduv\"arviga, \\
+      \noindent \nopagebreak[4] mille alla eesti pojad \\
+      \noindent \nopagebreak[4] \"uhiselt v\~oiks koonduda; \\
+      \noindent \nopagebreak[4] \"uhine neil olgu p\"u\"ue \\
+      \noindent \nopagebreak[4] \"uhes venna armuga, \\
+      \noindent \nopagebreak[4] kostku v\~oimsalt meie h\"u\"ue: \\
+      \noindent \nopagebreak[4] ,,Eesti, Eesti, ela sa!{``} \\
+  }
+  \end{changemargin}
+  \pagebreak[1]
+  % VERSE {'is_refrain': False, 'lines': ['Sinine on sinu taevas,', 'kallis Eesti kodumaa;', 'oled kord sa ohus, vaevas,', 'sinna \\"ules vaata sa.', 'Must on meie mullapinda,', 'mida higis haritud,', 'must on kuub, mis Eesti rinda', 'vanast juba varjanud.']}
+    \begin{changemargin}{ 0.95in }{ 0.1in }
+  {
+    \small
+      \noindent \nopagebreak[4] Sinine on sinu taevas, \\
+      \noindent \nopagebreak[4] kallis Eesti kodumaa; \\
+      \noindent \nopagebreak[4] oled kord sa ohus, vaevas, \\
+      \noindent \nopagebreak[4] sinna \"ules vaata sa. \\
+      \noindent \nopagebreak[4] Must on meie mullapinda, \\
+      \noindent \nopagebreak[4] mida higis haritud, \\
+      \noindent \nopagebreak[4] must on kuub, mis Eesti rinda \\
+      \noindent \nopagebreak[4] vanast juba varjanud. \\
+  }
+  \end{changemargin}
+  \pagebreak[1]
+  % VERSE {'is_refrain': False, 'lines': ['Sinine ja must ja valge', 'kaunistagu Eestimaad;', 'vili v\\~orsugu siin selge,', 'paisugu tal t\\"aieks p\\"a\\"ad!', 'Vaprast meelest, venna armust', 'Eesti kojad k\\~olagu,', 'kostku taeva poole p\\~ormust:', ',,Eesti, Eesti, elagu!{``}']}
+    \begin{changemargin}{ 0.95in }{ 0.1in }
+  {
+    \small
+      \noindent \nopagebreak[4] Sinine ja must ja valge \\
+      \noindent \nopagebreak[4] kaunistagu Eestimaad; \\
+      \noindent \nopagebreak[4] vili v\~orsugu siin selge, \\
+      \noindent \nopagebreak[4] paisugu tal t\"aieks p\"a\"ad! \\
+      \noindent \nopagebreak[4] Vaprast meelest, venna armust \\
+      \noindent \nopagebreak[4] Eesti kojad k\~olagu, \\
+      \noindent \nopagebreak[4] kostku taeva poole p\~ormust: \\
+      \noindent \nopagebreak[4] ,,Eesti, Eesti, elagu!{``} \\
   }
   \end{changemargin}
 
@@ -468,7 +555,7 @@ Jyri Kork, nskm.
     \large Vanasõna
   \end{minipage}%
   \noindent\begin{minipage}{.1\textwidth}
-      \includegraphics[width=1.0\textwidth,keepaspectratio,right]{/opt/laulik-repo/build/ver-20220207-042319-104f9553-ed44-4d44-b7f5-e39c53f07d61/tmpi4ersti7.jpg}
+      \includegraphics[width=1.0\textwidth,keepaspectratio,right]{/opt/laulik-repo/build/ver-20220207-043926-7e62f90d-83f9-4f0c-b821-cb01c4698f4a/tmpwvavpr3p.jpg}
   \end{minipage}
 
   \nopagebreak[4]
@@ -563,7 +650,7 @@ Jyri Kork, nskm.
   }
   \end{changemargin}
   \pagebreak[1]
-  % VERSE {'title': 'Vanasõna', 'composer': 'M. Kuhn', 'poet': 'M. Kuhn', 'misc': '(2005 ,,Vanas\\~ona{``} laagrilaul)', 'index': ['2005 Vanas\\~ona laagrilaul'], 'margin': {'verse': {'l': '0.7in', 'r': '0.1in'}, 'refrain': {'l': '0.8in', 'r': '0.2in'}}, 'paths': {'lyrics': '2005_vanasõna.tex', 'music': '2005_vanasõna.ly', 'image': '2005_vanasõna.jpg'}, 'image': '/opt/laulik-repo/build/ver-20220207-042319-104f9553-ed44-4d44-b7f5-e39c53f07d61/tmpi4ersti7.jpg', 'verses': [<__main__.Verse object at 0xffffa1f96310>, <__main__.Verse object at 0xffffa1dfe340>, <__main__.Verse object at 0xffffa1dfe2e0>, <__main__.Verse object at 0xffffa1dfeaf0>, <__main__.Verse object at 0xffffa1ddda00>, <__main__.Verse object at 0xffffa1ddda30>, None], 'music': '\ufeff\\header{\n  tagline = ""\n}\n\n#(set-global-staff-size 10)\n\ncfgSong = {\n  \\key c \\major\n  \\time 4/4\n}\n\ncfgText = {\n  \\set fontSize = #-2\n}\n\nmelody = {\n  \\cfgSong\n  \\relative c\'{\n    \\partial 8\n  e8 e4 e8 f8 g4 a8 g g f-. f8 g8-. f2\n  e4 e8 f g4 a8 g g2 r2\n  r4 e8 f g4 a8 g g f-.f g-. f4\n  <f a>8 <f a> <e g>4 f8 e d f16 e8. d8 c2. r4\n  r4 f8 f a4. a8 a g g f f e e4\n  r4 f8 f a4. a8 g g g a b2\n    \\bar "|."\n  }\n}\n\nverseOne = \\lyricmode {\n  \\cfgText\n  %\\set stanza = "1."\n  Kes ot -- sib, see lei -- ab, ja mu -- i -- du ei saa,\n  Ot -- si -- me Skaut -- lik -- ku teed!\n  I -- ga matk al -- gab ü -- he sam -- mu -- ga,\n  As -- tu jul -- gelt ja vaa -- ta mis on ees.\n\n  \\set stanza = "Ref:"\n  Va -- na -- sõ -- na, e -- si -- i -- sa õ -- pe -- tus,\n  kos -- tab mei -- le lä -- bi ae -- ga -- de!\n}\n\nsongChords = \\chordmode {\n  s8 c1 f1 c1 g2 g2:7 c2 c2:7 f2 gis2 c g c c:7\n  f1 c f g\n}\n\n\\score {\n  {\n    %\\time 4/4\n    <<\n      \\chords { \\songChords }\n      { \\melody }\n      \\addlyrics { \\verseOne }\n    >>\n  }\n  \\layout {\n    indent = #0\n  %ragged-last = ##t\n  \\context {\n      \\Score\n      \\remove "Bar_number_engraver"\n    }\n  }\n  \\midi { }\n}\n\n\\version "2.8.1"\n'}
+  % VERSE {'title': 'Vanasõna', 'composer': 'M. Kuhn', 'poet': 'M. Kuhn', 'misc': '(2005 ,,Vanas\\~ona{``} laagrilaul)', 'index': ['2005 Vanas\\~ona laagrilaul'], 'margin': {'verse': {'l': '0.7in', 'r': '0.1in'}, 'refrain': {'l': '0.8in', 'r': '0.2in'}}, 'paths': {'lyrics': '2005_vanasõna.tex', 'music': '2005_vanasõna.ly', 'image': '2005_vanasõna.jpg'}, 'image': '/opt/laulik-repo/build/ver-20220207-043926-7e62f90d-83f9-4f0c-b821-cb01c4698f4a/tmpwvavpr3p.jpg', 'verses': [<__main__.Verse object at 0xffff98fbdb50>, <__main__.Verse object at 0xffff98e04af0>, <__main__.Verse object at 0xffff98e04970>, <__main__.Verse object at 0xffff98e04dc0>, <__main__.Verse object at 0xffff98e04be0>, <__main__.Verse object at 0xffff98e04fd0>, None], 'music': '\ufeff\\header{\n  tagline = ""\n}\n\n#(set-global-staff-size 10)\n\ncfgSong = {\n  \\key c \\major\n  \\time 4/4\n}\n\ncfgText = {\n  \\set fontSize = #-2\n}\n\nmelody = {\n  \\cfgSong\n  \\relative c\'{\n    \\partial 8\n  e8 e4 e8 f8 g4 a8 g g f-. f8 g8-. f2\n  e4 e8 f g4 a8 g g2 r2\n  r4 e8 f g4 a8 g g f-.f g-. f4\n  <f a>8 <f a> <e g>4 f8 e d f16 e8. d8 c2. r4\n  r4 f8 f a4. a8 a g g f f e e4\n  r4 f8 f a4. a8 g g g a b2\n    \\bar "|."\n  }\n}\n\nverseOne = \\lyricmode {\n  \\cfgText\n  %\\set stanza = "1."\n  Kes ot -- sib, see lei -- ab, ja mu -- i -- du ei saa,\n  Ot -- si -- me Skaut -- lik -- ku teed!\n  I -- ga matk al -- gab ü -- he sam -- mu -- ga,\n  As -- tu jul -- gelt ja vaa -- ta mis on ees.\n\n  \\set stanza = "Ref:"\n  Va -- na -- sõ -- na, e -- si -- i -- sa õ -- pe -- tus,\n  kos -- tab mei -- le lä -- bi ae -- ga -- de!\n}\n\nsongChords = \\chordmode {\n  s8 c1 f1 c1 g2 g2:7 c2 c2:7 f2 gis2 c g c c:7\n  f1 c f g\n}\n\n\\score {\n  {\n    %\\time 4/4\n    <<\n      \\chords { \\songChords }\n      { \\melody }\n      \\addlyrics { \\verseOne }\n    >>\n  }\n  \\layout {\n    indent = #0\n  %ragged-last = ##t\n  \\context {\n      \\Score\n      \\remove "Bar_number_engraver"\n    }\n  }\n  \\midi { }\n}\n\n\\version "2.8.1"\n'}
     \begin{changemargin}{ 0.7in }{ 0.1in }
   {
     \small

@@ -1,0 +1,13 @@
+--- !Laul
+title: Eesti lipp
+composer: E. V\~ork
+poet: M. Lipp
+misc: (2005 ,,Vanas\~ona{``} laagrilaul)
+index:
+  - 2005 Vanas\~ona laagrilaul
+margin:
+  verse:
+    l: 0.95in
+    r: 0.1in
+paths:
+  lyrics: 02_eesti_lipp.tex
