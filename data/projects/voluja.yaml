@@ -2,7 +2,7 @@
 title: Järvemetsa laulik
 subtitle: 2006 Võluja Suurlaager
 parts:
-  - content/00001_intro.yml
-  - content/00002_ametlikud_laulud.yml
+  - content/voluja/00001_intro.yml
+  - content/voluja/00002_ametlikud_laulud.yml
   - laulud/01_eesti_hümn.yml
   - laulud/2005_vanasõna.yml

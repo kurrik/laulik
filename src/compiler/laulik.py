@@ -115,8 +115,7 @@ class BuildLaulik:
 
   def __process_content(self, content, partdir, output):
     contentpath = os.path.join(partdir, content.path)
-    # TODO: Can add fields to interpolate in the template here.
-    output.write(self.__render(contentpath, {}))
+    output.write(self.__render(contentpath, content.data))
 
   def run(self):
     self.__clear_output()

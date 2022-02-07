@@ -7,8 +7,11 @@ class Content(yaml.YAMLObject):
   yaml_tag = u'!Content'
   yaml_loader = yaml.SafeLoader
 
-  def __init__(self, path=None):
+  data = None
+
+  def __init__(self, path=None, data=None):
     self.path = path
+    self.data = data
 
 
 class Laul(yaml.YAMLObject):
