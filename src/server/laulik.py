@@ -9,11 +9,13 @@ import yaml
 KEY_PATTERN = re.compile('\W+', re.UNICODE)
 VER_PATTERN = re.compile('[^a-z0-9-]+', re.UNICODE)
 
+
 class Result(object):
   def __init__(self, success, stdout, stderr):
     self.success = success
     self.stdout = stdout
     self.stderr = stderr
+
 
 class API(object):
   def __init__(self, repopath):
@@ -25,15 +27,15 @@ class API(object):
 
   def __load_yaml(self, path):
     with open(path, 'r', encoding='utf8') as f:
-      return yaml.full_load(f)
+      return yaml.safe_load(f)
 
   def __load_project_paths(self, projectfile):
     key, _ = os.path.splitext(os.path.basename(projectfile))
     return models.ProjectPaths(
-      config = os.path.join(self.__projectpath, projectfile),
-      latex = os.path.join(self.__latestbuildpath, key + '.tex'),
-      pdf = os.path.join(self.__latestbuildpath, key + '.pdf'),
-      version = os.path.join(self.__latestbuildpath, key + '.version.txt'))
+        config=os.path.join(self.__projectpath, projectfile),
+        latex=os.path.join(self.__latestbuildpath, key + '.tex'),
+        pdf=os.path.join(self.__latestbuildpath, key + '.pdf'),
+        version=os.path.join(self.__latestbuildpath, key + '.version.txt'))
 
   def __load_project(self, projectfile):
     key, _ = os.path.splitext(os.path.basename(projectfile))
@@ -42,7 +44,7 @@ class API(object):
     return models.ProjectMeta(key, project, paths)
 
   def projects(self):
-    return [ self.__load_project(x) for x in os.listdir(self.__projectpath) ]
+    return [self.__load_project(x) for x in os.listdir(self.__projectpath)]
 
   def clean_key(self, unsafekey):
     return KEY_PATTERN.sub('', unsafekey)

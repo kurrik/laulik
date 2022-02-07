@@ -1,13 +1,14 @@
 import atexit
 import io
 import os
-from models import Laul, Project
+from models import Laul, Project, Content
 import pystache
 import re
 import sys
 import yaml
 import shutil
 import tempfile
+
 
 class Verse(object):
   def __init__(self, is_refrain=False):
@@ -16,6 +17,7 @@ class Verse(object):
 
   def add(self, line):
     self.lines.append(line)
+
 
 class VerseFactory(object):
   def __init__(self):
@@ -38,6 +40,7 @@ class VerseFactory(object):
     self.verses.append(self.current)
     self.current = None
 
+
 class Config(object):
   def __init__(self, datapath, buildpath):
     self.datapath = datapath
@@ -51,6 +54,7 @@ class Config(object):
         file_encoding='utf8',
         search_dirs=[self.templatespath],
         file_extension='tex')
+
 
 class BuildLaulik:
   def __init__(self, projectpath, datapath, buildpath, *args, **kwargs):
@@ -75,7 +79,7 @@ class BuildLaulik:
 
   def __load_yaml(self, path):
     with open(path, 'r', encoding='utf8') as f:
-      return yaml.full_load(f)
+      return yaml.safe_load(f)
 
   def __print(self, output):
     sys.stdout.buffer.write(output)
@@ -95,6 +99,25 @@ class BuildLaulik:
     factory.close()
     return factory.verses
 
+  def __process_laul(self, laul, partdir, output):
+    lyricspath = os.path.join(partdir, laul.paths['lyrics'])
+    musicpath = os.path.join(partdir, laul.paths['music'])
+    if 'image' in laul.paths:
+      src = os.path.join(partdir, laul.paths['image'])
+      _, ext = os.path.splitext(src)
+      (_, dst) = tempfile.mkstemp(suffix=ext, dir=self.config.buildpath)
+      shutil.copyfile(src, dst)
+      laul.image = dst
+      print('[laulik] Copied image {0} to {1}'.format(src, dst))
+    laul.verses = self.__parselyrics(self.__render(lyricspath, laul))
+    laul.music = self.__render(musicpath, laul)
+    output.write(self.config.stache.render(laul))
+
+  def __process_content(self, content, partdir, output):
+    contentpath = os.path.join(partdir, content.path)
+    # TODO: Can add fields to interpolate in the template here.
+    output.write(self.__render(contentpath, {}))
+
   def run(self):
     self.__clear_output()
 
@@ -109,24 +132,20 @@ class BuildLaulik:
       _, ext = os.path.splitext(partpath)
       if ext == '.yml':
         print('[laulik] Processing yaml config at {0}'.format(partpath))
-        laul = self.__load_yaml(partpath)
-        lyricspath = os.path.join(partdir, laul.paths['lyrics'])
-        musicpath = os.path.join(partdir, laul.paths['music'])
-        if 'image' in laul.paths:
-          src = os.path.join(partdir, laul.paths['image'])
-          _, ext = os.path.splitext(src)
-          (_, dst) = tempfile.mkstemp(suffix=ext, dir=self.config.buildpath)
-          shutil.copyfile(src, dst)
-          laul.image = dst
-          print('[laulik] Copied image {0} to {1}'.format(src, dst))
-        laul.verses = self.__parselyrics(self.__render(lyricspath, laul))
-        laul.music = self.__render(musicpath, laul)
-        rendered.write(self.config.stache.render(laul))
+        object = self.__load_yaml(partpath)
+        if object.yaml_tag == Laul.yaml_tag:
+          self.__process_laul(object, partdir, rendered)
+        elif object.yaml_tag == Content.yaml_tag:
+          self.__process_content(object, partdir, rendered)
+        else:
+          print('[laulik] Warning - {0} had an unhandled yaml tag {1}'.format(
+              partpath, object.yaml_tag))
       else:
         print('[laulik] Warning - {0} was not processed'.format(partpath))
     project.content = rendered.getvalue()
     rendered.close()
     self.__output(self.config.stache.render(project))
+
 
 if __name__ == '__main__':
   projectpath = sys.argv[1]
