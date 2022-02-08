@@ -133,9 +133,9 @@ class BuildLaulik:
       if ext == '.yml':
         print('[laulik] Processing yaml config at {0}'.format(partpath))
         object = self.__load_yaml(partpath)
-        if object.yaml_tag == Laul.yaml_tag:
+        if isinstance(object, Laul):
           self.__process_laul(object, partdir, rendered)
-        elif object.yaml_tag == Content.yaml_tag:
+        elif isinstance(object, Content):
           self.__process_content(object, partdir, rendered)
         else:
           print('[laulik] Warning - {0} had an unhandled yaml tag {1}'.format(
