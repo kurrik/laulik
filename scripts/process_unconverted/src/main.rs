@@ -1,3 +1,5 @@
+use lazy_static::lazy_static;
+use regex::Regex;
 use std::env;
 use std::error::Error;
 use std::fs;
@@ -93,13 +95,32 @@ impl SongData {
       path: path.clone(),
       ..SongData::default()
     };
-    let mut text = Vec::<String>::new();
-    for line in contents.lines() {
-      match line {
-        _ => text.push(String::from(line)),
+    let mut output = Vec::<String>::new();
+    for (prefix, text) in contents.lines().map(|l| SongData::parse_line(l)) {
+      match (prefix, text) {
+        (None, Some(t)) => output.push(t.to_string()),
+        (Some("TITLE"), Some(t)) => song_data.title = Some(t.to_string()),
+        (Some("POET"), Some(t)) => song_data.poet = Some(t.to_string()),
+        (Some("COMPOSER"), Some(t)) => song_data.composer = Some(t.to_string()),
+        (Some("ADDLINDEX"), Some(t)) => song_data.addlindex = Some(t.to_string()),
+        (Some("LMARGIN"), Some(t)) => song_data.lmargin = Some(t.to_string()),
+        (Some("RMARGIN"), Some(t)) => song_data.rmargin = Some(t.to_string()),
+        (Some("REFLMARGIN"), Some(t)) => song_data.reflmargin = Some(t.to_string()),
+        (Some("REFRMARGIN"), Some(t)) => song_data.refrmargin = Some(t.to_string()),
+        _ => {}
       }
     }
-    song_data.text = text.join("\n");
+    song_data.text = output.join("\n");
     Ok(song_data)
+  }
+
+  fn parse_line(line: &str) -> (Option<&str>, Option<&str>) {
+    lazy_static! {
+      static ref RE: Regex = Regex::new(r"^(%(.*)=)?(.*)$").unwrap();
+    }
+    let cap = RE.captures(line).unwrap();
+    let prefix = cap.get(2).map(|p| p.as_str());
+    let text = cap.get(3).map(|t| t.as_str());
+    (prefix, text)
   }
 }
