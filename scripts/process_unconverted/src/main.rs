@@ -1,31 +1,80 @@
 use lazy_static::lazy_static;
 use regex::Regex;
+use serde::{Deserialize, Serialize};
 use std::env;
 use std::error::Error;
 use std::fs;
+use std::path::Path;
 use std::process;
 
-#[derive(Default, Debug)]
+#[derive(Default, Debug, Serialize, Deserialize)]
 struct SongData {
   path: String,
   text: String,
-  title: Option<String>,
-  poet: Option<String>,
-  composer: Option<String>,
-  addlindex: Option<String>,
-  lmargin: Option<String>,
-  rmargin: Option<String>,
-  reflmargin: Option<String>,
-  refrmargin: Option<String>,
+  meta: SongMeta,
 }
 
-#[derive(Debug)]
+#[derive(Default, Debug, Serialize, Deserialize)]
+struct SongMeta {
+  #[serde(skip_serializing_if = "Option::is_none")]
+  title: Option<String>,
+  #[serde(skip_serializing_if = "Option::is_none")]
+  poet: Option<String>,
+  #[serde(skip_serializing_if = "Option::is_none")]
+  composer: Option<String>,
+  #[serde(skip_serializing_if = "Vec::is_empty")]
+  index: Vec<String>,
+  #[serde(skip_serializing_if = "Option::is_none")]
+  margin: Option<SongMargins>,
+  paths: SongPaths,
+}
+
+impl SongMeta {
+  fn ensure_margin(&mut self) -> &mut SongMargins {
+    self.margin.get_or_insert(SongMargins::default())
+  }
+}
+
+#[derive(Default, Debug, Serialize, Deserialize)]
+struct SongPaths {
+  lyrics: String,
+  #[serde(skip_serializing_if = "Option::is_none")]
+  music: Option<String>,
+}
+
+#[derive(Default, Debug, Serialize, Deserialize)]
+struct SongMargins {
+  #[serde(skip_serializing_if = "Option::is_none")]
+  verse: Option<MarginData>,
+  #[serde(skip_serializing_if = "Option::is_none")]
+  refrain: Option<MarginData>,
+}
+
+impl SongMargins {
+  fn ensure_verse(&mut self) -> &mut MarginData {
+    self.verse.get_or_insert(MarginData::default())
+  }
+
+  fn ensure_refrain(&mut self) -> &mut MarginData {
+    self.refrain.get_or_insert(MarginData::default())
+  }
+}
+
+#[derive(Default, Debug, Serialize, Deserialize)]
+struct MarginData {
+  #[serde(skip_serializing_if = "Option::is_none")]
+  l: Option<String>,
+  #[serde(skip_serializing_if = "Option::is_none")]
+  r: Option<String>,
+}
+
+#[derive(Debug, Serialize, Deserialize)]
 struct NoteData {
   path: String,
   text: String,
 }
 
-#[derive(Debug)]
+#[derive(Debug, Serialize, Deserialize)]
 struct Song {
   song_data: SongData,
   note_data: Option<NoteData>,
@@ -74,39 +123,88 @@ impl Config {
 
 impl Song {
   fn new(config: &Config) -> Result<Song, Box<dyn Error>> {
-    let song_data = SongData::new(&config.input_file)?;
     Ok(Song {
-      song_data,
-      note_data: None,
+      song_data: SongData::new(&config.input_file)?,
+      note_data: NoteData::new(&config.input_file)?,
     })
   }
 
   fn output(&self, config: Config) -> Result<(), Box<dyn Error>> {
-    println!("Config {:#?}", config);
-    println!("Song {:#?}", self);
+    let yaml = serde_yaml::to_string(&self.song_data.meta)?;
+    println!("{}", yaml.replacen("---", "--- !Laul", 1));
+    println!();
+    println!("{}", self.song_data.text);
+    println!();
+    self
+      .note_data
+      .as_ref()
+      .map(|note_data| println!("{}", note_data.text));
     Ok(())
+  }
+}
+
+impl NoteData {
+  fn new(path: &String) -> Result<Option<NoteData>, Box<dyn Error>> {
+    let input_path = Path::new(path);
+    let notes_input_path = input_path
+      .parent()
+      .unwrap()
+      .parent()
+      .unwrap()
+      .join("notes")
+      .join(input_path.with_extension("ly").file_name().unwrap());
+    println!("{:?}", notes_input_path);
+    let note_data = match notes_input_path.is_file() {
+      true => Some(NoteData {
+        text: fs::read_to_string(&notes_input_path)?,
+        path: notes_input_path.to_string_lossy().to_string(),
+      }),
+      false => None,
+    };
+    Ok(note_data)
   }
 }
 
 impl SongData {
   fn new(path: &String) -> Result<SongData, Box<dyn Error>> {
-    let contents = fs::read_to_string(&path)?;
+    let input_path = Path::new(path);
+    let song_contents = fs::read_to_string(&path)?;
     let mut song_data = SongData {
       path: path.clone(),
+      meta: SongMeta {
+        paths: SongPaths {
+          lyrics: input_path
+            .with_extension("tex")
+            .file_name()
+            .unwrap()
+            .to_string_lossy()
+            .to_string(),
+          music: None,
+        },
+        ..SongMeta::default()
+      },
       ..SongData::default()
     };
     let mut output = Vec::<String>::new();
-    for (prefix, text) in contents.lines().map(|l| SongData::parse_line(l)) {
+    for (prefix, text) in song_contents.lines().map(|l| SongData::parse_line(l)) {
       match (prefix, text) {
         (None, Some(t)) => output.push(t.to_string()),
-        (Some("TITLE"), Some(t)) => song_data.title = Some(t.to_string()),
-        (Some("POET"), Some(t)) => song_data.poet = Some(t.to_string()),
-        (Some("COMPOSER"), Some(t)) => song_data.composer = Some(t.to_string()),
-        (Some("ADDLINDEX"), Some(t)) => song_data.addlindex = Some(t.to_string()),
-        (Some("LMARGIN"), Some(t)) => song_data.lmargin = Some(t.to_string()),
-        (Some("RMARGIN"), Some(t)) => song_data.rmargin = Some(t.to_string()),
-        (Some("REFLMARGIN"), Some(t)) => song_data.reflmargin = Some(t.to_string()),
-        (Some("REFRMARGIN"), Some(t)) => song_data.refrmargin = Some(t.to_string()),
+        (Some("TITLE"), Some(t)) => song_data.meta.title = Some(t.to_string()),
+        (Some("POET"), Some(t)) => song_data.meta.poet = Some(t.to_string()),
+        (Some("COMPOSER"), Some(t)) => song_data.meta.composer = Some(t.to_string()),
+        (Some("ADDLINDEX"), Some(t)) => song_data.meta.index.push(t.to_string()),
+        (Some("LMARGIN"), Some(t)) => {
+          song_data.meta.ensure_margin().ensure_verse().l = Some(t.to_string())
+        }
+        (Some("RMARGIN"), Some(t)) => {
+          song_data.meta.ensure_margin().ensure_verse().r = Some(t.to_string())
+        }
+        (Some("REFLMARGIN"), Some(t)) => {
+          song_data.meta.ensure_margin().ensure_refrain().l = Some(t.to_string())
+        }
+        (Some("REFRMARGIN"), Some(t)) => {
+          song_data.meta.ensure_margin().ensure_refrain().r = Some(t.to_string())
+        }
         _ => {}
       }
     }
