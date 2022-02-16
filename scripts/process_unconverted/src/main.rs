@@ -123,22 +123,36 @@ impl Config {
 
 impl Song {
   fn new(config: &Config) -> Result<Song, Box<dyn Error>> {
+    let note_data = NoteData::new(&config.input_file)?;
+    let song_data = SongData::new(&config.input_file, note_data.as_ref())?;
     Ok(Song {
-      song_data: SongData::new(&config.input_file)?,
-      note_data: NoteData::new(&config.input_file)?,
+      song_data,
+      note_data,
     })
   }
 
   fn output(&self, config: Config) -> Result<(), Box<dyn Error>> {
     let yaml = serde_yaml::to_string(&self.song_data.meta)?;
-    println!("{}", yaml.replacen("---", "--- !Laul", 1));
-    println!();
-    println!("{}", self.song_data.text);
-    println!();
-    self
-      .note_data
-      .as_ref()
-      .map(|note_data| println!("{}", note_data.text));
+    let out_path = Path::new(&config.output_path);
+
+    // Lyrics
+    let tex_path = out_path.join(&self.song_data.meta.paths.lyrics);
+    fs::write(tex_path, &self.song_data.text)?;
+
+    // Yaml
+    let yml_path = out_path
+      .join(&self.song_data.meta.paths.lyrics)
+      .with_extension("yml");
+    fs::write(yml_path, yaml.replacen("---", "--- !Laul", 1))?;
+
+    // Notes
+    match (&self.song_data.meta.paths.music, &self.note_data) {
+      (Some(music_path), Some(note_data)) => {
+        let ly_path = out_path.join(music_path).with_extension("ly");
+        fs::write(ly_path, &note_data.text)?;
+      }
+      _ => (),
+    }
     Ok(())
   }
 }
@@ -166,7 +180,7 @@ impl NoteData {
 }
 
 impl SongData {
-  fn new(path: &String) -> Result<SongData, Box<dyn Error>> {
+  fn new(path: &String, note_data: Option<&NoteData>) -> Result<SongData, Box<dyn Error>> {
     let input_path = Path::new(path);
     let song_contents = fs::read_to_string(&path)?;
     let mut song_data = SongData {
@@ -179,7 +193,13 @@ impl SongData {
             .unwrap()
             .to_string_lossy()
             .to_string(),
-          music: None,
+          music: note_data.map(|d| {
+            Path::new(&d.path)
+              .file_name()
+              .unwrap()
+              .to_string_lossy()
+              .to_string()
+          }),
         },
         ..SongMeta::default()
       },
