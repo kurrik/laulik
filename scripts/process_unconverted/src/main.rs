@@ -167,7 +167,6 @@ impl NoteData {
       .unwrap()
       .join("notes")
       .join(input_path.with_extension("ly").file_name().unwrap());
-    println!("{:?}", notes_input_path);
     let note_data = match notes_input_path.is_file() {
       true => Some(NoteData {
         text: fs::read_to_string(&notes_input_path)?,
