@@ -1,0 +1,11 @@
+--- !Laul
+title: "Jumal, mu s\\\"uda"
+poet: G. Kiviste
+composer: L. N. Morris
+margin:
+  verse:
+    l: 0.9in
+  refrain:
+    l: 1.2in
+paths:
+  lyrics: jumal_mu_suda.tex

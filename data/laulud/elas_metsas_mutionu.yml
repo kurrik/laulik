@@ -1,0 +1,11 @@
+--- !Laul
+title: Elas metsas mutionu
+index:
+  - Mutionu pidu
+margin:
+  verse:
+    l: 1.0in
+  refrain:
+    l: 1.3in
+paths:
+  lyrics: elas_metsas_mutionu.tex

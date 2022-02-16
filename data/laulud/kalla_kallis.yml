@@ -1,0 +1,11 @@
+--- !Laul
+title: "Kalla, kallis isa k\\\"asi"
+poet: J. Lattik
+composer: A. Topmann
+margin:
+  verse:
+    l: 1.0in
+  refrain:
+    l: 1.3in
+paths:
+  lyrics: kalla_kallis.tex

@@ -1,0 +1,12 @@
+--- !Laul
+title: Ma ihkan koju
+composer: "L\\\"a\\\"ane-India trad. viis"
+index:
+  - Sloop John B
+margin:
+  verse:
+    l: 0.6in
+  refrain:
+    l: 0.9in
+paths:
+  lyrics: ma_ihkan_koju.tex

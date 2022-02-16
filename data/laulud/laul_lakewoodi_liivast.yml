@@ -1,0 +1,15 @@
+--- !Laul
+title: Laul Lakewoodi liivast
+poet: J. Kork
+composer: V. Loigu
+index:
+  - 2002 Lakewoodi liiv laagrilaul
+  - Lakewoodi liiv
+margin:
+  verse:
+    l: 0.7in
+  refrain:
+    l: 1.0in
+paths:
+  lyrics: laul_lakewoodi_liivast.tex
+  music: laul_lakewoodi_liivast.ly

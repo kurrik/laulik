@@ -1,0 +1,11 @@
+--- !Laul
+title: Naabri Mari
+poet: K. A. Hermann
+composer: eesti rahvaviis
+margin:
+  verse:
+    l: 0.9in
+  refrain:
+    l: 1.2in
+paths:
+  lyrics: naabri_mari.tex

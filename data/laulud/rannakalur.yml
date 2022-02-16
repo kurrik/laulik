@@ -1,0 +1,10 @@
+--- !Laul
+title: Rannakalur
+composer: K. Merilaas
+margin:
+  verse:
+    l: 0.9in
+  refrain:
+    l: 1.2in
+paths:
+  lyrics: rannakalur.tex

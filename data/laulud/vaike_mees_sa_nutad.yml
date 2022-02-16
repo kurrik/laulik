@@ -1,0 +1,9 @@
+--- !Laul
+title: "V\\\"aike mees, sa nutad"
+margin:
+  verse:
+    l: 0.7in
+  refrain:
+    l: 1.0in
+paths:
+  lyrics: vaike_mees_sa_nutad.tex

@@ -1,0 +1,15 @@
+--- !Laul
+title: Kalevite samm
+poet: E. Loo
+composer: E. Loo
+index:
+  - "Tungalnoole '54 suurlaagri laul"
+  - 1954 Tungalnoole suurlaagri laul
+margin:
+  verse:
+    l: 0.9in
+  refrain:
+    l: 1.2in
+paths:
+  lyrics: 1954_kalevite_samm.tex
+  music: 1954_kalevite_samm.ly

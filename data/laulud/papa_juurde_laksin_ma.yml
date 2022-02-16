@@ -1,0 +1,9 @@
+--- !Laul
+title: "Papa juurde l\\\"aksin ma"
+margin:
+  verse:
+    l: 0.7in
+  refrain:
+    l: 1.0in
+paths:
+  lyrics: papa_juurde_laksin_ma.tex

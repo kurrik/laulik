@@ -1,0 +1,12 @@
+--- !Laul
+title: Tuletorn
+composer: P. ja T. Fischgrund ja T. Tammaru
+index:
+  - 1998 Tuletorn laagrilaul
+margin:
+  verse:
+    l: 0.9in
+  refrain:
+    l: 1.2in
+paths:
+  lyrics: 1998_tuletorn_laagri_laul.tex

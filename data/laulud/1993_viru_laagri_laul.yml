@@ -1,0 +1,9 @@
+--- !Laul
+title: "Viru laagrilaul "
+margin:
+  verse:
+    l: 0.7in
+  refrain:
+    l: 1.0in
+paths:
+  lyrics: 1993_viru_laagri_laul.tex

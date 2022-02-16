@@ -1,0 +1,9 @@
+--- !Laul
+title: "Skautide h\\\"umn"
+poet: F. Kuhlbars
+composer: F. A. Schulz
+margin:
+  verse:
+    l: 0.9in
+paths:
+  lyrics: 05_skautide_humn.tex

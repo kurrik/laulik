@@ -1,0 +1,9 @@
+--- !Laul
+title: "Taamal, kus kaugel silmapiir"
+margin:
+  verse:
+    l: 0.7in
+  refrain:
+    l: 1.0in
+paths:
+  lyrics: taamal_kus_kauge_silmapiir.tex

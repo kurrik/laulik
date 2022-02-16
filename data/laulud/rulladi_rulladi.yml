@@ -1,0 +1,9 @@
+--- !Laul
+title: "Rulladi, rulladi"
+margin:
+  verse:
+    l: 0.65in
+  refrain:
+    l: 0.95in
+paths:
+  lyrics: rulladi_rulladi.tex

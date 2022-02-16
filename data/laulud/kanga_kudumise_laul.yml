@@ -1,0 +1,11 @@
+--- !Laul
+title: Kanga kudumise laul
+index:
+  - Meie koome kangast
+margin:
+  verse:
+    l: 0.35in
+  refrain:
+    l: 0.65in
+paths:
+  lyrics: kanga_kudumise_laul.tex

@@ -1,0 +1,10 @@
+--- !Laul
+title: Edelweiss
+composer: R. Rodgers
+margin:
+  verse:
+    l: 0.8in
+  refrain:
+    l: 1.1in
+paths:
+  lyrics: edelweiss.tex

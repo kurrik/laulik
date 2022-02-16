@@ -1,0 +1,10 @@
+--- !Laul
+title: Kui on kevade
+poet: H. Tedder
+margin:
+  verse:
+    l: 0.8in
+  refrain:
+    l: 1.1in
+paths:
+  lyrics: kui_on_kevade.tex

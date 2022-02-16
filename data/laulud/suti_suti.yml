@@ -1,0 +1,9 @@
+--- !Laul
+title: "S\\\"uti, s\\\"uti"
+margin:
+  verse:
+    l: 0.7in
+  refrain:
+    l: 1.0in
+paths:
+  lyrics: suti_suti.tex

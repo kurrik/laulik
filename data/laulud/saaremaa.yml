@@ -1,0 +1,11 @@
+--- !Laul
+title: Saaremaa
+index:
+  - Ma vaatan paadist kiikriga
+margin:
+  verse:
+    l: 0.7in
+  refrain:
+    l: 1.0in
+paths:
+  lyrics: saaremaa.tex

@@ -1,0 +1,11 @@
+--- !Laul
+title: Oi aegu ammuseid
+poet: K. Kikerpuu
+composer: B. Fomin
+margin:
+  verse:
+    l: 0.5in
+  refrain:
+    l: 0.8in
+paths:
+  lyrics: oi_aegu_ammuseid.tex

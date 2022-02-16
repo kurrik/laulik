@@ -1,0 +1,13 @@
+--- !Laul
+title: Ajaratas
+poet: T. Vettik
+composer: "K. T\\\"urnpu"
+index:
+  - "Nii ajaratas ringi k\\\"aind"
+margin:
+  verse:
+    l: 0.8in
+  refrain:
+    l: 1.1in
+paths:
+  lyrics: ajaratas.tex

@@ -1,0 +1,10 @@
+--- !Laul
+title: Koit
+composer: "T. M\\\"agi"
+margin:
+  verse:
+    l: 0.8in
+  refrain:
+    l: 1.1in
+paths:
+  lyrics: koit.tex

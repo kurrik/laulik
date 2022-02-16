@@ -1,0 +1,9 @@
+--- !Laul
+title: "Inimesed t\\\"anavatel"
+margin:
+  verse:
+    l: 0.8in
+  refrain:
+    l: 1.1in
+paths:
+  lyrics: inimesed_tanavatel.tex

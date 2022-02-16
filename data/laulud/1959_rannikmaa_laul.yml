@@ -1,0 +1,13 @@
+--- !Laul
+title: Rannikmaa laul
+poet: M. Paul-Saluste
+composer: S. Kasemets
+index:
+  - 1959 Rannikmaa suurlaagri laul
+margin:
+  verse:
+    l: 0.7in
+  refrain:
+    l: 1.0in
+paths:
+  lyrics: 1959_rannikmaa_laul.tex

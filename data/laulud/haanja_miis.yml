@@ -1,0 +1,11 @@
+--- !Laul
+title: Haanja miis
+poet: "J. R\\\"appo"
+composer: rahvalik viis
+margin:
+  verse:
+    l: 0.9in
+  refrain:
+    l: 1.2in
+paths:
+  lyrics: haanja_miis.tex

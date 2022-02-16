@@ -1,0 +1,12 @@
+--- !Laul
+title: "P\\~ohjarada"
+composer: T. Andra ja T. Tammaru
+index:
+  - "2003 P\\~ohjarada laagrilaul"
+margin:
+  verse:
+    l: 0.8in
+  refrain:
+    l: 1.1in
+paths:
+  lyrics: 2003_pohjarada_laagri_laul.tex

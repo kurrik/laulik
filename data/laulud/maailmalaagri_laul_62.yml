@@ -1,0 +1,13 @@
+--- !Laul
+title: "Maailmalaagri Laul '62"
+poet: J. Kork
+composer: E. Stafenau
+margin:
+  verse:
+    l: 0.1in
+    r: 0.1in
+  refrain:
+    l: 0.4in
+    r: 0.2in
+paths:
+  lyrics: maailmalaagri_laul_62.tex

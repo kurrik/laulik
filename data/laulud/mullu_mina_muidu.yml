@@ -1,0 +1,11 @@
+--- !Laul
+title: Mullu mina muidu
+poet: rahvaluule
+composer: soome rahvaviis
+margin:
+  verse:
+    l: 0.8in
+  refrain:
+    l: 1.1in
+paths:
+  lyrics: mullu_mina_muidu.tex

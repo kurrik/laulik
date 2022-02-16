@@ -1,0 +1,12 @@
+--- !Laul
+title: Kiigelaul
+composer: "M. L\\\"udig"
+index:
+  - "Veli, hella"
+margin:
+  verse:
+    l: 0.9in
+  refrain:
+    l: 1.2in
+paths:
+  lyrics: kiigelaul.tex

@@ -1,0 +1,13 @@
+--- !Laul
+title: Muistne malev
+poet: K. Kamberg ja I. Sokk
+composer: I. Sokk
+index:
+  - 1989 Muistne malev laagrilaul
+margin:
+  verse:
+    l: 0.7in
+  refrain:
+    l: 1.0in
+paths:
+  lyrics: 1989_muistne_malev_laagri_laul.tex

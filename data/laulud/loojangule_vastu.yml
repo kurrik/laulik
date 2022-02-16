@@ -1,0 +1,11 @@
+--- !Laul
+title: "Loojangule vastu kappap \\\"uksik hobune"
+poet: H. Soop
+composer: K. Frenreisz
+margin:
+  verse:
+    l: 0.4in
+  refrain:
+    l: 0.7in
+paths:
+  lyrics: loojangule_vastu.tex

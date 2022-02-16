@@ -1,0 +1,10 @@
+--- !Laul
+title: Minu peig on kalamees
+composer: "R. P\\\"ats"
+margin:
+  verse:
+    l: 1.0in
+  refrain:
+    l: 1.3in
+paths:
+  lyrics: minu_peig_on_kalamees.tex

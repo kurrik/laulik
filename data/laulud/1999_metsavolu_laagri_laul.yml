@@ -1,0 +1,13 @@
+--- !Laul
+title: "Metsav\\~olu"
+poet: A. Suve ja R. Luuse
+composer: T. Tammaru
+index:
+  - "1999 Metsav\\~olu laagrilaul"
+margin:
+  verse:
+    l: 0.8in
+  refrain:
+    l: 1.2in
+paths:
+  lyrics: 1999_metsavolu_laagri_laul.tex

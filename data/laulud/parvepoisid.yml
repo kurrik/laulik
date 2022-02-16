@@ -1,0 +1,11 @@
+--- !Laul
+title: Parvepoisid
+poet: J. Kork
+composer: R. Ufer
+margin:
+  verse:
+    l: 1.0in
+  refrain:
+    l: 1.3in
+paths:
+  lyrics: parvepoisid.tex

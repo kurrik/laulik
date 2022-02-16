@@ -1,0 +1,11 @@
+--- !Laul
+title: "Armsad s\\~obrad"
+index:
+  - Piibulaul
+margin:
+  verse:
+    l: 0.8in
+  refrain:
+    l: 1.1in
+paths:
+  lyrics: armsad_sobrad.tex

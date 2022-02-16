@@ -1,0 +1,12 @@
+--- !Laul
+title: Meil merevood on vabad
+composer: V. Oksvort
+index:
+  - 1991 Kodu Eesti laagrilaul
+margin:
+  verse:
+    l: 0.5in
+  refrain:
+    l: 0.8in
+paths:
+  lyrics: 1991_meil_merevood_on_vabad.tex

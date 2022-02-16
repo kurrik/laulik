@@ -1,0 +1,10 @@
+--- !Laul
+title: "Me m\\~otted on priid"
+poet: "J. T\\\"atte"
+margin:
+  verse:
+    l: 0.9in
+  refrain:
+    l: 1.2in
+paths:
+  lyrics: me_motted_on_priid.tex

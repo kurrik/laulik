@@ -1,0 +1,9 @@
+--- !Laul
+title: "Metsa l\\\"aksid sa"
+margin:
+  verse:
+    l: 0.8in
+  refrain:
+    l: 1.1in
+paths:
+  lyrics: metsa_laksid_sa.tex

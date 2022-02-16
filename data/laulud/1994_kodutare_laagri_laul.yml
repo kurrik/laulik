@@ -1,0 +1,13 @@
+--- !Laul
+title: Kodutare laagrilaul
+poet: P. ja T. Fischgrund
+composer: "A., P. ja T. Fischgrund"
+index:
+  - 1994 Kodutare laagrilaul
+margin:
+  verse:
+    l: 1.0in
+  refrain:
+    l: 1.3in
+paths:
+  lyrics: 1994_kodutare_laagri_laul.tex

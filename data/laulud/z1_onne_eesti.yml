@@ -1,0 +1,10 @@
+--- !Laul
+title: "\\~Onne, Eesti!"
+composer: V. Juhandi
+margin:
+  verse:
+    l: 1.0in
+  refrain:
+    l: 1.3in
+paths:
+  lyrics: z1_onne_eesti.tex

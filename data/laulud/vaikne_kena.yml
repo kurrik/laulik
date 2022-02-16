@@ -1,0 +1,11 @@
+--- !Laul
+title: Vaikne kena kohakene
+poet: "M. K\\\"orber"
+composer: "F. M\\\"uhlhausen"
+margin:
+  verse:
+    l: 0.9in
+  refrain:
+    l: 1.2in
+paths:
+  lyrics: vaikne_kena.tex

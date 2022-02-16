@@ -1,0 +1,9 @@
+--- !Laul
+title: Mulgimaal
+margin:
+  verse:
+    l: 1.0in
+  refrain:
+    l: 1.3in
+paths:
+  lyrics: mulgimaal.tex

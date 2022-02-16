@@ -1,0 +1,10 @@
+--- !Laul
+title: "T\\\"udruk"
+composer: M. Nuude
+margin:
+  verse:
+    l: 0.6in
+  refrain:
+    l: 0.9in
+paths:
+  lyrics: tudruk.tex

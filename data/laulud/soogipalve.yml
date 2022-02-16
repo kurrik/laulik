@@ -1,0 +1,9 @@
+--- !Laul
+title: "S\\\"o\\\"ogipalve"
+margin:
+  verse:
+    l: 1.1in
+  refrain:
+    l: 1.4in
+paths:
+  lyrics: soogipalve.tex

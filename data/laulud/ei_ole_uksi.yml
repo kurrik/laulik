@@ -1,0 +1,11 @@
+--- !Laul
+title: "Ei ole \\\"uksi \\\"ukski maa"
+poet: J. Leesment
+composer: A. Mattiisen
+margin:
+  verse:
+    l: 0.8in
+  refrain:
+    l: 1.1in
+paths:
+  lyrics: ei_ole_uksi.tex

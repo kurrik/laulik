@@ -1,0 +1,11 @@
+--- !Laul
+title: "Hoia, Jumal, Eestit"
+poet: L. Raudkepp
+composer: J. Aavik
+margin:
+  verse:
+    l: 1.1in
+  refrain:
+    l: 1.4in
+paths:
+  lyrics: hoia_jumal_eestit.tex

@@ -1,0 +1,11 @@
+--- !Laul
+title: "Kaunimad laulud p\\\"uhendan sull'"
+poet: P. Ruubel
+composer: F. Saebelmann
+margin:
+  verse:
+    l: 0.7in
+  refrain:
+    l: 1.0in
+paths:
+  lyrics: kaunimad_laulud.tex

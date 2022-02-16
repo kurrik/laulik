@@ -1,0 +1,11 @@
+--- !Laul
+title: Kikilips
+poet: I. Linna
+composer: C. Richard
+margin:
+  verse:
+    l: 0.9in
+  refrain:
+    l: 1.2in
+paths:
+  lyrics: kikilips.tex

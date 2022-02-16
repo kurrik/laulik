@@ -1,0 +1,11 @@
+--- !Laul
+title: Vanemate laul
+poet: "P. Fischgrund, T. Tammaru, L. Sarapik, M. Ets"
+composer: P. Fischgrund
+margin:
+  verse:
+    l: 0.6in
+  refrain:
+    l: 0.9in
+paths:
+  lyrics: vanemate_laul.tex

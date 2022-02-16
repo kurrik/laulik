@@ -1,0 +1,9 @@
+--- !Laul
+title: "Gaidide h\\\"umn"
+poet: "P. Gr\\\"unfeldt"
+composer: "K. T\\\"urnpu"
+margin:
+  verse:
+    l: 0.8in
+paths:
+  lyrics: 06_gaidide_humn.tex

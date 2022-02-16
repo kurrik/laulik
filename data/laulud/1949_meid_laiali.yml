@@ -1,0 +1,15 @@
+--- !Laul
+title: Meid laiali pillutand tuuled
+poet: "A. M\\\"agi"
+composer: E. Stafenau
+index:
+  - "1949 \\\"Ommerni suurlaagri laul"
+  - "\\\"Ommerni '49 suurlaagri laul"
+margin:
+  verse:
+    l: 0.8in
+  refrain:
+    l: 1.1in
+paths:
+  lyrics: 1949_meid_laiali.tex
+  music: 1949_meid_laiali.ly

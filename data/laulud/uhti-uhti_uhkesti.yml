@@ -1,0 +1,11 @@
+--- !Laul
+title: Uhti-uhti uhkesti
+poet: A. Piirkivi
+composer: eesti rahvaviis
+margin:
+  verse:
+    l: 0.8in
+  refrain:
+    l: 1.1in
+paths:
+  lyrics: uhti-uhti_uhkesti.tex

@@ -1,0 +1,14 @@
+--- !Laul
+title: Kungla rahvas
+poet: Fr. Kuhlbars
+composer: K. A. Hermann
+index:
+  - Vanemuine
+  - 1969 Kungla laagrilaul
+margin:
+  verse:
+    l: 0.8in
+  refrain:
+    l: 1.1in
+paths:
+  lyrics: 1969_kungla_rahvas.tex

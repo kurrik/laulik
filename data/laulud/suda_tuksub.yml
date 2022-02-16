@@ -1,0 +1,11 @@
+--- !Laul
+title: "S\\\"uda tuksub"
+poet: rahvasuust
+composer: K. A. Hermann
+margin:
+  verse:
+    l: 0.95in
+  refrain:
+    l: 1.25in
+paths:
+  lyrics: suda_tuksub.tex

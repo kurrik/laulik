@@ -1,0 +1,9 @@
+--- !Laul
+title: Kalevite kants
+margin:
+  verse:
+    l: 0.9in
+  refrain:
+    l: 1.2in
+paths:
+  lyrics: kalevite_kants.tex

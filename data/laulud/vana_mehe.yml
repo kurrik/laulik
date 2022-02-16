@@ -1,0 +1,11 @@
+--- !Laul
+title: Vana mehe laul
+poet: J. Viiding
+composer: O. Ehala
+margin:
+  verse:
+    l: 0.65in
+  refrain:
+    l: 0.95in
+paths:
+  lyrics: vana_mehe.tex

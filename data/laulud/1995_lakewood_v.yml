@@ -1,0 +1,15 @@
+--- !Laul
+title: "Lakewood v\\~olub meid"
+poet: M. ja A. Lannus
+composer: J. Mandre
+index:
+  - 1995 Gaidirada laagrilaul
+  - Gaidirada laagrilaul
+margin:
+  verse:
+    l: 0.7in
+  refrain:
+    l: 1.0in
+paths:
+  lyrics: 1995_lakewood_v.tex
+  music: 1995_lakewood_v.ly

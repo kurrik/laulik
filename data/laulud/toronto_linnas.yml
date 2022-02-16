@@ -1,0 +1,9 @@
+--- !Laul
+title: Toronto linnas
+margin:
+  verse:
+    l: 0.8in
+  refrain:
+    l: 1.1in
+paths:
+  lyrics: toronto_linnas.tex

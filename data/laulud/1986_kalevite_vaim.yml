@@ -1,0 +1,11 @@
+--- !Laul
+title: Kalevite vaim
+index:
+  - "1986 J\\\"arvemetsa 30 laagrilaul"
+margin:
+  verse:
+    l: 0.7in
+  refrain:
+    l: 1.0in
+paths:
+  lyrics: 1986_kalevite_vaim.tex

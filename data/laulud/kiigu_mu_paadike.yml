@@ -1,0 +1,11 @@
+--- !Laul
+title: Kiigu mu paadike
+poet: Fr. Kuhlbars
+composer: Tirooli rahvaviis
+margin:
+  verse:
+    l: 0.8in
+  refrain:
+    l: 1.1in
+paths:
+  lyrics: kiigu_mu_paadike.tex

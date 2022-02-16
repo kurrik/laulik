@@ -1,0 +1,12 @@
+--- !Laul
+title: Tamme laagrilaul
+composer: L. Koorits
+index:
+  - 1980 Tamme laagrilaul
+margin:
+  verse:
+    l: 0.9in
+  refrain:
+    l: 1.2in
+paths:
+  lyrics: 1980_tamme_laagri_laul.tex

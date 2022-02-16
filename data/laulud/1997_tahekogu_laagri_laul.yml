@@ -1,0 +1,11 @@
+--- !Laul
+title: "T\\\"ahekogu"
+index:
+  - "1997 T\\\"ahekogu laagrilaul"
+margin:
+  verse:
+    l: 0.7in
+  refrain:
+    l: 1.0in
+paths:
+  lyrics: 1997_tahekogu_laagri_laul.tex

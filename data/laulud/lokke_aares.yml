@@ -1,0 +1,9 @@
+--- !Laul
+title: "L\\~okke \\\"a\\\"ares"
+margin:
+  verse:
+    l: 0.6in
+  refrain:
+    l: 0.9in
+paths:
+  lyrics: lokke_aares.tex

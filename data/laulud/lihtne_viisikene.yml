@@ -1,0 +1,9 @@
+--- !Laul
+title: Lihtne viisikene
+margin:
+  verse:
+    l: 0.7in
+  refrain:
+    l: 1.0in
+paths:
+  lyrics: lihtne_viisikene.tex

@@ -1,0 +1,11 @@
+--- !Laul
+title: Saaremaa valss
+poet: D. Vaarandi
+composer: R. Valgre
+margin:
+  verse:
+    l: 0.6in
+  refrain:
+    l: 0.9in
+paths:
+  lyrics: saaremaa_valss.tex

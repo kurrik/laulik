@@ -1,0 +1,11 @@
+--- !Laul
+title: Eestlane olen
+poet: J. Leesment
+composer: A. Mattiisen
+margin:
+  verse:
+    l: 0.7in
+  refrain:
+    l: 1.0in
+paths:
+  lyrics: eestlane_olen.tex

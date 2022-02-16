@@ -1,0 +1,9 @@
+--- !Laul
+title: "Kaugel, kaugel"
+margin:
+  verse:
+    l: 0.8in
+  refrain:
+    l: 1.1in
+paths:
+  lyrics: kaugel_kaugel.tex

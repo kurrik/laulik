@@ -1,0 +1,13 @@
+--- !Laul
+title: "P\\~ohjamaa"
+poet: E. Vetemaa
+composer: "\\\"U. Vinter"
+index:
+  - "Laul P\\~ohjamaast"
+margin:
+  verse:
+    l: 1.0in
+  refrain:
+    l: 1.3in
+paths:
+  lyrics: pohjamaa.tex

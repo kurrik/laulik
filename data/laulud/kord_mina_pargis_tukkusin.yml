@@ -1,0 +1,12 @@
+--- !Laul
+title: Kord mina pargis
+index:
+  - Hakkas nurgas liikuma
+  - "S\\~odurid"
+margin:
+  verse:
+    l: 0.7in
+  refrain:
+    l: 1.0in
+paths:
+  lyrics: kord_mina_pargis_tukkusin.tex

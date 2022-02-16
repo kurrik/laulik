@@ -1,0 +1,11 @@
+--- !Laul
+title: Ei saa mitte vaiki olla
+poet: A. Haava
+composer: "M. H\\\"arma"
+margin:
+  verse:
+    l: 0.9in
+  refrain:
+    l: 1.2in
+paths:
+  lyrics: ei_saa_mitte_vaiki_olla.tex

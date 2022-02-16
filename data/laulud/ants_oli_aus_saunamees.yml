@@ -1,0 +1,9 @@
+--- !Laul
+title: Ants oli aus saunamees
+margin:
+  verse:
+    l: 0.35in
+  refrain:
+    l: 0.65in
+paths:
+  lyrics: ants_oli_aus_saunamees.tex

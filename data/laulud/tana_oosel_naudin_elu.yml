@@ -1,0 +1,12 @@
+--- !Laul
+title: "T\\\"ana \\\"o\\\"osel naudin elu"
+index:
+  - "K\\~oik maailma uhked roosid"
+  - "\\\"Utle s\\~ober, mis on elu"
+margin:
+  verse:
+    l: 0.7in
+  refrain:
+    l: 1.0in
+paths:
+  lyrics: tana_oosel_naudin_elu.tex

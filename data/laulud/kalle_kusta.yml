@@ -1,0 +1,9 @@
+--- !Laul
+title: "Kalle Kusta "
+margin:
+  verse:
+    l: 0.5in
+  refrain:
+    l: 0.8in
+paths:
+  lyrics: kalle_kusta.tex

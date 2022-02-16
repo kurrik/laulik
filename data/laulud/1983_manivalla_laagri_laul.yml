@@ -1,0 +1,13 @@
+--- !Laul
+title: "M\\\"annivalla laagrilaul"
+poet: J. Linask
+composer: M. Miido
+index:
+  - "1983 M\\\"annivalla laagri laul"
+margin:
+  verse:
+    l: 0.7in
+  refrain:
+    l: 1.0in
+paths:
+  lyrics: 1983_manivalla_laagri_laul.tex

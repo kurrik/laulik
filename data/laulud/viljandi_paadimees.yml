@@ -1,0 +1,13 @@
+--- !Laul
+title: Viljandi paadimees
+poet: S. Lipp
+composer: A. Vinters
+index:
+  - "K\\\"ae ulatab noor paadimees"
+margin:
+  verse:
+    l: 0.3in
+  refrain:
+    l: 0.6in
+paths:
+  lyrics: viljandi_paadimees.tex

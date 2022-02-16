@@ -1,0 +1,12 @@
+--- !Laul
+title: Suur Vanker
+composer: T. Fischgrund
+index:
+  - 1988 Suur Vanker laagrilaul
+margin:
+  verse:
+    l: 1.0in
+  refrain:
+    l: 1.3in
+paths:
+  lyrics: 1988_suur_vanker_laagri_laul.tex

@@ -1,0 +1,11 @@
+--- !Laul
+title: O Canada
+poet: "R. S. Weir, A. B. Routhier"
+composer: "C. Lavall\\'{e}e"
+index:
+  - "Kanada h\\\"umn"
+margin:
+  verse:
+    l: 0.65in
+paths:
+  lyrics: 04_kanada_humn.tex

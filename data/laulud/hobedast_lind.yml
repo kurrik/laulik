@@ -1,0 +1,11 @@
+--- !Laul
+title: "H\\~obedast lind"
+poet: J. Kork
+composer: J. Denver
+margin:
+  verse:
+    l: 0.6in
+  refrain:
+    l: 0.9in
+paths:
+  lyrics: hobedast_lind.tex

@@ -1,0 +1,9 @@
+--- !Laul
+title: Eidekene ketrab
+margin:
+  verse:
+    l: 0.6in
+  refrain:
+    l: 0.9in
+paths:
+  lyrics: eidekene_ketrab.tex

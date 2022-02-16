@@ -1,0 +1,12 @@
+--- !Laul
+title: "Ol\\\"umpia laagrilaul"
+composer: L. Sarapik
+index:
+  - "2004 Ol\\\"umpia laagrilaul"
+margin:
+  verse:
+    l: 0.9in
+  refrain:
+    l: 1.2in
+paths:
+  lyrics: 2004_olumpia_laagri_laul.tex

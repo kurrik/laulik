@@ -1,0 +1,11 @@
+--- !Laul
+title: "Maa tuleb t\\\"aita lastega"
+poet: H. Runnel
+composer: R. Rannap
+margin:
+  verse:
+    l: 1.0in
+  refrain:
+    l: 1.3in
+paths:
+  lyrics: maa_tuleb_taita_lastega.tex

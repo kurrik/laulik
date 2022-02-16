@@ -1,0 +1,15 @@
+--- !Laul
+title: "Tule, r\\\"andame"
+poet: J. Kork
+composer: J. Mandre
+index:
+  - "Koguja h\\\"u\\\"ud"
+  - 1967 Koguja M/L laul
+margin:
+  verse:
+    l: 0.75in
+  refrain:
+    l: 1.05in
+paths:
+  lyrics: 1967_koguja_laul.tex
+  music: 1967_koguja_laul.ly

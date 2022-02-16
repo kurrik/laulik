@@ -1,0 +1,14 @@
+--- !Laul
+title: Teraspoiste laul
+poet: J. Kork
+composer: V. Loigu
+index:
+  - 1959 Teraspoisid laagrilaul
+margin:
+  verse:
+    l: 0.8in
+  refrain:
+    l: 1.1in
+paths:
+  lyrics: 1959_teraspoiste_laul.tex
+  music: 1959_teraspoiste_laul.ly

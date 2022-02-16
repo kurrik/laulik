@@ -1,0 +1,13 @@
+--- !Laul
+title: Kui mina alles noor veel olin
+poet: rahvaluule
+composer: rahvaviis
+index:
+  - "Meie elu "
+margin:
+  verse:
+    l: 0.7in
+  refrain:
+    l: 1.0in
+paths:
+  lyrics: kui_mina_alles_noor_veel_olin.tex

@@ -1,0 +1,10 @@
+--- !Laul
+title: "Kotkaj\\\"arve Kai"
+poet: "H. J\\~oe"
+margin:
+  verse:
+    l: 0.6in
+  refrain:
+    l: 0.9in
+paths:
+  lyrics: kotkajarve_kai.tex

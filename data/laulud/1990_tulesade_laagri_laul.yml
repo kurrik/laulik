@@ -1,0 +1,12 @@
+--- !Laul
+title: "Tules\\\"ade"
+poet: R. Viise
+index:
+  - "1990 Tules\\\"ade laagrilaul"
+margin:
+  verse:
+    l: 0.9in
+  refrain:
+    l: 1.2in
+paths:
+  lyrics: 1990_tulesade_laagri_laul.tex

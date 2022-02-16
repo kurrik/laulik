@@ -1,0 +1,11 @@
+--- !Laul
+title: "Kas sul on \\\"uks vana sohva?"
+index:
+  - "Kuuvalgel \\\"o\\\"ol"
+margin:
+  verse:
+    l: 0.45in
+  refrain:
+    l: 0.75in
+paths:
+  lyrics: kas_sul_on_uks_vana_sohva.tex

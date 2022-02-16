@@ -1,0 +1,11 @@
+--- !Laul
+title: Isamaa ilu hoieldes
+poet: ",,Kalevipoeg{``}"
+composer: K.A. Hermann
+margin:
+  verse:
+    l: 0.95in
+  refrain:
+    l: 1.25in
+paths:
+  lyrics: isamaa_ilu_hoieldes.tex

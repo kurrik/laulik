@@ -1,0 +1,9 @@
+--- !Laul
+title: "Hiir h\\\"uppas"
+margin:
+  verse:
+    l: 0.95in
+  refrain:
+    l: 1.25in
+paths:
+  lyrics: hiir_huppas.tex

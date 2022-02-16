@@ -1,0 +1,13 @@
+--- !Laul
+title: "Vanas\\~ona"
+composer: M. Kuhn
+index:
+  - "2005 Vanas\\~ona laagrilaul"
+margin:
+  verse:
+    l: 0.9in
+  refrain:
+    l: 1.2in
+paths:
+  lyrics: 2005_vanasona.tex
+  music: 2005_vanasona.ly

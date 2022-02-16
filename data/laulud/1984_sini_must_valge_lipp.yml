@@ -1,0 +1,11 @@
+--- !Laul
+title: Sini-must-valge lipp
+index:
+  - 1984 Sini-must-valge laagrilaul
+margin:
+  verse:
+    l: 0.25in
+  refrain:
+    l: 0.55in
+paths:
+  lyrics: 1984_sini_must_valge_lipp.tex

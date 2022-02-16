@@ -1,0 +1,15 @@
+--- !Laul
+title: The Star-Spangled Banner
+poet: F. S. Key
+composer: J. S. Smith
+index:
+  - "Ameerika \\\"Uhendriikide h\\\"umn"
+margin:
+  verse:
+    l: 0.05in
+    r: 0.0in
+  refrain:
+    l: 0.4in
+    r: 0.2in
+paths:
+  lyrics: 03_ameerika_humn.tex

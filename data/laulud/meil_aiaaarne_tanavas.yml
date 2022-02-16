@@ -1,0 +1,11 @@
+--- !Laul
+title: "Meil aia\\\"a\\\"arne t\\\"anavas"
+poet: L. Koidula
+composer: eesti rahvaviis
+margin:
+  verse:
+    l: 0.9in
+  refrain:
+    l: 1.2in
+paths:
+  lyrics: meil_aiaaarne_tanavas.tex

@@ -1,0 +1,9 @@
+--- !Laul
+title: "J\\\"anes istus"
+margin:
+  verse:
+    l: 0.8in
+  refrain:
+    l: 1.2in
+paths:
+  lyrics: janes_istus.tex

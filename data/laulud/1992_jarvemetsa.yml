@@ -1,0 +1,13 @@
+--- !Laul
+title: "J\\\"arvemetsa laul"
+composer: E. Kiilaspea
+index:
+  - "1992 J\\\"arvemetsa '92 M/L laul"
+margin:
+  verse:
+    l: 0.7in
+  refrain:
+    l: 1.0in
+paths:
+  lyrics: 1992_jarvemetsa.tex
+  music: 1992_jarvemetsa.ly

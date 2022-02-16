@@ -1,0 +1,9 @@
+--- !Laul
+title: Kord elas Ali-baba
+margin:
+  verse:
+    l: 0.8in
+  refrain:
+    l: 1.1in
+paths:
+  lyrics: kord_elas_ali-baba.tex

@@ -1,0 +1,9 @@
+--- !Laul
+title: "Tiina, Tiina"
+margin:
+  verse:
+    l: 0.6in
+  refrain:
+    l: 0.9in
+paths:
+  lyrics: tiina_tiina.tex

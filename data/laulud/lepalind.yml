@@ -1,0 +1,11 @@
+--- !Laul
+title: Lepalind
+index:
+  - "Lenda, lenda lepalind"
+margin:
+  verse:
+    l: 1.0in
+  refrain:
+    l: 1.3in
+paths:
+  lyrics: lepalind.tex

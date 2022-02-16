@@ -1,0 +1,11 @@
+--- !Laul
+title: "S\\~ober \\\"ara v\\\"asi"
+index:
+  - Matkalaul
+margin:
+  verse:
+    l: 0.7in
+  refrain:
+    l: 1.0in
+paths:
+  lyrics: sober_ara_vasi.tex
