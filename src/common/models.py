@@ -38,6 +38,11 @@ class Laul(yaml.YAMLObject):
     self.music = None
     self.image = None
 
+  @classmethod
+  def from_yaml(cls, loader, node):
+    fields = loader.construct_mapping(node)
+    return Laul(**fields)
+
   def poet_or_composer(self):
     return self.poet != None or self.composer != None
 
