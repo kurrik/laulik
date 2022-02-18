@@ -1,6 +1,7 @@
 import os
 from xml.etree.ElementInclude import include
 import yaml
+from glom import glom
 
 
 class Content(yaml.YAMLObject):
@@ -37,6 +38,7 @@ class Laul(yaml.YAMLObject):
     self.verses = None
     self.music = None
     self.image = None
+    self.default_margin = '0.1in'
 
   @classmethod
   def from_yaml(cls, loader, node):
@@ -45,6 +47,18 @@ class Laul(yaml.YAMLObject):
 
   def poet_or_composer(self):
     return self.poet != None or self.composer != None
+
+  def margin_verse_l(self):
+    return glom(self, 'margin.verse.l', default=self.default_margin)
+
+  def margin_verse_r(self):
+    return glom(self, 'margin.verse.r', default=self.default_margin)
+
+  def margin_refrain_l(self):
+    return glom(self, 'margin.refrain.l', default=self.default_margin)
+
+  def margin_refrain_r(self):
+    return glom(self, 'margin.refrain.r', default=self.default_margin)
 
 
 class Project(yaml.YAMLObject):
@@ -69,7 +83,7 @@ class ProjectMeta(object):
     self.paths = paths
     self.__version = False
 
-  @property
+  @ property
   def version(self):
     if self.__version is False:
       if os.path.isfile(self.paths.version):
