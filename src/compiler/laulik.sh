@@ -36,6 +36,7 @@ xindy \
   -M latex-loc-fmts \
   -I latex \
   -L estonian \
+  -C utf8 \
   -t ex1.xlg \
   -M $COMPILERPATH/laulik.xdy \
   laulik.idx

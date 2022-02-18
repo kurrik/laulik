@@ -2,6 +2,7 @@ import os
 from xml.etree.ElementInclude import include
 import yaml
 from glom import glom
+import re
 
 
 class Content(yaml.YAMLObject):
@@ -44,6 +45,9 @@ class Laul(yaml.YAMLObject):
   def from_yaml(cls, loader, node):
     fields = loader.construct_mapping(node)
     return Laul(**fields)
+
+  def title_for_index(self):
+    return re.sub('([^"])!', '\\1"!', self.title)
 
   def poet_or_composer(self):
     return self.poet != None or self.composer != None
