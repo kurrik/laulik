@@ -1,4 +1,9 @@
 --- !Laul
 title: "\\\"Uhte laulu"
+margin:
+  verse:
+    l: 0.4in
+  refrain:
+    l: 0.7in
 paths:
   lyrics: z4_uhte_laulu.tex
