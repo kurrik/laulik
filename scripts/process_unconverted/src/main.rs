@@ -25,6 +25,8 @@ struct SongMeta {
   #[serde(skip_serializing_if = "Vec::is_empty")]
   index: Vec<String>,
   #[serde(skip_serializing_if = "Option::is_none")]
+  misc: Option<String>,
+  #[serde(skip_serializing_if = "Option::is_none")]
   margin: Option<SongMargins>,
   paths: SongPaths,
 }
@@ -212,6 +214,7 @@ impl SongData {
         (Some("POET"), Some(t)) => song_data.meta.poet = Some(t.to_string()),
         (Some("COMPOSER"), Some(t)) => song_data.meta.composer = Some(t.to_string()),
         (Some("ADDLINDEX"), Some(t)) => song_data.meta.index.push(t.to_string()),
+        (Some("MISC"), Some(t)) => song_data.meta.misc = Some(t.to_string()),
         (Some("LMARGIN"), Some(t)) => {
           song_data.meta.ensure_margin().ensure_verse().l = Some(t.to_string())
         }

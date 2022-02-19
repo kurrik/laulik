@@ -9,6 +9,7 @@ parts:
   - laulud/03_ameerika_humn.yml
   - laulud/04_kanada_humn.yml
   - laulud/05_skautide_humn.yml
+  - content/clearpage.yml
   - laulud/06_gaidide_humn.yml
   - content/voluja/00003_laagrilaulud.yml
   - laulud/1949_meid_laiali.yml

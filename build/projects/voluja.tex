@@ -437,7 +437,7 @@ Jyri Kork, nskm.
   }
   \end{changemargin}
   \pagebreak[1]
-  % VERSE {'title': 'Eesti h\\"umn', 'composer': 'Fr. Pacius', 'poet': 'J. V. Jannsen', 'margin': {'verse': {'l': '0.9in', 'r': '0.1in'}, 'refrain': {'l': '0.8in', 'r': '0.2in'}}, 'index': None, 'misc': None, 'paths': {'lyrics': '01_eesti_hümn.tex', 'music': '01_eesti_hümn.ly'}, 'verses': [<__main__.Verse object at 0xffff9f3e8fd0>, <__main__.Verse object at 0xffff9f3fc1c0>, <__main__.Verse object at 0xffff9f3fc130>, None], 'music': '\\header{\n  tagline = ""\n}\n\n#(set-global-staff-size 10)\n\nmBreak = {  }\n\ncfgSong = {\n  \\key a \\major\n  \\time 3/4\n  \\autoBeamOff\n  \\partial 4.\n}\n\ncfgText = {\n  \\set fontSize = #-2\n}\n\nmelody = {\n  \\cfgSong\n  \\relative c\'{\n    e8 cis d |\n    e4. a8 b8. e,16 | cis\'2 a4\n      \\mBreak\n    fis8. b16 a4 gis | a2 e4 |\n    b\'8. a16 gis8[fis] e[d]\n      \\mBreak\n    cis8 fis e4 e | b\'8. a16 gis8[fis] e[d] |\n    cis8 fis e4 r8 e8\n      \\mBreak\n    a8. e16 cis8 e a b | cis2 a4 |\n    fis8. b16 a4 gis | a4.\\fermata\n      \\bar "|."\n  }\n}\n\nsongChords = \\chordmode {\n  %CHORDS GO HERE\n}\n\nverseOne = \\lyricmode {\n  %\\cfgText\n  %\\set stanza = "1."\n  Mu i -- sa -- maa, mu õnn ja rõõm,\n  kui kau -- nis o -- led sa!\n  Ei lei -- a mi -- na ii -- al teal\n  see suu -- re lai -- a il -- ma peal,\n  mis mull\' nii ar -- mas o -- leks ka,\n  kui sa, mu i -- sa -- maa!\n}\n\n\\score {\n  {\n    <<\n      %\\chords { \\set chordChanges = ##t \\songChords }\n      { \\melody }\n      \\addlyrics { \\verseOne }\n    >>\n  }\n\n  \\layout {\n    indent = #0\n    %ragged-last = ##t\n    \\context {\n      \\Score\n      \\remove "Bar_number_engraver"\n    }\n    \\context {\n      \\Lyrics\n      fontSize = #-2\n    }\n  }\n  \\midi { \\tempo 4 = 90 }\n}\n\n\\version "2.8.1"\n', 'image': None, 'default_margin': '0.1in'}
+  % VERSE {'title': 'Eesti h\\"umn', 'composer': 'Fr. Pacius', 'poet': 'J. V. Jannsen', 'margin': {'verse': {'l': '0.9in', 'r': '0.1in'}, 'refrain': {'l': '0.8in', 'r': '0.2in'}}, 'index': None, 'misc': None, 'paths': {'lyrics': '01_eesti_hümn.tex', 'music': '01_eesti_hümn.ly'}, 'verses': [<__main__.Verse object at 0xffff844c5fd0>, <__main__.Verse object at 0xffff844d91c0>, <__main__.Verse object at 0xffff844d9130>, None], 'music': '\\header{\n  tagline = ""\n}\n\n#(set-global-staff-size 10)\n\nmBreak = {  }\n\ncfgSong = {\n  \\key a \\major\n  \\time 3/4\n  \\autoBeamOff\n  \\partial 4.\n}\n\ncfgText = {\n  \\set fontSize = #-2\n}\n\nmelody = {\n  \\cfgSong\n  \\relative c\'{\n    e8 cis d |\n    e4. a8 b8. e,16 | cis\'2 a4\n      \\mBreak\n    fis8. b16 a4 gis | a2 e4 |\n    b\'8. a16 gis8[fis] e[d]\n      \\mBreak\n    cis8 fis e4 e | b\'8. a16 gis8[fis] e[d] |\n    cis8 fis e4 r8 e8\n      \\mBreak\n    a8. e16 cis8 e a b | cis2 a4 |\n    fis8. b16 a4 gis | a4.\\fermata\n      \\bar "|."\n  }\n}\n\nsongChords = \\chordmode {\n  %CHORDS GO HERE\n}\n\nverseOne = \\lyricmode {\n  %\\cfgText\n  %\\set stanza = "1."\n  Mu i -- sa -- maa, mu õnn ja rõõm,\n  kui kau -- nis o -- led sa!\n  Ei lei -- a mi -- na ii -- al teal\n  see suu -- re lai -- a il -- ma peal,\n  mis mull\' nii ar -- mas o -- leks ka,\n  kui sa, mu i -- sa -- maa!\n}\n\n\\score {\n  {\n    <<\n      %\\chords { \\set chordChanges = ##t \\songChords }\n      { \\melody }\n      \\addlyrics { \\verseOne }\n    >>\n  }\n\n  \\layout {\n    indent = #0\n    %ragged-last = ##t\n    \\context {\n      \\Score\n      \\remove "Bar_number_engraver"\n    }\n    \\context {\n      \\Lyrics\n      fontSize = #-2\n    }\n  }\n  \\midi { \\tempo 4 = 90 }\n}\n\n\\version "2.8.1"\n', 'image': None, 'default_margin': '0.1in'}
     \begin{changemargin}{ 0.9in }{ 0.1in }
   {
     \small
@@ -481,8 +481,6 @@ Jyri Kork, nskm.
   {\footnotesize M. Lipp \hfill E. V\~ork }\\
   \vspace{0.01in}
 
-  {\em {\footnotesize (2005 ,,Vanas\~ona{``} laagrilaul) } }
-  \vspace{0.01in}
 
 
   \pagebreak[1]
@@ -572,7 +570,7 @@ Jyri Kork, nskm.
 
   \pagebreak[1]
   % VERSE {'is_refrain': False, 'lines': ["O say, can you see, by the dawn's early light,", "What so proudly we hailed at the twilight's last gleaming?", 'Whose broad stripes and bright stars, through the perilous fight,', "O'er the ramparts we watched, were so gallantly streaming!", "And the rockets' red glare, the bombs bursting in air,", 'Gave proof through the night that our flag was still there:', 'O say, does that star-spangled banner yet wave', "O'er the land of the free and the home of the brave?"]}
-    \begin{changemargin}{ 0.05in }{ 0.0in }
+    \begin{changemargin}{ 0.0in }{ 0.0in }
   {
     \small
       \noindent \nopagebreak[4] O say, can you see, by the dawn's early light, \\
@@ -587,7 +585,7 @@ Jyri Kork, nskm.
   \end{changemargin}
   \pagebreak[1]
   % VERSE {'is_refrain': False, 'lines': ['On the shore, dimly seen through the mists of the deep,', "Where the foe's haughty host in dread silence reposes,", "What is that which the breeze, o'er the towering steep,", 'As it fitfully blows, now conceals, now discloses?', "Now it catches the gleam of the morning's first beam,", 'In full glory reflected now shines on the stream:', "'Tis the star-spangled banner! O long may it wave", "O'er the land of the free and the home of the brave!"]}
-    \begin{changemargin}{ 0.05in }{ 0.0in }
+    \begin{changemargin}{ 0.0in }{ 0.0in }
   {
     \small
       \noindent \nopagebreak[4] On the shore, dimly seen through the mists of the deep, \\
@@ -602,7 +600,7 @@ Jyri Kork, nskm.
   \end{changemargin}
   \pagebreak[1]
   % VERSE {'is_refrain': False, 'lines': ['And where is that band who so vauntingly swore', "That the havoc of war and the battle's confusion", 'A home and a country should leave us no more?', "Their blood has washed out their foul footsteps' pollution.", 'No refuge could save the hireling and slave', 'From the terror of flight, or the gloom of the grave:', 'And the star-spangled banner in triumph doth wave', "O'er the land of the free and the home of the brave!"]}
-    \begin{changemargin}{ 0.05in }{ 0.0in }
+    \begin{changemargin}{ 0.0in }{ 0.0in }
   {
     \small
       \noindent \nopagebreak[4] And where is that band who so vauntingly swore \\
@@ -617,7 +615,7 @@ Jyri Kork, nskm.
   \end{changemargin}
   \pagebreak[1]
   % VERSE {'is_refrain': False, 'lines': ['\\clearpage Oh! thus be it ever, when freemen shall stand', "Between their loved homes and the war's desolation!", 'Blest with victory and peace, may the Heaven-rescued land', 'Praise the Power that hath made and preserved us a nation.', 'Then conquer we must, when our cause it is just,', "And this be our motto: ``In God is our trust.''", 'And the star-spangled banner in triumph shall wave', "O'er the land of the free and the home of the brave!"]}
-    \begin{changemargin}{ 0.05in }{ 0.0in }
+    \begin{changemargin}{ 0.0in }{ 0.0in }
   {
     \small
       \noindent \nopagebreak[4] \clearpage Oh! thus be it ever, when freemen shall stand \\
@@ -784,7 +782,7 @@ Jyri Kork, nskm.
 }
 \vskip 0in plus 1in minus 0in
 \pagebreak[3]
-
+\clearpage
 {
   \samepage
   \raggedbottom
@@ -3756,7 +3754,7 @@ Jyri Kork, nskm.
     \large Vanasõna
   \end{minipage}%
   \noindent\begin{minipage}{.1\textwidth}
-      \includegraphics[width=1.0\textwidth,keepaspectratio,right]{/opt/laulik-repo/build/ver-20220218-074812-f6348ae7-0db9-4774-8079-1eb5a12ab0f1/tmpxlkjqluz.jpg}
+      \includegraphics[width=1.0\textwidth,keepaspectratio,right]{/opt/laulik-repo/build/ver-20220219-174043-537b8553-0eb7-48a2-89b5-d255118ae015/tmpyhmz8r8w.jpg}
   \end{minipage}
 
   \nopagebreak[4]
@@ -3851,7 +3849,7 @@ Jyri Kork, nskm.
   }
   \end{changemargin}
   \pagebreak[1]
-  % VERSE {'title': 'Vanasõna', 'composer': 'M. Kuhn', 'poet': 'M. Kuhn', 'margin': {'verse': {'l': '0.7in', 'r': '0.1in'}, 'refrain': {'l': '0.8in', 'r': '0.2in'}}, 'index': ['2005 Vanas\\~ona laagrilaul'], 'misc': '(2005 ,,Vanas\\~ona{``} laagrilaul)', 'paths': {'lyrics': '2005_vanasõna.tex', 'music': '2005_vanasõna.ly', 'image': '2005_vanasõna.jpg'}, 'verses': [<__main__.Verse object at 0xffff9f3fc070>, <__main__.Verse object at 0xffff9f3fce50>, <__main__.Verse object at 0xffff9f3fc9a0>, <__main__.Verse object at 0xffff9f3fca60>, <__main__.Verse object at 0xffff9f3fca30>, <__main__.Verse object at 0xffff9f3fc7f0>, None], 'music': '\ufeff\\header{\n  tagline = ""\n}\n\n#(set-global-staff-size 10)\n\ncfgSong = {\n  \\key c \\major\n  \\time 4/4\n}\n\ncfgText = {\n  \\set fontSize = #-2\n}\n\nmelody = {\n  \\cfgSong\n  \\relative c\'{\n    \\partial 8\n  e8 e4 e8 f8 g4 a8 g g f-. f8 g8-. f2\n  e4 e8 f g4 a8 g g2 r2\n  r4 e8 f g4 a8 g g f-.f g-. f4\n  <f a>8 <f a> <e g>4 f8 e d f16 e8. d8 c2. r4\n  r4 f8 f a4. a8 a g g f f e e4\n  r4 f8 f a4. a8 g g g a b2\n    \\bar "|."\n  }\n}\n\nverseOne = \\lyricmode {\n  \\cfgText\n  %\\set stanza = "1."\n  Kes ot -- sib, see lei -- ab, ja mu -- i -- du ei saa,\n  Ot -- si -- me Skaut -- lik -- ku teed!\n  I -- ga matk al -- gab ü -- he sam -- mu -- ga,\n  As -- tu jul -- gelt ja vaa -- ta mis on ees.\n\n  \\set stanza = "Ref:"\n  Va -- na -- sõ -- na, e -- si -- i -- sa õ -- pe -- tus,\n  kos -- tab mei -- le lä -- bi ae -- ga -- de!\n}\n\nsongChords = \\chordmode {\n  s8 c1 f1 c1 g2 g2:7 c2 c2:7 f2 gis2 c g c c:7\n  f1 c f g\n}\n\n\\score {\n  {\n    %\\time 4/4\n    <<\n      \\chords { \\songChords }\n      { \\melody }\n      \\addlyrics { \\verseOne }\n    >>\n  }\n  \\layout {\n    indent = #0\n  %ragged-last = ##t\n  \\context {\n      \\Score\n      \\remove "Bar_number_engraver"\n    }\n  }\n  \\midi { }\n}\n\n\\version "2.8.1"\n', 'image': '/opt/laulik-repo/build/ver-20220218-074812-f6348ae7-0db9-4774-8079-1eb5a12ab0f1/tmpxlkjqluz.jpg', 'default_margin': '0.1in'}
+  % VERSE {'title': 'Vanasõna', 'composer': 'M. Kuhn', 'poet': 'M. Kuhn', 'margin': {'verse': {'l': '0.7in', 'r': '0.1in'}, 'refrain': {'l': '0.8in', 'r': '0.2in'}}, 'index': ['2005 Vanas\\~ona laagrilaul'], 'misc': '(2005 ,,Vanas\\~ona{``} laagrilaul)', 'paths': {'lyrics': '2005_vanasõna.tex', 'music': '2005_vanasõna.ly', 'image': '2005_vanasõna.jpg'}, 'verses': [<__main__.Verse object at 0xffff844d9340>, <__main__.Verse object at 0xffff844d9250>, <__main__.Verse object at 0xffff844d9ca0>, <__main__.Verse object at 0xffff844d9d00>, <__main__.Verse object at 0xffff844d91c0>, <__main__.Verse object at 0xffff844d9490>, None], 'music': '\ufeff\\header{\n  tagline = ""\n}\n\n#(set-global-staff-size 10)\n\ncfgSong = {\n  \\key c \\major\n  \\time 4/4\n}\n\ncfgText = {\n  \\set fontSize = #-2\n}\n\nmelody = {\n  \\cfgSong\n  \\relative c\'{\n    \\partial 8\n  e8 e4 e8 f8 g4 a8 g g f-. f8 g8-. f2\n  e4 e8 f g4 a8 g g2 r2\n  r4 e8 f g4 a8 g g f-.f g-. f4\n  <f a>8 <f a> <e g>4 f8 e d f16 e8. d8 c2. r4\n  r4 f8 f a4. a8 a g g f f e e4\n  r4 f8 f a4. a8 g g g a b2\n    \\bar "|."\n  }\n}\n\nverseOne = \\lyricmode {\n  \\cfgText\n  %\\set stanza = "1."\n  Kes ot -- sib, see lei -- ab, ja mu -- i -- du ei saa,\n  Ot -- si -- me Skaut -- lik -- ku teed!\n  I -- ga matk al -- gab ü -- he sam -- mu -- ga,\n  As -- tu jul -- gelt ja vaa -- ta mis on ees.\n\n  \\set stanza = "Ref:"\n  Va -- na -- sõ -- na, e -- si -- i -- sa õ -- pe -- tus,\n  kos -- tab mei -- le lä -- bi ae -- ga -- de!\n}\n\nsongChords = \\chordmode {\n  s8 c1 f1 c1 g2 g2:7 c2 c2:7 f2 gis2 c g c c:7\n  f1 c f g\n}\n\n\\score {\n  {\n    %\\time 4/4\n    <<\n      \\chords { \\songChords }\n      { \\melody }\n      \\addlyrics { \\verseOne }\n    >>\n  }\n  \\layout {\n    indent = #0\n  %ragged-last = ##t\n  \\context {\n      \\Score\n      \\remove "Bar_number_engraver"\n    }\n  }\n  \\midi { }\n}\n\n\\version "2.8.1"\n', 'image': '/opt/laulik-repo/build/ver-20220219-174043-537b8553-0eb7-48a2-89b5-d255118ae015/tmpyhmz8r8w.jpg', 'default_margin': '0.1in'}
     \begin{changemargin}{ 0.7in }{ 0.1in }
   {
     \small
@@ -5126,7 +5124,7 @@ Jyri Kork, nskm.
   }
   \end{changemargin}
   \pagebreak[1]
-  % VERSE {'title': 'Ema pani supi sooja', 'composer': None, 'poet': None, 'margin': {'verse': {'l': '0.75in'}, 'refrain': {'l': '1.05in'}}, 'index': None, 'misc': None, 'paths': {'lyrics': 'ema_pani_supi_sooja.tex'}, 'verses': [<__main__.Verse object at 0xffff9f377dc0>, None], 'music': None, 'image': None, 'default_margin': '0.1in'}
+  % VERSE {'title': 'Ema pani supi sooja', 'composer': None, 'poet': None, 'margin': {'verse': {'l': '0.75in'}, 'refrain': {'l': '1.05in'}}, 'index': None, 'misc': None, 'paths': {'lyrics': 'ema_pani_supi_sooja.tex'}, 'verses': [<__main__.Verse object at 0xffff84443670>, None], 'music': None, 'image': None, 'default_margin': '0.1in'}
     \begin{changemargin}{ 0.75in }{ 0.1in }
   {
     \small
@@ -5786,7 +5784,7 @@ Jyri Kork, nskm.
   }
   \end{changemargin}
   \pagebreak[1]
-  % VERSE {'title': 'House of the Pipra Pood', 'composer': 'Inglismaa rahvaviis', 'poet': 'T. Tammaru, G. Tamm', 'margin': {'verse': {'l': '0.4in'}, 'refrain': {'l': '0.7in'}}, 'index': ['Pipra Pood, House of the'], 'misc': None, 'paths': {'lyrics': 'house_of_the_pipra_pood.tex'}, 'verses': [<__main__.Verse object at 0xffff9f3f6f10>, <__main__.Verse object at 0xffff9f3f6c10>, <__main__.Verse object at 0xffff9f3f67c0>, <__main__.Verse object at 0xffff9f3f6b20>, <__main__.Verse object at 0xffff9f3f6310>, None], 'music': None, 'image': None, 'default_margin': '0.1in'}
+  % VERSE {'title': 'House of the Pipra Pood', 'composer': 'Inglismaa rahvaviis', 'poet': 'T. Tammaru, G. Tamm', 'margin': {'verse': {'l': '0.4in'}, 'refrain': {'l': '0.7in'}}, 'index': ['Pipra Pood, House of the'], 'misc': None, 'paths': {'lyrics': 'house_of_the_pipra_pood.tex'}, 'verses': [<__main__.Verse object at 0xffff84455df0>, <__main__.Verse object at 0xffff84455100>, <__main__.Verse object at 0xffff84455c10>, <__main__.Verse object at 0xffff84455f70>, <__main__.Verse object at 0xffff844558b0>, None], 'music': None, 'image': None, 'default_margin': '0.1in'}
     \begin{changemargin}{ 0.4in }{ 0.1in }
   {
     \small
@@ -6710,7 +6708,7 @@ Jyri Kork, nskm.
   }
   \end{changemargin}
   \pagebreak[1]
-  % VERSE {'title': 'Kas sul on \\"uks vana sohva?', 'composer': None, 'poet': None, 'margin': {'verse': {'l': '0.45in'}, 'refrain': {'l': '0.75in'}}, 'index': ['Kuuvalgel \\"o\\"ol'], 'misc': None, 'paths': {'lyrics': 'kas_sul_on_uks_vana_sohva.tex'}, 'verses': [<__main__.Verse object at 0xffff9f3fc400>, <__main__.Verse object at 0xffff9f3fc700>, <__main__.Verse object at 0xffff9f3fc490>, <__main__.Verse object at 0xffff9f3fce20>, <__main__.Verse object at 0xffff9f3fc3d0>, <__main__.Verse object at 0xffff9f3fc190>, <__main__.Verse object at 0xffff9f3fc7c0>, None], 'music': None, 'image': None, 'default_margin': '0.1in'}
+  % VERSE {'title': 'Kas sul on \\"uks vana sohva?', 'composer': None, 'poet': None, 'margin': {'verse': {'l': '0.45in'}, 'refrain': {'l': '0.75in'}}, 'index': ['Kuuvalgel \\"o\\"ol'], 'misc': None, 'paths': {'lyrics': 'kas_sul_on_uks_vana_sohva.tex'}, 'verses': [<__main__.Verse object at 0xffff844d91f0>, <__main__.Verse object at 0xffff844d9b50>, <__main__.Verse object at 0xffff844d9040>, <__main__.Verse object at 0xffff844d9cd0>, <__main__.Verse object at 0xffff844d9280>, <__main__.Verse object at 0xffff844d9d30>, <__main__.Verse object at 0xffff844d9af0>, None], 'music': None, 'image': None, 'default_margin': '0.1in'}
     \begin{changemargin}{ 0.45in }{ 0.1in }
   {
     \small
@@ -14782,7 +14780,7 @@ Jyri Kork, nskm.
   }
   \end{changemargin}
   \pagebreak[1]
-  % VERSE {'title': 'Tulih\\"and', 'composer': None, 'poet': None, 'margin': {'verse': {'l': '0.8in'}, 'refrain': {'l': '1.1in'}}, 'index': None, 'misc': None, 'paths': {'lyrics': 'tulihand.tex'}, 'verses': [<__main__.Verse object at 0xffff9f30de80>, <__main__.Verse object at 0xffff9f30d100>, <__main__.Verse object at 0xffff9f30dc40>, <__main__.Verse object at 0xffff9f30d2b0>, <__main__.Verse object at 0xffff9f30d4f0>, <__main__.Verse object at 0xffff9f30d310>, None], 'music': None, 'image': None, 'default_margin': '0.1in'}
+  % VERSE {'title': 'Tulih\\"and', 'composer': None, 'poet': None, 'margin': {'verse': {'l': '0.8in'}, 'refrain': {'l': '1.1in'}}, 'index': None, 'misc': None, 'paths': {'lyrics': 'tulihand.tex'}, 'verses': [<__main__.Verse object at 0xffff843eadc0>, <__main__.Verse object at 0xffff843ea1f0>, <__main__.Verse object at 0xffff843ea730>, <__main__.Verse object at 0xffff843eaaf0>, <__main__.Verse object at 0xffff843ea6d0>, <__main__.Verse object at 0xffff843ea040>, None], 'music': None, 'image': None, 'default_margin': '0.1in'}
     \begin{changemargin}{ 0.8in }{ 0.1in }
   {
     \small
@@ -15237,7 +15235,7 @@ Jyri Kork, nskm.
   }
   \end{changemargin}
   \pagebreak[1]
-  % VERSE {'title': 'V\\"aike mees, sa nutad', 'composer': None, 'poet': None, 'margin': {'verse': {'l': '0.7in'}, 'refrain': {'l': '1.0in'}}, 'index': None, 'misc': None, 'paths': {'lyrics': 'vaike_mees_sa_nutad.tex'}, 'verses': [<__main__.Verse object at 0xffff9f3f6130>, <__main__.Verse object at 0xffff9f3f6760>, <__main__.Verse object at 0xffff9f3f6790>, <__main__.Verse object at 0xffff9f3f6f10>, None], 'music': None, 'image': None, 'default_margin': '0.1in'}
+  % VERSE {'title': 'V\\"aike mees, sa nutad', 'composer': None, 'poet': None, 'margin': {'verse': {'l': '0.7in'}, 'refrain': {'l': '1.0in'}}, 'index': None, 'misc': None, 'paths': {'lyrics': 'vaike_mees_sa_nutad.tex'}, 'verses': [<__main__.Verse object at 0xffff84447340>, <__main__.Verse object at 0xffff84447e80>, <__main__.Verse object at 0xffff844003d0>, <__main__.Verse object at 0xffff844007c0>, None], 'music': None, 'image': None, 'default_margin': '0.1in'}
     \begin{changemargin}{ 0.7in }{ 0.1in }
   {
     \small
@@ -16072,7 +16070,7 @@ Jyri Kork, nskm.
   }
   \end{changemargin}
   \pagebreak[1]
-  % VERSE {'title': 'Vanemate laul', 'composer': 'P. Fischgrund', 'poet': 'P. Fischgrund, T. Tammaru, L. Sarapik, M. Ets', 'margin': {'verse': {'l': '0.6in'}, 'refrain': {'l': '0.9in'}}, 'index': None, 'misc': None, 'paths': {'lyrics': 'vanemate_laul.tex'}, 'verses': [<__main__.Verse object at 0xffff9f31bf10>, <__main__.Verse object at 0xffff9f309340>, <__main__.Verse object at 0xffff9f309bb0>, <__main__.Verse object at 0xffff9f309190>, <__main__.Verse object at 0xffff9f3094c0>, <__main__.Verse object at 0xffff9f309250>, None], 'music': None, 'image': None, 'default_margin': '0.1in'}
+  % VERSE {'title': 'Vanemate laul', 'composer': 'P. Fischgrund', 'poet': 'P. Fischgrund, T. Tammaru, L. Sarapik, M. Ets', 'margin': {'verse': {'l': '0.6in'}, 'refrain': {'l': '0.9in'}}, 'index': None, 'misc': None, 'paths': {'lyrics': 'vanemate_laul.tex'}, 'verses': [<__main__.Verse object at 0xffff843eafa0>, <__main__.Verse object at 0xffff84436310>, <__main__.Verse object at 0xffff84436730>, <__main__.Verse object at 0xffff84436dc0>, <__main__.Verse object at 0xffff844365b0>, <__main__.Verse object at 0xffff84436880>, None], 'music': None, 'image': None, 'default_margin': '0.1in'}
     \begin{changemargin}{ 0.6in }{ 0.1in }
   {
     \small
