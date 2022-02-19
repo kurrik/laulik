@@ -39,7 +39,10 @@ class Laul(yaml.YAMLObject):
     self.verses = None
     self.music = None
     self.image = None
-    self.default_margin = '0.1in'
+    self.default_verse_l_margin = '0.1in'
+    self.default_verse_r_margin = '0.1in'
+    self.default_refrain_l_margin = '0.4in'
+    self.default_refrain_r_margin = '0.1in'
 
   @classmethod
   def from_yaml(cls, loader, node):
@@ -53,16 +56,16 @@ class Laul(yaml.YAMLObject):
     return self.poet != None or self.composer != None
 
   def margin_verse_l(self):
-    return glom(self, 'margin.verse.l', default=self.default_margin)
+    return glom(self, 'margin.verse.l', default=self.default_verse_l_margin)
 
   def margin_verse_r(self):
-    return glom(self, 'margin.verse.r', default=self.default_margin)
+    return glom(self, 'margin.verse.r', default=self.default_verse_r_margin)
 
   def margin_refrain_l(self):
-    return glom(self, 'margin.refrain.l', default=self.default_margin)
+    return glom(self, 'margin.refrain.l', default=self.default_refrain_l_margin)
 
   def margin_refrain_r(self):
-    return glom(self, 'margin.refrain.r', default=self.default_margin)
+    return glom(self, 'margin.refrain.r', default=self.default_refrain_r_margin)
 
 
 class Project(yaml.YAMLObject):

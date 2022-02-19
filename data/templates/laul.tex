@@ -1,7 +1,6 @@
 {{#music}}
 \clearpage
 {{/music}}
-
 {
   \samepage
   \raggedbottom
@@ -19,26 +18,27 @@
   \index{|title_for_index|}
   |= {{ }} =|
   \vspace{0.2in}
-
-  \noindent\begin{minipage}{.1\textwidth}
-    \hfill\vspace{0.1in}
-  \end{minipage}%
-  \noindent\begin{minipage}{.8\textwidth}
-    \centering
-    \bfseries
-    \large {{title}}
-  \end{minipage}%
-  \noindent\begin{minipage}{.1\textwidth}
-    {{#image}}
+  {{#image}}
+    \noindent\begin{minipage}{.1\textwidth}
+      \hfill\vspace{0.1in}
+    \end{minipage}%
+    \noindent\begin{minipage}{.8\textwidth}
+      \centering
+      \bfseries
+      \large {{title}}
+    \end{minipage}%
+    \noindent\begin{minipage}{.1\textwidth}
       {{= | | =}}
       \includegraphics[width=1.0\textwidth,keepaspectratio,right]{|.|}
       |= {{ }} =|
-    {{/image}}
-    {{^image}}
-      \hfill\vspace{0.1in}
-    {{/image}}
-  \end{minipage}
-
+    \end{minipage}
+  {{/image}}
+  {{^image}}
+    \centerline{
+      \bfseries
+      \large {{title}}
+    }
+  {{/image}}
   \nopagebreak[4]
   \vspace{0.1in}
   \nopagebreak[4]
@@ -48,7 +48,7 @@
 {{/title}}
 
 {{#poet_or_composer}}
-  {\footnotesize {{poet}} \hfill {{composer}} }\\
+  {\footnotesize {{#poet}}{{poet}}{{/poet}} \hfill {{#composer}}{{composer}}{{/composer}} }\\
   \vspace{0.01in}
 {{/poet_or_composer}}
 
@@ -58,16 +58,16 @@
 {{/misc}}
 
 {{#music}}
-  \vspace{0.01in}
+  \vspace{-0.05in}
   \nopagebreak[4]
   \begin[noindent,line-width=3.2\in, staffsize=9, fontload]{lilypond}
   {{music}}
   \end{lilypond}
+  \vspace{-0.15in}
 {{/music}}
 
 {{#verses}}
   \pagebreak[1]
-  % VERSE {{__dict__}}
   {{#is_refrain}}
     \begin{changemargin}{ {{margin_refrain_l}} }{ {{margin_refrain_r}} }
   {{/is_refrain}}
@@ -82,7 +82,7 @@
   }
   \end{changemargin}
 {{/verses}}
-
 }
 \vskip 0in plus 1in minus 0in
+\vspace{-0.05in}
 \pagebreak[3]
