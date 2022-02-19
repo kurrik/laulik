@@ -1,3 +1,7 @@
 .gcloudignore
 .git
 .gitignore
+
+build/*
+!build/projects
+!build/projects/*
