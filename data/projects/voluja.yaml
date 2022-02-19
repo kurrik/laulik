@@ -16,6 +16,7 @@ parts:
   - laulud/1954_kalevite_samm.yml
   - laulud/1959_rannikmaa_laul.yml
   - laulud/1959_teraspoiste_laul.yml
+  - laulud/maailmalaagri_laul_62.yml
   - laulud/1967_koguja_laul.yml
   - laulud/1969_kungla_rahvas.yml
   - laulud/1970_uhendaja_laul.yml
@@ -102,7 +103,6 @@ parts:
   - laulud/ma_kondisin_vainul.yml
   - laulud/ma_tahaksin_kodus_olla.yml
   - laulud/maa_tuleb_taita_lastega.yml
-  - laulud/maailmalaagri_laul_62.yml
   - laulud/mats_alati_on_tubli_mees.yml
   - laulud/me_motted_on_priid.yml
   - laulud/meil_aiaaarne_tanavas.yml
