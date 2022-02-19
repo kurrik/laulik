@@ -1,4 +1,9 @@
 --- !Laul
 title: Faria
+margin:
+  verse:
+    l: 0.4in
+  refrain:
+    l: 0.7in
 paths:
   lyrics: faria.tex

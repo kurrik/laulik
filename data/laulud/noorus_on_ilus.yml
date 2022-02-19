@@ -1,0 +1,11 @@
+--- !Laul
+title: Noorus on ilus
+poet: "M. K\\\"orber"
+composer: saksa tudengilaul
+margin:
+  verse:
+    l: 0.8in
+  refrain:
+    l: 1.1in
+paths:
+  lyrics: noorus_on_ilus.tex

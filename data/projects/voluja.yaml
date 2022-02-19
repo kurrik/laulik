@@ -36,10 +36,10 @@ parts:
   - laulud/1997_tahekogu_laagri_laul.yml
   - laulud/1998_tuletorn_laagri_laul.yml
   - laulud/1999_metsavolu_laagri_laul.yml
+  - content/clearpage.yml
   - laulud/2001_arkamisaja_laagri_laul.yml
   - laulud/2003_pohjarada_laagri_laul.yml
   - laulud/2004_olumpia_laagri_laul.yml
-  - laulud/2005_vanasona.yml
   - laulud/2005_vanasõna.yml
   - laulud/2006_voluja.yml
   - content/voluja/00004_lemmiklaulud.yml
@@ -60,14 +60,14 @@ parts:
   - laulud/haanja_miis.yml
   - laulud/hei_vallerii.yml
   - laulud/hiir_huppas.yml
-  - laulud/hobedast_lind.yml
   - laulud/hoia_jumal_eestit.yml
   - laulud/house_of_the_pipra_pood.yml
+  - laulud/hobedast_lind.yml
   - laulud/inimesed_tanavatel.yml
   - laulud/isamaa_ilu_hoieldes.yml
-  - laulud/jaaj001.yml
-  - laulud/janes_istus.yml
   - laulud/jumal_mu_suda.yml
+  - laulud/janes_istus.yml
+  - laulud/jaaj001.yml
   - laulud/kaks_laulijat.yml
   - laulud/kalevite_kants.yml
   - laulud/kalla_kallis.yml
@@ -91,19 +91,20 @@ parts:
   - laulud/kuldne_ohtupaike.yml
   - laulud/kus_sa_kaisid_sokukene.yml
   - laulud/kuulge_eestimaa_pojad.yml
-  - laulud/labi_paeva_ja_oo.yml
+  - content/clearpage.yml
   - laulud/laul_lakewoodi_liivast.yml
   - laulud/laurentsius.yml
   - laulud/lepalind.yml
   - laulud/lihtne_viisikene.yml
   - laulud/liisa.yml
-  - laulud/lokke_aares.yml
+  - content/clearpage.yml
   - laulud/loojangule_vastu.yml
+  - laulud/labi_paeva_ja_oo.yml
+  - laulud/lokke_aares.yml
   - laulud/ma_ihkan_koju.yml
   - laulud/ma_kondisin_vainul.yml
   - laulud/ma_tahaksin_kodus_olla.yml
   - laulud/maa_tuleb_taita_lastega.yml
-  - laulud/maailmalaagri_laul_62.yml
   - laulud/mats_alati_on_tubli_mees.yml
   - laulud/me_motted_on_priid.yml
   - laulud/meil_aiaaarne_tanavas.yml
@@ -112,24 +113,27 @@ parts:
   - laulud/metsa_laksid_sa.yml
   - laulud/metsavennad.yml
   - laulud/miki_merehadas.yml
-  - laulud/minu_paev.yml
   - laulud/minu_peig_on_kalamees.yml
+  - laulud/minu_paev.yml
   - laulud/mmm_ma_tahaks_viibida.yml
   - laulud/mu_isamaa_armas.yml
   - laulud/mulgimaal.yml
   - laulud/mullu_mina_muidu.yml
   - laulud/mustjala_pulmarong.yml
   - laulud/naabri_mari.yml
+  - laulud/noorus_on_ilus.yml
   - laulud/nagin_eile_neiut.yml
   - laulud/oi_aegu_ammuseid.yml
   - laulud/olen_gaid_ja_kodumaa_tutar.yml
-  - laulud/paike_veerend.yml
+  - content/clearpage.yml
   - laulud/papa_juurde_laksin_ma.yml
   - laulud/parvepoisid.yml
+  - content/clearpage.yml
   - laulud/peo_laul.yml
-  - laulud/pohjamaa.yml
   - laulud/postipoiss.yml
   - laulud/punab_laagrilipp.yml
+  - laulud/paike_veerend.yml
+  - laulud/pohjamaa.yml
   - laulud/raha_paneb_rattad_kaima.yml
   - laulud/rannakalur.yml
   - laulud/rulladi_rulladi.yml
@@ -139,42 +143,46 @@ parts:
   - laulud/sauna_taga.yml
   - laulud/see_on_meie_roomus_malev.yml
   - laulud/sinilill.yml
-  - laulud/sober_ara_vasi.yml
-  - laulud/soogipalve.yml
-  - laulud/suda_tuksub.yml
   - laulud/superesto.yml
-  - laulud/suti_suti.yml
   - laulud/suudluse_opetus.yml
   - laulud/suvi.yml
+  - content/clearpage.yml
+  - laulud/sober_ara_vasi.yml
+  - laulud/soogipalve.yml
+  - content/clearpage.yml
+  - laulud/suda_tuksub.yml
+  - laulud/suti_suti.yml
   - laulud/taamal_kus_kauge_silmapiir.yml
   - laulud/taat_ara_maga.yml
   - laulud/tallinna_teel.yml
-  - laulud/tana_oosel_naudin_elu.yml
   - laulud/tere_tibukene.yml
   - laulud/tiideratas_taaderatas.yml
   - laulud/tiina_tiina.yml
   - laulud/toronto_linnas.yml
-  - laulud/tudruk.yml
   - laulud/tule_aares.yml
   - laulud/tulihand.yml
   - laulud/tuul_ja_liiv.yml
+  - laulud/tana_oosel_naudin_elu.yml
+  - content/clearpage.yml
+  - laulud/tudruk.yml
   - laulud/uhti-uhti_uhkesti.yml
   - laulud/unelaul.yml
-  - laulud/vaike_lauluke.yml
-  - laulud/vaike_mees_sa_nutad.yml
-  - laulud/vaike_neid.yml
-  - laulud/vaike_peiu.yml
   - laulud/vaikne_kena.yml
   - laulud/vallerii_valleraa.yml
   - laulud/vana_mehe.yml
   - laulud/vana_viis.yml
-  - laulud/vandra_metsas.yml
   - laulud/vanemate_laul.yml
   - laulud/vangile_ei_meeldi_trellid.yml
   - laulud/viljandi_paadimees.yml
+  - laulud/vaike_lauluke.yml
+  - laulud/vaike_mees_sa_nutad.yml
+  - laulud/vaike_neid.yml
+  - laulud/vaike_peiu.yml
+  - laulud/vandra_metsas.yml
   - laulud/z1_onne_eesti.yml
   - laulud/z2_arkamise_aeg.yml
   - laulud/z3_oine_tuul.yml
   - laulud/z3_oo_pime.yml
+  - content/vspace_push_down.yml
   - laulud/z4_uhte_laulu.yml
   - laulud/z4_uks_mees_nagi_unes.yml

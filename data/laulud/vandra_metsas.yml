@@ -1,5 +1,10 @@
 --- !Laul
 title: "V\\\"andra metsas"
+margin:
+  verse:
+    l: 0.4in
+  refrain:
+    l: 0.7in
 paths:
   lyrics: vandra_metsas.tex
   music: vandra_metsas.ly

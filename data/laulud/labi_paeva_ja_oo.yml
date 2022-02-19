@@ -1,5 +1,10 @@
 --- !Laul
 title: "L\\\"abi p\\\"aeva ja \\\"o\\\"o"
 composer: P. Kopvillem
+margin:
+  verse:
+    l: 0.4in
+  refrain:
+    l: 0.7in
 paths:
   lyrics: labi_paeva_ja_oo.tex

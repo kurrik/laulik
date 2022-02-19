@@ -1,0 +1,4 @@
+--- !Content
+path: vspace.tex
+data:
+  space: "0.1in"
