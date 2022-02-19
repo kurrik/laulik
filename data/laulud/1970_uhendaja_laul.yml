@@ -4,6 +4,7 @@ poet: J. Kork
 composer: J. Mandre
 index:
   - "1970 \\\"Uhendaja suurlaagri laul"
+misc: "(1970 ,,\\\"Uhendaja{``} suurlaagri laul)"
 margin:
   verse:
     l: 0.8in
