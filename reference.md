@@ -25,7 +25,7 @@ Followed by a set of keys / values, in standard [Yaml format][yaml].
 The following keys are supported:
 
 #### `title` - String
-Name of the song.  This will also be included as an index entry.  
+Name of the song.  This will also be included as an index entry.
 Supports [LaTeX][latex] markup.
 ```
 title: Eesti h\"umn
@@ -166,7 +166,7 @@ Followed by a set of keys / values, in standard
 The following keys are supported:
 
 #### `title` - String
-Name of the book.  
+Name of the book.
 Supports [LaTeX][latex] markup.
 ```
 title: Järvemetsa laulik
@@ -184,13 +184,32 @@ A list of paths to include as songs in this project. These paths are relative to
 
 Order is important as the songs will be included in the same order they appear in this list.
 
-**TODO: Support linking to .latex files in order to include supplemental text, etc in the project.**
 
 ```
 parts:
   - laulud/01_eesti_hümn.yml
   - laulud/2005_vanasõna.yml
 ```
+
+#### `templatesdir` - String
+Path to a non-default directory to use for template files.  A project might customize Laul and Project templates using this.
+```
+templatesdir: templates/test
+```
+
+#### `debug` - Boolean
+If true, PDF will render red boxes around verses.  Useful for debugging layout.
+```
+debug: true
+```
+
+#### `layoutmode` - String
+One of `margin` (default) or `width`.  Controls how verses are laid out.  Ideally everything uses
+`width` in `em` units, which should scale to different paper sizes easily.
+```
+layoutmode: width
+```
+
 
 ## Templates
 Templates are located in the `data/templates` directory, typically with a `.tex` extension.

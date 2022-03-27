@@ -26,6 +26,7 @@ class Laul(yaml.YAMLObject):
           composer=None,
           poet=None,
           margin=None,
+          layout=None,
           index=None,
           misc=None,
           paths=None):
@@ -33,6 +34,7 @@ class Laul(yaml.YAMLObject):
     self.composer = composer
     self.poet = poet
     self.margin = margin
+    self.layout = layout
     self.index = index
     self.misc = misc
     self.paths = paths
@@ -43,6 +45,8 @@ class Laul(yaml.YAMLObject):
     self.default_verse_r_margin = '0.1in'
     self.default_refrain_l_margin = '0.4in'
     self.default_refrain_r_margin = '0.1in'
+    self.default_layout_verse_width = '18em'
+    self.default_layout_refrain_width = '15em'
 
   @classmethod
   def from_yaml(cls, loader, node):
@@ -67,6 +71,12 @@ class Laul(yaml.YAMLObject):
   def margin_refrain_r(self):
     return glom(self, 'margin.refrain.r', default=self.default_refrain_r_margin)
 
+  def layout_verse_width(self):
+    return glom(self, 'layout.verse.width', default=self.default_layout_verse_width)
+
+  def layout_refrain_width(self):
+    return glom(self, 'layout.refrain.width', default=self.default_layout_refrain_width)
+
 
 class Project(yaml.YAMLObject):
   yaml_tag = u'!Project'
@@ -78,6 +88,7 @@ class Project(yaml.YAMLObject):
           subtitle,
           parts,
           debug=False,
+          layoutmode='margin',
           page=None,
           music=None,
           templatesdir=None,
@@ -86,6 +97,7 @@ class Project(yaml.YAMLObject):
     self.subtitle = subtitle
     self.parts = parts
     self.debug = debug
+    self.layoutmode = layoutmode
     self.page = page
     self.music = music
     self.templatesdir = templatesdir
@@ -107,6 +119,15 @@ class Project(yaml.YAMLObject):
 
   def music_staffsize(self):
     return glom(self, 'music.staffsize', default=self.default_music_staffsize)
+
+  def layout_mode(self):
+    return glom(self, 'layoutmode', default='margin')
+
+  def use_margin_layout(self):
+    return self.layoutmode == 'margin'
+
+  def use_width_layout(self):
+    return self.layoutmode == 'width'
 
   @classmethod
   def from_yaml(cls, loader, node):

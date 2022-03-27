@@ -1,4 +1,4 @@
-\documentclass[10pt]{book}
+\documentclass[14pt]{book}
 \usepackage{layout}
 \usepackage[margin=.20in, bindingoffset=.4in, papersize={ {{page_width}}, {{page_height}} },  top=0.25in,  includefoot]{geometry}
 \usepackage{makeidx}
@@ -39,10 +39,12 @@
     \setlength{\itemindent}{\parindent}
     \setlength{\parsep}{\parskip}
   }
-  \item[]
+  \item[]{{#debug}}\begin{debugbox}{{/debug}}
 }{
+  {{#debug}}\end{debugbox}{{/debug}}
   \end{list}
 }
+
 \newcommand{\vcenteredinclude}[1]{\begingroup
   \setbox0=\hbox{\includegraphics[height=0.1\textheight,keepaspectratio]{#1}}%
 \parbox{\wd0}{\box0}\endgroup}
