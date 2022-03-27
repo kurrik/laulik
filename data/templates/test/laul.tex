@@ -80,10 +80,10 @@
   {{/project.use_margin_layout}}
   {{#project.use_width_layout}}
     {{#is_refrain}}
-      \begin{changewidth}{ {{layout_refrain_width}} }
+      \begin{changewidth}{ {{layout_refrain_width}} }{ {{layout_refrain_indent}} }
     {{/is_refrain}}
     {{^is_refrain}}
-      \begin{changewidth}{ {{layout_verse_width}} }
+      \begin{changewidth}{ {{layout_verse_width}} }{ {{layout_verse_indent}} }
     {{/is_refrain}}
   {{/project.use_width_layout}}
   {

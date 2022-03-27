@@ -12,25 +12,25 @@ music:
   linewidth: 5.20\in
   staffsize: 9
 parts:
-  - laulud/01_eesti_hümn.yml
-  - laulud/02_eesti_lipp.yml
-  - laulud/03_ameerika_humn.yml
-  - laulud/04_kanada_humn.yml
-  - laulud/05_skautide_humn.yml
-  - laulud/06_gaidide_humn.yml
-#  - laulud/1949_meid_laiali.yml
-#  - laulud/1954_kalevite_samm.yml
-#  - laulud/1959_rannikmaa_laul.yml
-#  - laulud/1959_teraspoiste_laul.yml
-#  - laulud/1962_maailmalaagri_laul.yml
-#  - laulud/1967_koguja_laul.yml
-#  - laulud/1969_kungla_rahvas.yml
-#  - laulud/1970_uhendaja_laul.yml
-#  - laulud/1980_tamme_laagri_laul.yml
-#  - laulud/1983_manivalla_laagri_laul.yml
-#  - laulud/1984_sini_must_valge_lipp.yml
-#  - laulud/1986_kalevite_vaim.yml
-#  - laulud/1987_skautlikul_teel.yml
+#  - laulud/01_eesti_hümn.yml
+#  - laulud/02_eesti_lipp.yml
+#  - laulud/03_ameerika_humn.yml
+#  - laulud/04_kanada_humn.yml
+#  - laulud/05_skautide_humn.yml
+#  - laulud/06_gaidide_humn.yml
+  - laulud/1949_meid_laiali.yml
+  - laulud/1954_kalevite_samm.yml
+  - laulud/1959_rannikmaa_laul.yml
+  - laulud/1959_teraspoiste_laul.yml
+  - laulud/1962_maailmalaagri_laul.yml
+  - laulud/1967_koguja_laul.yml
+  - laulud/1969_kungla_rahvas.yml
+  - laulud/1970_uhendaja_laul.yml
+  - laulud/1980_tamme_laagri_laul.yml
+  - laulud/1983_manivalla_laagri_laul.yml
+  - laulud/1984_sini_must_valge_lipp.yml
+  - laulud/1986_kalevite_vaim.yml
+  - laulud/1987_skautlikul_teel.yml
 #  - laulud/1988_suur_vanker_laagri_laul.yml
 #  - laulud/1989_muistne_malev_laagri_laul.yml
 #  - laulud/1990_tulesade_laagri_laul.yml

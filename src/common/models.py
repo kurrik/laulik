@@ -46,7 +46,9 @@ class Laul(yaml.YAMLObject):
     self.default_refrain_l_margin = '0.4in'
     self.default_refrain_r_margin = '0.1in'
     self.default_layout_verse_width = '18em'
+    self.default_layout_verse_indent = '0em'
     self.default_layout_refrain_width = '15em'
+    self.default_layout_refrain_indent = '1em'
 
   @classmethod
   def from_yaml(cls, loader, node):
@@ -76,6 +78,12 @@ class Laul(yaml.YAMLObject):
 
   def layout_refrain_width(self):
     return glom(self, 'layout.refrain.width', default=self.default_layout_refrain_width)
+
+  def layout_verse_indent(self):
+    return glom(self, 'layout.verse.indent', default=self.default_layout_verse_indent)
+
+  def layout_refrain_indent(self):
+    return glom(self, 'layout.refrain.indent', default=self.default_layout_refrain_indent)
 
 
 class Project(yaml.YAMLObject):

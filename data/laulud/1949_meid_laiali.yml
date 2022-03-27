@@ -6,6 +6,11 @@ index:
   - "1949 \\\"Ommerni suurlaagri laul"
   - "\\\"Ommerni '49 suurlaagri laul"
 misc: "(1949 ,,\\\"Ommerni{``} suurlaagri laul)"
+layout:
+  verse:
+    width: 15em
+  refrain:
+    width: 13em
 margin:
   verse:
     l: 0.8in

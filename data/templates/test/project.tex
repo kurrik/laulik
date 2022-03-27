@@ -15,11 +15,11 @@
 \newtcolorbox{debugbox}[1][]{enhanced jigsaw,breakable,pad at break=1mm,
   oversize,interior hidden,colframe=red,nobeforeafter=,#1}
 
-\newenvironment{changewidth}[1]{
+\newenvironment{changewidth}[2]{
   \begin{list}{}{
     \setlength{\topsep}{0pt}
-    \setlength{\leftmargin}{\dimexpr(\linewidth-#1)/2\relax}
-    \setlength{\rightmargin}{\dimexpr(\linewidth-#1)/2\relax}
+    \setlength{\leftmargin}{\dimexpr(\linewidth-#1)/2+#2\relax}
+    \setlength{\rightmargin}{\dimexpr(\linewidth-#1)/2-#2\relax}
     \setlength{\listparindent}{\parindent}
     \setlength{\itemindent}{\parindent}
     \setlength{\parsep}{\parskip}
