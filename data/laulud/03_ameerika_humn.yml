@@ -4,6 +4,9 @@ poet: F. S. Key
 composer: J. S. Smith
 index:
   - "Ameerika \\\"Uhendriikide h\\\"umn"
+layout:
+  verse:
+    width: 24em
 margin:
   verse:
     l: 0.01in

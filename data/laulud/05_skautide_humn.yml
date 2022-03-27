@@ -2,6 +2,9 @@
 title: "Skautide h\\\"umn"
 poet: F. Kuhlbars
 composer: F. A. Schulz
+layout:
+  verse:
+    width: 13em
 margin:
   verse:
     l: 0.9in

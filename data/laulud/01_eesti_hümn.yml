@@ -2,6 +2,9 @@
 title: Eesti h\"umn
 composer: Fr. Pacius
 poet: J. V. Jannsen
+layout:
+  verse:
+    width: 11em
 margin:
   verse:
     l: 0.9in

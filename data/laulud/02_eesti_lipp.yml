@@ -4,6 +4,9 @@ composer: E. V\~ork
 poet: M. Lipp
 index:
   - 2005 Vanas\~ona laagrilaul
+layout:
+  verse:
+    width: 12em
 margin:
   verse:
     l: 0.95in

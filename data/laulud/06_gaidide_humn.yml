@@ -2,6 +2,9 @@
 title: "Gaidide h\\\"umn"
 poet: "P. Gr\\\"unfeldt"
 composer: "K. T\\\"urnpu"
+layout:
+  verse:
+    width: 13em
 margin:
   verse:
     l: 0.8in
