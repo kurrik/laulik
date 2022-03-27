@@ -2,6 +2,11 @@
 title: Eestlane olen
 poet: J. Leesment
 composer: A. Mattiisen
+layout:
+  verse:
+    width: 15em
+  refrain:
+    width: 13em
 margin:
   verse:
     l: 0.7in

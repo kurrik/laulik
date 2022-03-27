@@ -1,5 +1,10 @@
 --- !Laul
 title: Ants oli aus saunamees
+layout:
+  verse:
+    width: 20em
+  refrain:
+    width: 15em
 margin:
   verse:
     l: 0.35in

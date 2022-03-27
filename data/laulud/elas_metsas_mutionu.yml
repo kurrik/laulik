@@ -2,6 +2,9 @@
 title: Elas metsas mutionu
 index:
   - Mutionu pidu
+layout:
+  verse:
+    width: 10em
 margin:
   verse:
     l: 1.0in

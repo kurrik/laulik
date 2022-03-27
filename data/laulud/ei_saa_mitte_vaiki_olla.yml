@@ -2,6 +2,11 @@
 title: Ei saa mitte vaiki olla
 poet: A. Haava
 composer: "M. H\\\"arma"
+layout:
+  verse:
+    width: 11em
+  refrain:
+    width: 11em
 margin:
   verse:
     l: 0.9in

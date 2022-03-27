@@ -2,6 +2,12 @@
 title: "Ei ole \\\"uksi \\\"ukski maa"
 poet: J. Leesment
 composer: A. Mattiisen
+layout:
+  verse:
+    width: 12em
+  refrain:
+    width: 15em
+    indent: 3em
 margin:
   verse:
     l: 0.8in

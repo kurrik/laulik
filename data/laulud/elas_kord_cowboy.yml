@@ -2,6 +2,11 @@
 title: Elas kord kauboi
 index:
   - Cowboy
+layout:
+  verse:
+    width: 16em
+  refrain:
+    width: 13em
 margin:
   verse:
     l: 0.6in

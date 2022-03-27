@@ -1,5 +1,8 @@
 --- !Laul
 title: Ema pani supi sooja
+layout:
+  verse:
+    width: 14em
 margin:
   verse:
     l: 0.75in

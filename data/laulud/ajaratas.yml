@@ -4,6 +4,9 @@ poet: T. Vettik
 composer: "K. T\\\"urnpu"
 index:
   - "Nii ajaratas ringi k\\\"aind"
+layout:
+  verse:
+    width: 13em
 margin:
   verse:
     l: 0.8in

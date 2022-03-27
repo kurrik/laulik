@@ -3,5 +3,10 @@ title: "Eilne p\\\"aev"
 poet: J. Kork
 composer: P. McCartney
 misc: "(Viisil: ,,Yesterday{``})"
+layout:
+  verse:
+    width: 17em
+  refrain:
+    width: 17em
 paths:
   lyrics: eilne_paev.tex
