@@ -1,6 +1,12 @@
 --- !Laul
 title: "Viru laagrilaul "
 misc: "(1993 ,,Viru{``} laagrilaul)"
+layout:
+  verse:
+    width: 13em
+  refrain:
+    width: 14em
+    indent: 1.5em
 margin:
   verse:
     l: 0.7in

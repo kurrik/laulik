@@ -4,6 +4,11 @@ poet: R. Viise
 index:
   - "1990 Tules\\\"ade laagrilaul"
 misc: "(1990 ,,Tules\\\"ade{``} laagrilaul)"
+layout:
+  verse:
+    width: 13em
+  refrain:
+    width: 13em
 margin:
   verse:
     l: 0.9in

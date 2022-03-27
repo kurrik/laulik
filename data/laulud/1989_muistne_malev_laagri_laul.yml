@@ -5,6 +5,11 @@ composer: I. Sokk
 index:
   - 1989 Muistne malev laagrilaul
 misc: "(1989 ,,Muistne malev{``} laagrilaul)"
+layout:
+  verse:
+    width: 14em
+  refrain:
+    width: 14em
 margin:
   verse:
     l: 0.7in

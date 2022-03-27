@@ -5,6 +5,11 @@ composer: "A., P. ja T. Fischgrund"
 index:
   - 1994 Kodutare laagrilaul
 misc: "(1994 ,,Kodutare{``} laagrilaul)"
+layout:
+  verse:
+    width: 11em
+  refrain:
+    width: 11em
 margin:
   verse:
     l: 1.0in

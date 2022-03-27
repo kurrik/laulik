@@ -4,6 +4,11 @@ composer: V. Oksvort
 index:
   - 1991 Kodu Eesti laagrilaul
 misc: "(kasutatud 1991 ,,Kodu Eesti{``} laagrilauluna)"
+layout:
+  verse:
+    width: 17em
+  refrain:
+    width: 17em
 margin:
   verse:
     l: 0.5in
