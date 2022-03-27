@@ -6,6 +6,11 @@ index:
   - Vanemuine
   - 1969 Kungla laagrilaul
 misc: "(1969 ,,Kungla{``} laagrilaul)"
+layout:
+  verse:
+    width: 12em
+  refrain:
+    width: 12em
 margin:
   verse:
     l: 0.8in

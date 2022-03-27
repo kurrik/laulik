@@ -5,6 +5,12 @@ composer: S. Kasemets
 index:
   - 1959 Rannikmaa suurlaagri laul
 misc: "(1959 ,,Rannikmaa{``} Gaidide suurlaagri laul)"
+layout:
+  verse:
+    width: 12em
+  refrain:
+    width: 13em
+    indent: 1.5em
 margin:
   verse:
     l: 0.7in

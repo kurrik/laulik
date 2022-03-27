@@ -15,11 +15,11 @@
 \newtcolorbox{debugbox}[1][]{enhanced jigsaw,breakable,pad at break=1mm,
   oversize,interior hidden,colframe=red,nobeforeafter=,#1}
 
-\newenvironment{changewidth}[1]{
+\newenvironment{changewidth}[2]{
   \begin{list}{}{
     \setlength{\topsep}{0pt}
-    \setlength{\leftmargin}{\dimexpr(\linewidth-#1)/2\relax}
-    \setlength{\rightmargin}{\dimexpr(\linewidth-#1)/2\relax}
+    \setlength{\leftmargin}{\dimexpr(\linewidth-#1)/2+#2\relax}
+    \setlength{\rightmargin}{\dimexpr(\linewidth-#1)/2-#2\relax}
     \setlength{\listparindent}{\parindent}
     \setlength{\itemindent}{\parindent}
     \setlength{\parsep}{\parskip}
@@ -120,7 +120,7 @@
   \vspace{-0.1in}
 
   \pagebreak[1]
-      \begin{changewidth}{ 15em }
+      \begin{changewidth}{ 13em }{ 0em }
   {
     \small
       \noindent \nopagebreak[4] Meid laiali pillutand tuuled, \\
@@ -130,7 +130,7 @@
   }
     \end{changewidth}
   \pagebreak[1]
-      \begin{changewidth}{ 13em }
+      \begin{changewidth}{ 13em }{ 1em }
   {
     \small
       \noindent \nopagebreak[4] %REFRAIN \\
@@ -141,7 +141,7 @@
   }
     \end{changewidth}
   \pagebreak[1]
-      \begin{changewidth}{ 15em }
+      \begin{changewidth}{ 13em }{ 0em }
   {
     \small
       \noindent \nopagebreak[4] Koos veedetud p\"aevade tuumast \\
@@ -151,7 +151,7 @@
   }
     \end{changewidth}
   \pagebreak[1]
-      \begin{changewidth}{ 13em }
+      \begin{changewidth}{ 13em }{ 1em }
   {
     \small
       \noindent \nopagebreak[4] %REFRAIN \\
@@ -159,7 +159,7 @@
   }
     \end{changewidth}
   \pagebreak[1]
-      \begin{changewidth}{ 15em }
+      \begin{changewidth}{ 13em }{ 0em }
   {
     \small
       \noindent \nopagebreak[4] \clearpage Me seisame v\~o\~orsil, kuid palged \\
@@ -169,7 +169,7 @@
   }
     \end{changewidth}
   \pagebreak[1]
-      \begin{changewidth}{ 13em }
+      \begin{changewidth}{ 13em }{ 1em }
   {
     \small
       \noindent \nopagebreak[4] %REFRAIN \\
@@ -227,7 +227,7 @@
   \vspace{-0.1in}
 
   \pagebreak[1]
-      \begin{changewidth}{ 18em }
+      \begin{changewidth}{ 11em }{ 0em }
   {
     \small
       \noindent \nopagebreak[4] Kalevite julgel sammul \\
@@ -237,7 +237,7 @@
   }
     \end{changewidth}
   \pagebreak[1]
-      \begin{changewidth}{ 15em }
+      \begin{changewidth}{ 11em }{ 1em }
   {
     \small
       \noindent \nopagebreak[4] %REFRAIN \\
@@ -252,17 +252,17 @@
   }
     \end{changewidth}
   \pagebreak[1]
-      \begin{changewidth}{ 18em }
+      \begin{changewidth}{ 11em }{ 0em }
   {
     \small
-      \noindent \nopagebreak[4] \clearpage Kalev ise annab k\"asu \\
+      \noindent \nopagebreak[4] Kalev ise annab k\"asu \\
       \noindent \nopagebreak[4] oma malevale kord, \\
       \noindent \nopagebreak[4] ei siis sortsil ole asu \\
       \noindent \nopagebreak[4] hoida meie maad ja merd. \\
   }
     \end{changewidth}
   \pagebreak[1]
-      \begin{changewidth}{ 15em }
+      \begin{changewidth}{ 11em }{ 1em }
   {
     \small
       \noindent \nopagebreak[4] %REFRAIN \\
@@ -302,7 +302,7 @@
 
 
   \pagebreak[1]
-      \begin{changewidth}{ 18em }
+      \begin{changewidth}{ 12em }{ 0em }
   {
     \small
       \noindent \nopagebreak[4] M\"annimetsa roheluses, \\
@@ -316,7 +316,7 @@
   }
     \end{changewidth}
   \pagebreak[1]
-      \begin{changewidth}{ 15em }
+      \begin{changewidth}{ 13em }{ 1.5em }
   {
     \small
       \noindent \nopagebreak[4] %REFRAIN \\
@@ -328,7 +328,7 @@
   }
     \end{changewidth}
   \pagebreak[1]
-      \begin{changewidth}{ 18em }
+      \begin{changewidth}{ 12em }{ 0em }
   {
     \small
       \noindent \nopagebreak[4] Silmades erksas r\~o\~omus\"aras, \\
@@ -342,7 +342,7 @@
   }
     \end{changewidth}
   \pagebreak[1]
-      \begin{changewidth}{ 15em }
+      \begin{changewidth}{ 13em }{ 1.5em }
   {
     \small
       \noindent \nopagebreak[4] %REFRAIN \\
@@ -350,7 +350,7 @@
   }
     \end{changewidth}
   \pagebreak[1]
-      \begin{changewidth}{ 18em }
+      \begin{changewidth}{ 12em }{ 0em }
   {
     \small
       \noindent \nopagebreak[4] \~Ohtu p\"uhas h\"amaruses \\
@@ -364,7 +364,7 @@
   }
     \end{changewidth}
   \pagebreak[1]
-      \begin{changewidth}{ 15em }
+      \begin{changewidth}{ 13em }{ 1.5em }
   {
     \small
       \noindent \nopagebreak[4] %REFRAIN \\
@@ -421,7 +421,7 @@
   \vspace{-0.1in}
 
   \pagebreak[1]
-      \begin{changewidth}{ 18em }
+      \begin{changewidth}{ 14em }{ 0em }
   {
     \small
       \noindent \nopagebreak[4] Suvi s\"atendab sinisel taeval, \\
@@ -431,7 +431,7 @@
   }
     \end{changewidth}
   \pagebreak[1]
-      \begin{changewidth}{ 15em }
+      \begin{changewidth}{ 14em }{ 1em }
   {
     \small
       \noindent \nopagebreak[4] %REFRAIN \\
@@ -442,7 +442,7 @@
   }
     \end{changewidth}
   \pagebreak[1]
-      \begin{changewidth}{ 18em }
+      \begin{changewidth}{ 14em }{ 0em }
   {
     \small
       \noindent \nopagebreak[4] \"O\"osel maruhoog m\"andides ulgus, \\
@@ -452,7 +452,7 @@
   }
     \end{changewidth}
   \pagebreak[1]
-      \begin{changewidth}{ 15em }
+      \begin{changewidth}{ 14em }{ 1em }
   {
     \small
       \noindent \nopagebreak[4] %REFRAIN \\
@@ -460,7 +460,7 @@
   }
     \end{changewidth}
   \pagebreak[1]
-      \begin{changewidth}{ 18em }
+      \begin{changewidth}{ 14em }{ 0em }
   {
     \small
       \noindent \nopagebreak[4] Ei me komista k\"andude t\~okkel, \\
@@ -470,7 +470,7 @@
   }
     \end{changewidth}
   \pagebreak[1]
-      \begin{changewidth}{ 15em }
+      \begin{changewidth}{ 14em }{ 1em }
   {
     \small
       \noindent \nopagebreak[4] %REFRAIN \\
@@ -510,7 +510,7 @@
 
 
   \pagebreak[1]
-      \begin{changewidth}{ 18em }
+      \begin{changewidth}{ 14em }{ 0em }
   {
     \small
       \noindent \nopagebreak[4] Meie purjedes tormide haare, \\
@@ -520,7 +520,7 @@
   }
     \end{changewidth}
   \pagebreak[1]
-      \begin{changewidth}{ 15em }
+      \begin{changewidth}{ 14em }{ 1em }
   {
     \small
       \noindent \nopagebreak[4] %REFRAIN \\
@@ -531,7 +531,7 @@
   }
     \end{changewidth}
   \pagebreak[1]
-      \begin{changewidth}{ 18em }
+      \begin{changewidth}{ 14em }{ 0em }
   {
     \small
       \noindent \nopagebreak[4] Suvetaeval on sinised silmad, \\
@@ -541,7 +541,7 @@
   }
     \end{changewidth}
   \pagebreak[1]
-      \begin{changewidth}{ 15em }
+      \begin{changewidth}{ 14em }{ 1em }
   {
     \small
       \noindent \nopagebreak[4] %REFRAIN \\
@@ -549,7 +549,7 @@
   }
     \end{changewidth}
   \pagebreak[1]
-      \begin{changewidth}{ 18em }
+      \begin{changewidth}{ 14em }{ 0em }
   {
     \small
       \noindent \nopagebreak[4] Tormilinnud, me tervisi kandke \\
@@ -559,7 +559,7 @@
   }
     \end{changewidth}
   \pagebreak[1]
-      \begin{changewidth}{ 15em }
+      \begin{changewidth}{ 14em }{ 1em }
   {
     \small
       \noindent \nopagebreak[4] %REFRAIN \\
@@ -617,7 +617,7 @@
   \vspace{-0.1in}
 
   \pagebreak[1]
-      \begin{changewidth}{ 18em }
+      \begin{changewidth}{ 13em }{ 0em }
   {
     \small
       \noindent \nopagebreak[4] Tule, r\"andame m\"andide varju, \\
@@ -627,7 +627,7 @@
   }
     \end{changewidth}
   \pagebreak[1]
-      \begin{changewidth}{ 15em }
+      \begin{changewidth}{ 13em }{ 1em }
   {
     \small
       \noindent \nopagebreak[4] %REFRAIN \\
@@ -640,7 +640,7 @@
   }
     \end{changewidth}
   \pagebreak[1]
-      \begin{changewidth}{ 18em }
+      \begin{changewidth}{ 13em }{ 0em }
   {
     \small
       \noindent \nopagebreak[4] S\~onajalgade keskele naerud \\
@@ -650,7 +650,7 @@
   }
     \end{changewidth}
   \pagebreak[1]
-      \begin{changewidth}{ 15em }
+      \begin{changewidth}{ 13em }{ 1em }
   {
     \small
       \noindent \nopagebreak[4] %REFRAIN \\
@@ -658,7 +658,7 @@
   }
     \end{changewidth}
   \pagebreak[1]
-      \begin{changewidth}{ 18em }
+      \begin{changewidth}{ 13em }{ 0em }
   {
     \small
       \noindent \nopagebreak[4] L\"abi m\"andide kuu-kiirte nooled \\
@@ -668,7 +668,7 @@
   }
     \end{changewidth}
   \pagebreak[1]
-      \begin{changewidth}{ 15em }
+      \begin{changewidth}{ 13em }{ 1em }
   {
     \small
       \noindent \nopagebreak[4] %REFRAIN \\
@@ -709,7 +709,7 @@
 
 
   \pagebreak[1]
-      \begin{changewidth}{ 18em }
+      \begin{changewidth}{ 12em }{ 0em }
   {
     \small
       \noindent \nopagebreak[4] Kui Kungla rahvas kuldsel a'al \\
@@ -719,7 +719,7 @@
   }
     \end{changewidth}
   \pagebreak[1]
-      \begin{changewidth}{ 15em }
+      \begin{changewidth}{ 12em }{ 1em }
   {
     \small
       \noindent \nopagebreak[4] %REFRAIN \\
@@ -728,7 +728,7 @@
   }
     \end{changewidth}
   \pagebreak[1]
-      \begin{changewidth}{ 18em }
+      \begin{changewidth}{ 12em }{ 0em }
   {
     \small
       \noindent \nopagebreak[4] Sealt said siis lind ja lehepuu, \\
@@ -738,7 +738,7 @@
   }
     \end{changewidth}
   \pagebreak[1]
-      \begin{changewidth}{ 15em }
+      \begin{changewidth}{ 12em }{ 1em }
   {
     \small
       \noindent \nopagebreak[4] %REFRAIN \\
@@ -746,7 +746,7 @@
   }
     \end{changewidth}
   \pagebreak[1]
-      \begin{changewidth}{ 18em }
+      \begin{changewidth}{ 12em }{ 0em }
   {
     \small
       \noindent \nopagebreak[4] Siis k\~olas kaunis lauluviis \\
@@ -756,7 +756,7 @@
   }
     \end{changewidth}
   \pagebreak[1]
-      \begin{changewidth}{ 15em }
+      \begin{changewidth}{ 12em }{ 1em }
   {
     \small
       \noindent \nopagebreak[4] %REFRAIN \\
@@ -764,7 +764,7 @@
   }
     \end{changewidth}
   \pagebreak[1]
-      \begin{changewidth}{ 18em }
+      \begin{changewidth}{ 12em }{ 0em }
   {
     \small
       \noindent \nopagebreak[4] Ma m\"angin m\"attal, m\"ae p\"a\"al \\
@@ -774,7 +774,7 @@
   }
     \end{changewidth}
   \pagebreak[1]
-      \begin{changewidth}{ 15em }
+      \begin{changewidth}{ 12em }{ 1em }
   {
     \small
       \noindent \nopagebreak[4] %REFRAIN \\
@@ -814,7 +814,7 @@
 
 
   \pagebreak[1]
-      \begin{changewidth}{ 18em }
+      \begin{changewidth}{ 13em }{ 0em }
   {
     \small
       \noindent \nopagebreak[4] \"Ule maade ja merede kandis \\
@@ -824,7 +824,7 @@
   }
     \end{changewidth}
   \pagebreak[1]
-      \begin{changewidth}{ 15em }
+      \begin{changewidth}{ 13em }{ 1em }
   {
     \small
       \noindent \nopagebreak[4] %REFRAIN \\
@@ -835,7 +835,7 @@
   }
     \end{changewidth}
   \pagebreak[1]
-      \begin{changewidth}{ 18em }
+      \begin{changewidth}{ 13em }{ 0em }
   {
     \small
       \noindent \nopagebreak[4] Kaugel Saksamaa orgude varjus \\
@@ -845,7 +845,7 @@
   }
     \end{changewidth}
   \pagebreak[1]
-      \begin{changewidth}{ 15em }
+      \begin{changewidth}{ 13em }{ 1em }
   {
     \small
       \noindent \nopagebreak[4] %REFRAIN \\
@@ -853,7 +853,7 @@
   }
     \end{changewidth}
   \pagebreak[1]
-      \begin{changewidth}{ 18em }
+      \begin{changewidth}{ 13em }{ 0em }
   {
     \small
       \noindent \nopagebreak[4] Puude latvades \"o\"oseti tuuled, \\
@@ -863,7 +863,7 @@
   }
     \end{changewidth}
   \pagebreak[1]
-      \begin{changewidth}{ 15em }
+      \begin{changewidth}{ 13em }{ 1em }
   {
     \small
       \noindent \nopagebreak[4] %REFRAIN \\
@@ -903,7 +903,7 @@
 
 
   \pagebreak[1]
-      \begin{changewidth}{ 18em }
+      \begin{changewidth}{ 11em }{ 0em }
   {
     \small
       \noindent \nopagebreak[4] Tamme laager kuula n\"u\"ud, \\
@@ -913,7 +913,7 @@
   }
     \end{changewidth}
   \pagebreak[1]
-      \begin{changewidth}{ 15em }
+      \begin{changewidth}{ 11em }{ 1em }
   {
     \small
       \noindent \nopagebreak[4] %REFRAIN \\
@@ -924,7 +924,7 @@
   }
     \end{changewidth}
   \pagebreak[1]
-      \begin{changewidth}{ 18em }
+      \begin{changewidth}{ 11em }{ 0em }
   {
     \small
       \noindent \nopagebreak[4] Lauluga k\"aib meie t\"o\"o, \\
@@ -934,7 +934,7 @@
   }
     \end{changewidth}
   \pagebreak[1]
-      \begin{changewidth}{ 15em }
+      \begin{changewidth}{ 11em }{ 1em }
   {
     \small
       \noindent \nopagebreak[4] %REFRAIN \\
@@ -942,7 +942,7 @@
   }
     \end{changewidth}
   \pagebreak[1]
-      \begin{changewidth}{ 18em }
+      \begin{changewidth}{ 11em }{ 0em }
   {
     \small
       \noindent \nopagebreak[4] Olgugi et noor ma veel, \\
@@ -952,7 +952,7 @@
   }
     \end{changewidth}
   \pagebreak[1]
-      \begin{changewidth}{ 15em }
+      \begin{changewidth}{ 11em }{ 1em }
   {
     \small
       \noindent \nopagebreak[4] %REFRAIN \\
@@ -992,7 +992,7 @@
 
 
   \pagebreak[1]
-      \begin{changewidth}{ 18em }
+      \begin{changewidth}{ 15em }{ 0em }
   {
     \small
       \noindent \nopagebreak[4] J\"alle koondab m\"andide alla \\
@@ -1002,7 +1002,7 @@
   }
     \end{changewidth}
   \pagebreak[1]
-      \begin{changewidth}{ 15em }
+      \begin{changewidth}{ 14em }{ 1em }
   {
     \small
       \noindent \nopagebreak[4] %REFRAIN \\
@@ -1013,7 +1013,7 @@
   }
     \end{changewidth}
   \pagebreak[1]
-      \begin{changewidth}{ 18em }
+      \begin{changewidth}{ 15em }{ 0em }
   {
     \small
       \noindent \nopagebreak[4] M\"and m\~otte viib Virumaa randa, \\
@@ -1023,7 +1023,7 @@
   }
     \end{changewidth}
   \pagebreak[1]
-      \begin{changewidth}{ 15em }
+      \begin{changewidth}{ 14em }{ 1em }
   {
     \small
       \noindent \nopagebreak[4] %REFRAIN \\
@@ -1031,7 +1031,7 @@
   }
     \end{changewidth}
   \pagebreak[1]
-      \begin{changewidth}{ 18em }
+      \begin{changewidth}{ 15em }{ 0em }
   {
     \small
       \noindent \nopagebreak[4] \"O\"os koondume t\"ahtede alla \\
@@ -1041,7 +1041,7 @@
   }
     \end{changewidth}
   \pagebreak[1]
-      \begin{changewidth}{ 15em }
+      \begin{changewidth}{ 14em }{ 1em }
   {
     \small
       \noindent \nopagebreak[4] %REFRAIN \\
@@ -1079,7 +1079,7 @@
 
 
   \pagebreak[1]
-      \begin{changewidth}{ 18em }
+      \begin{changewidth}{ 20em }{ 0em }
   {
     \small
       \noindent \nopagebreak[4] Meie sini must valge lipp (lipp, lipp) \\
@@ -1087,7 +1087,7 @@
   }
     \end{changewidth}
   \pagebreak[1]
-      \begin{changewidth}{ 18em }
+      \begin{changewidth}{ 20em }{ 0em }
   {
     \small
       \noindent \nopagebreak[4] P\"uha, \"uhine ja \"ullas, see on meie Eesti lipp (lipp, lipp)! \\
@@ -1124,7 +1124,7 @@
 
 
   \pagebreak[1]
-      \begin{changewidth}{ 18em }
+      \begin{changewidth}{ 15em }{ 0em }
   {
     \small
       \noindent \nopagebreak[4] J\"alle metsa laager r\~okkab t\"aies hoos, \\
@@ -1132,7 +1132,7 @@
   }
     \end{changewidth}
   \pagebreak[1]
-      \begin{changewidth}{ 15em }
+      \begin{changewidth}{ 15em }{ 1em }
   {
     \small
       \noindent \nopagebreak[4] %REFRAIN \\
@@ -1141,7 +1141,7 @@
   }
     \end{changewidth}
   \pagebreak[1]
-      \begin{changewidth}{ 18em }
+      \begin{changewidth}{ 15em }{ 0em }
   {
     \small
       \noindent \nopagebreak[4] Palju aastaid s\~opru siin ma j\"alle n\"aen, \\
@@ -1149,7 +1149,7 @@
   }
     \end{changewidth}
   \pagebreak[1]
-      \begin{changewidth}{ 15em }
+      \begin{changewidth}{ 15em }{ 1em }
   {
     \small
       \noindent \nopagebreak[4] %REFRAIN \\
@@ -1189,7 +1189,7 @@
 
 
   \pagebreak[1]
-      \begin{changewidth}{ 18em }
+      \begin{changewidth}{ 17em }{ 0em }
   {
     \small
       \noindent \nopagebreak[4] Linna maha j\"atame, \\
@@ -1199,7 +1199,7 @@
   }
     \end{changewidth}
   \pagebreak[1]
-      \begin{changewidth}{ 15em }
+      \begin{changewidth}{ 17em }{ 1em }
   {
     \small
       \noindent \nopagebreak[4] %REFRAIN \\
@@ -1208,7 +1208,7 @@
   }
     \end{changewidth}
   \pagebreak[1]
-      \begin{changewidth}{ 18em }
+      \begin{changewidth}{ 17em }{ 0em }
   {
     \small
       \noindent \nopagebreak[4] Nagu gaidid/skaudid enne meid, \\
@@ -1218,7 +1218,7 @@
   }
     \end{changewidth}
   \pagebreak[1]
-      \begin{changewidth}{ 15em }
+      \begin{changewidth}{ 17em }{ 1em }
   {
     \small
       \noindent \nopagebreak[4] %REFRAIN \\
@@ -1226,15 +1226,15 @@
   }
     \end{changewidth}
   \pagebreak[1]
-      \begin{changewidth}{ 18em }
+      \begin{changewidth}{ 17em }{ 0em }
   {
     \small
-      \noindent \nopagebreak[4] \clearpage Skaudi/gaidi seadused, lubadused, headused \\
+      \noindent \nopagebreak[4] Skaudi/gaidi seadused, lubadused, headused \\
       \noindent \nopagebreak[4] meie elu juhtigu, Eesti gaidlus/skautlus elagu. \\
   }
     \end{changewidth}
   \pagebreak[1]
-      \begin{changewidth}{ 15em }
+      \begin{changewidth}{ 17em }{ 1em }
   {
     \small
       \noindent \nopagebreak[4] %REFRAIN \\

@@ -6,6 +6,11 @@ index:
   - "Tungalnoole '54 suurlaagri laul"
   - 1954 Tungalnoole suurlaagri laul
 misc: "(1954 ,,Tungalnoole{``} suurlaagri laul)"
+layout:
+  verse:
+    width: 11em
+  refrain:
+    width: 11em
 margin:
   verse:
     l: 0.9in

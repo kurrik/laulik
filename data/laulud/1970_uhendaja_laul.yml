@@ -5,6 +5,11 @@ composer: J. Mandre
 index:
   - "1970 \\\"Uhendaja suurlaagri laul"
 misc: "(1970 ,,\\\"Uhendaja{``} suurlaagri laul)"
+layout:
+  verse:
+    width: 13em
+  refrain:
+    width: 13em
 margin:
   verse:
     l: 0.8in

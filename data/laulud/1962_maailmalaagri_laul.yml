@@ -5,6 +5,11 @@ composer: E. Stafenau
 index:
   - 1962 Maailmalaagri laul
 misc: (1962 Maailmalaagri laul)
+layout:
+  verse:
+    width: 14em
+  refrain:
+    width: 14em
 margin:
   verse:
     l: 0.7in

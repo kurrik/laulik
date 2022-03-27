@@ -3,6 +3,9 @@ title: Sini-must-valge lipp
 index:
   - 1984 Sini-must-valge laagrilaul
 misc: "(1984 ,,Sini-must-valge{``} laagrilaul)"
+layout:
+  verse:
+    width: 20em
 margin:
   verse:
     l: 0.25in

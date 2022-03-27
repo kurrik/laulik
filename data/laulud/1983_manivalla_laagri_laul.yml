@@ -5,6 +5,11 @@ composer: M. Miido
 index:
   - "1983 M\\\"annivalla laagri laul"
 misc: "(1983 ,,M\\\"annivalla{``} laagrilaul)"
+layout:
+  verse:
+    width: 15em
+  refrain:
+    width: 14em
 margin:
   verse:
     l: 0.7in

@@ -4,5 +4,10 @@ composer: T. Fischgrund
 index:
   - 1987 Skautlikul teel laagrilaul
 misc: "(1987 ,,Skautlikul teel{``} laagrilaul)"
+layout:
+  verse:
+    width: 17em
+  refrain:
+    width: 17em
 paths:
   lyrics: 1987_skautlikul_teel.tex

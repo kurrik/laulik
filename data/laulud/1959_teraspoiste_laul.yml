@@ -5,6 +5,11 @@ composer: V. Loigu
 index:
   - 1959 Teraspoisid laagrilaul
 misc: "(1959 ,,Teraspoisid{``} suurlaagri laul)"
+layout:
+  verse:
+    width: 14em
+  refrain:
+    width: 14em
 margin:
   verse:
     l: 0.8in
