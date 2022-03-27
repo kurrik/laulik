@@ -3,8 +3,11 @@ title: Test
 subtitle: Test build which happens fast
 templatesdir: templates/test
 page:
-  width: 8.00in
-  height: 10.00in
+  width: 6.00in
+  height: 9.00in
+music:
+  linewidth: 5.20\in
+  staffsize: 9
 parts:
   - laulud/01_eesti_hümn.yml
   - laulud/02_eesti_lipp.yml

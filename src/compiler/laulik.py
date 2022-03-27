@@ -88,11 +88,11 @@ class BuildLaulik:
   def __print(self, output):
     sys.stdout.buffer.write(output)
 
-  def __render(self, path, obj):
+  def __render(self, path, obj, **kwargs):
     if os.path.isfile(path):
       with open(path, 'r', encoding='utf8') as f:
         template = f.read()
-        return self.config.stache.render(template, obj)
+        return self.config.stache.render(template, obj, **kwargs)
     print('[laulik] Warning - {0} is not a file'.format(path))
     return None
 
@@ -103,7 +103,7 @@ class BuildLaulik:
     factory.close()
     return factory.verses
 
-  def __process_laul(self, laul, partdir, output):
+  def __process_laul(self, laul, project, partdir, output):
     lyricspath = os.path.join(partdir, laul.paths['lyrics'])
     if 'image' in laul.paths:
       src = os.path.join(partdir, laul.paths['image'])
@@ -116,11 +116,11 @@ class BuildLaulik:
     if 'music' in laul.paths:
       musicpath = os.path.join(partdir, laul.paths['music'])
       laul.music = self.__render(musicpath, laul)
-    output.write(self.config.stache.render(laul))
+    output.write(self.config.stache.render(laul, project=project))
 
-  def __process_content(self, content, partdir, output):
+  def __process_content(self, content, project, partdir, output):
     contentpath = os.path.join(partdir, content.path)
-    output.write(self.__render(contentpath, content.data))
+    output.write(self.__render(contentpath, content.data, project=project))
 
   def run(self):
     self.__clear_output()
@@ -138,9 +138,9 @@ class BuildLaulik:
         print('[laulik] Processing yaml config at {0}'.format(partpath))
         object = self.__load_yaml(partpath)
         if isinstance(object, Laul):
-          self.__process_laul(object, partdir, rendered)
+          self.__process_laul(object, project, partdir, rendered)
         elif isinstance(object, Content):
-          self.__process_content(object, partdir, rendered)
+          self.__process_content(object, project, partdir, rendered)
         else:
           print('[laulik] Warning - {0} had an unhandled yaml tag {1}'.format(
               partpath, object.yaml_tag))

@@ -78,23 +78,33 @@ class Project(yaml.YAMLObject):
           subtitle,
           parts,
           page=None,
+          music=None,
           templatesdir=None,
           outputfile=None):
     self.title = title
     self.subtitle = subtitle
     self.parts = parts
     self.page = page
+    self.music = music
     self.templatesdir = templatesdir
     self.outputfile = outputfile
     self.content = None
     self.default_page_width = '4.00in'
     self.default_page_height = '6.00in'
+    self.default_music_linewidth = '3.2\in'
+    self.default_music_staffsize = 9
 
   def page_width(self):
     return glom(self, 'page.width', default=self.default_page_width)
 
   def page_height(self):
     return glom(self, 'page.height', default=self.default_page_height)
+
+  def music_linewidth(self):
+    return glom(self, 'music.linewidth', default=self.default_music_linewidth)
+
+  def music_staffsize(self):
+    return glom(self, 'music.staffsize', default=self.default_music_staffsize)
 
   @classmethod
   def from_yaml(cls, loader, node):
