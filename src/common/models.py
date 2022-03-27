@@ -77,6 +77,7 @@ class Project(yaml.YAMLObject):
           title,
           subtitle,
           parts,
+          debug=False,
           page=None,
           music=None,
           templatesdir=None,
@@ -84,6 +85,7 @@ class Project(yaml.YAMLObject):
     self.title = title
     self.subtitle = subtitle
     self.parts = parts
+    self.debug = debug
     self.page = page
     self.music = music
     self.templatesdir = templatesdir

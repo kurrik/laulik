@@ -71,10 +71,10 @@
 {{#verses}}
   \pagebreak[1]
   {{#is_refrain}}
-    \begin{changemargin}{ {{margin_refrain_l}} }{ {{margin_refrain_r}} }
+    \begin{changewidth}{ 15em }
   {{/is_refrain}}
   {{^is_refrain}}
-    \begin{changemargin}{ {{margin_verse_l}} }{ {{margin_verse_r}} }
+    \begin{changewidth}{ 18em }
   {{/is_refrain}}
   {
     \small
@@ -82,7 +82,7 @@
       \noindent \nopagebreak[4] {{.}} \\
     {{/lines}}
   }
-  \end{changemargin}
+  \end{changewidth}
 {{/verses}}
 }
 \vskip 0in plus 1in minus 0in

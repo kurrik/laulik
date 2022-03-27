@@ -10,6 +10,26 @@
 \usepackage{wrapfig}
 \usepackage[export]{adjustbox}
 \usepackage{grffile}
+\usepackage[skins,breakable]{tcolorbox}
+
+\newtcolorbox{debugbox}[1][]{enhanced jigsaw,breakable,pad at break=1mm,
+  oversize,interior hidden,colframe=red,nobeforeafter=,#1}
+
+\newenvironment{changewidth}[1]{
+  \begin{list}{}{
+    \setlength{\topsep}{0pt}
+    \setlength{\leftmargin}{\dimexpr(\linewidth-#1)/2\relax}
+    \setlength{\rightmargin}{\dimexpr(\linewidth-#1)/2\relax}
+    \setlength{\listparindent}{\parindent}
+    \setlength{\itemindent}{\parindent}
+    \setlength{\parsep}{\parskip}
+  }
+  \item[]{{#debug}}\begin{debugbox}{{/debug}}
+}{
+  {{#debug}}\end{debugbox}{{/debug}}
+  \end{list}
+}
+
 \newenvironment{changemargin}[2]{
   \begin{list}{}{
     \setlength{\topsep}{0pt}

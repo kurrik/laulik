@@ -2,6 +2,7 @@
 title: Test
 subtitle: Test build which happens fast
 templatesdir: templates/test
+debug: true
 page:
   width: 6.00in
   height: 9.00in
@@ -14,6 +15,7 @@ parts:
   - laulud/03_ameerika_humn.yml
   - laulud/04_kanada_humn.yml
   - laulud/05_skautide_humn.yml
-  - content/clearpage.yml
   - laulud/06_gaidide_humn.yml
-  - content/voluja/00003_laagrilaulud.yml
+  - laulud/2004_olumpia_laagri_laul.yml
+  - laulud/2005_vanasõna.yml
+  - laulud/2006_voluja.yml
