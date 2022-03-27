@@ -1,0 +1,513 @@
+\documentclass[10pt]{book}
+\usepackage{layout}
+\usepackage[margin=.20in, bindingoffset=.4in, papersize={ 8.00in, 10.00in },  top=0.25in,  includefoot]{geometry}
+\usepackage{makeidx}
+\usepackage{pslatex}
+\usepackage[utf8]{inputenc}
+\usepackage{multicol}
+\usepackage{graphicx}
+\usepackage{bmpsize}
+\usepackage{wrapfig}
+\usepackage[export]{adjustbox}
+\usepackage{grffile}
+\newenvironment{changemargin}[2]{
+  \begin{list}{}{
+    \setlength{\topsep}{0pt}
+    \setlength{\leftmargin}{#1}
+    \setlength{\rightmargin}{#2}
+    \setlength{\listparindent}{\parindent}
+    \setlength{\itemindent}{\parindent}
+    \setlength{\parsep}{\parskip}
+  }
+  \item[]
+}{
+  \end{list}
+}
+\newcommand{\vcenteredinclude}[1]{\begingroup
+  \setbox0=\hbox{\includegraphics[height=0.1\textheight,keepaspectratio]{#1}}%
+\parbox{\wd0}{\box0}\endgroup}
+
+\makeindex
+
+\special{papersize=8.00in, 10.00in }
+\parskip .07in
+\pagestyle{plain}
+\widowpenalty=1000
+\clubpenalty=1000
+\raggedbottom
+\sloppy
+
+\usepackage{graphics}
+\begin{document}
+\rmfamily
+
+\begin{titlepage}
+  \null
+  \begin{center}
+    \vspace{1.5in}
+    {\LARGE Test }\\
+    { Test build which happens fast }
+    \vfill
+  \end{center}
+\end{titlepage}
+
+\clearpage
+{
+  \samepage
+  \raggedbottom
+  \raggedright
+  \sloppy
+
+
+  \index{Eesti h\"umn}
+  \vspace{0.2in}
+    \centerline{
+      \bfseries
+      \large Eesti h\"umn
+    }
+  \nopagebreak[4]
+  \vspace{0.1in}
+  \nopagebreak[4]
+  \hrule height 0.05ex
+  \nopagebreak[4]
+  \vspace{-0.05in}
+
+  {\footnotesize J. V. Jannsen \hfill Fr. Pacius }\\
+  \vspace{0.01in}
+
+
+  \nopagebreak[4]
+  {%
+\parindent 0pt
+\noindent
+\ifx\preLilyPondExample \undefined
+\else
+  \expandafter\preLilyPondExample
+\fi
+\def\lilypondbook{}%
+\input{74/lily-e47769be-systems.tex}
+\ifx\postLilyPondExample \undefined
+\else
+  \expandafter\postLilyPondExample
+\fi
+}
+  \vspace{-0.1in}
+
+  \pagebreak[1]
+    \begin{changemargin}{ 0.9in }{ 0.1in }
+  {
+    \small
+      \noindent \nopagebreak[4] Mu isamaa, mu õnn ja rõõm, \\
+      \noindent \nopagebreak[4] kui kaunis oled sa! \\
+      \noindent \nopagebreak[4] Ei leia mina iial teal \\
+      \noindent \nopagebreak[4] see suure laia ilma peal, \\
+      \noindent \nopagebreak[4] mis mull' nii armas oleks ka \\
+      \noindent \nopagebreak[4] kui sa, mu isamaa! \\
+  }
+  \end{changemargin}
+  \pagebreak[1]
+    \begin{changemargin}{ 0.9in }{ 0.1in }
+  {
+    \small
+      \noindent \nopagebreak[4] Sa oled mind ju sünnitand \\
+      \noindent \nopagebreak[4] ja üles kasvatand! \\
+      \noindent \nopagebreak[4] Sind tänan mina alati \\
+      \noindent \nopagebreak[4] ja jään sul truuiks surmani! \\
+      \noindent \nopagebreak[4] Mull' kõige armsam oled sa. \\
+      \noindent \nopagebreak[4] mu kallis isamaa! \\
+  }
+  \end{changemargin}
+  \pagebreak[1]
+    \begin{changemargin}{ 0.9in }{ 0.1in }
+  {
+    \small
+      \noindent \nopagebreak[4] Su üle Jumal valvaku, \\
+      \noindent \nopagebreak[4] mu armas isamaa! \\
+      \noindent \nopagebreak[4] Ta olgu sinu kaitseja \\
+      \noindent \nopagebreak[4] ja võtku rohkest' õnnista', \\
+      \noindent \nopagebreak[4] mis iial ette võtad sa, \\
+      \noindent \nopagebreak[4] mu kallis isamaa! \\
+  }
+  \end{changemargin}
+  \pagebreak[1]
+    \begin{changemargin}{ 0.9in }{ 0.1in }
+  {
+    \small
+  }
+  \end{changemargin}
+}
+\vskip 0in plus 1in minus 0in
+\vspace{-0.05in}
+\pagebreak[3]
+{
+  \samepage
+  \raggedbottom
+  \raggedright
+  \sloppy
+
+  \index{2005 Vanas\~ona laagrilaul}
+
+  \index{Eesti lipp}
+  \vspace{0.2in}
+    \centerline{
+      \bfseries
+      \large Eesti lipp
+    }
+  \nopagebreak[4]
+  \vspace{0.1in}
+  \nopagebreak[4]
+  \hrule height 0.05ex
+  \nopagebreak[4]
+  \vspace{-0.05in}
+
+  {\footnotesize M. Lipp \hfill E. V\~ork }\\
+  \vspace{0.01in}
+
+
+
+  \pagebreak[1]
+    \begin{changemargin}{ 0.95in }{ 0.1in }
+  {
+    \small
+      \noindent \nopagebreak[4] Kaunistagem eesti kojad \\
+      \noindent \nopagebreak[4] kolme koduv\"arviga, \\
+      \noindent \nopagebreak[4] mille alla eesti pojad \\
+      \noindent \nopagebreak[4] \"uhiselt v\~oiks koonduda; \\
+      \noindent \nopagebreak[4] \"uhine neil olgu p\"u\"ue \\
+      \noindent \nopagebreak[4] \"uhes venna armuga, \\
+      \noindent \nopagebreak[4] kostku v\~oimsalt meie h\"u\"ue: \\
+      \noindent \nopagebreak[4] ,,Eesti, Eesti, ela sa!{``} \\
+  }
+  \end{changemargin}
+  \pagebreak[1]
+    \begin{changemargin}{ 0.95in }{ 0.1in }
+  {
+    \small
+      \noindent \nopagebreak[4] Sinine on sinu taevas, \\
+      \noindent \nopagebreak[4] kallis Eesti kodumaa; \\
+      \noindent \nopagebreak[4] oled kord sa ohus, vaevas, \\
+      \noindent \nopagebreak[4] sinna \"ules vaata sa. \\
+      \noindent \nopagebreak[4] Must on meie mullapinda, \\
+      \noindent \nopagebreak[4] mida higis haritud, \\
+      \noindent \nopagebreak[4] must on kuub, mis Eesti rinda \\
+      \noindent \nopagebreak[4] vanast juba varjanud. \\
+  }
+  \end{changemargin}
+  \pagebreak[1]
+    \begin{changemargin}{ 0.95in }{ 0.1in }
+  {
+    \small
+      \noindent \nopagebreak[4] Sinine ja must ja valge \\
+      \noindent \nopagebreak[4] kaunistagu Eestimaad; \\
+      \noindent \nopagebreak[4] vili v\~orsugu siin selge, \\
+      \noindent \nopagebreak[4] paisugu tal t\"aieks p\"a\"ad! \\
+      \noindent \nopagebreak[4] Vaprast meelest, venna armust \\
+      \noindent \nopagebreak[4] Eesti kojad k\~olagu, \\
+      \noindent \nopagebreak[4] kostku taeva poole p\~ormust: \\
+      \noindent \nopagebreak[4] ,,Eesti, Eesti, elagu!{``} \\
+  }
+  \end{changemargin}
+}
+\vskip 0in plus 1in minus 0in
+\vspace{-0.05in}
+\pagebreak[3]
+{
+  \samepage
+  \raggedbottom
+  \raggedright
+  \sloppy
+
+  \index{Ameerika \"Uhendriikide h\"umn}
+
+  \index{The Star-Spangled Banner}
+  \vspace{0.2in}
+    \centerline{
+      \bfseries
+      \large The Star-Spangled Banner
+    }
+  \nopagebreak[4]
+  \vspace{0.1in}
+  \nopagebreak[4]
+  \hrule height 0.05ex
+  \nopagebreak[4]
+  \vspace{-0.05in}
+
+  {\footnotesize F. S. Key \hfill J. S. Smith }\\
+  \vspace{0.01in}
+
+
+
+  \pagebreak[1]
+    \begin{changemargin}{ 0.01in }{ 0.0in }
+  {
+    \small
+      \noindent \nopagebreak[4] O say, can you see, by the dawn's early light, \\
+      \noindent \nopagebreak[4] What so proudly we hailed at the twilight's last gleaming? \\
+      \noindent \nopagebreak[4] Whose broad stripes and bright stars, through the perilous fight, \\
+      \noindent \nopagebreak[4] O'er the ramparts we watched, were so gallantly streaming! \\
+      \noindent \nopagebreak[4] And the rockets' red glare, the bombs bursting in air, \\
+      \noindent \nopagebreak[4] Gave proof through the night that our flag was still there: \\
+      \noindent \nopagebreak[4] O say, does that star-spangled banner yet wave \\
+      \noindent \nopagebreak[4] O'er the land of the free and the home of the brave? \\
+  }
+  \end{changemargin}
+  \pagebreak[1]
+    \begin{changemargin}{ 0.01in }{ 0.0in }
+  {
+    \small
+      \noindent \nopagebreak[4] On the shore, dimly seen through the mists of the deep, \\
+      \noindent \nopagebreak[4] Where the foe's haughty host in dread silence reposes, \\
+      \noindent \nopagebreak[4] What is that which the breeze, o'er the towering steep, \\
+      \noindent \nopagebreak[4] As it fitfully blows, now conceals, now discloses? \\
+      \noindent \nopagebreak[4] Now it catches the gleam of the morning's first beam, \\
+      \noindent \nopagebreak[4] In full glory reflected now shines on the stream: \\
+      \noindent \nopagebreak[4] 'Tis the star-spangled banner! O long may it wave \\
+      \noindent \nopagebreak[4] O'er the land of the free and the home of the brave! \\
+  }
+  \end{changemargin}
+  \pagebreak[1]
+    \begin{changemargin}{ 0.01in }{ 0.0in }
+  {
+    \small
+      \noindent \nopagebreak[4] And where is that band who so vauntingly swore \\
+      \noindent \nopagebreak[4] That the havoc of war and the battle's confusion \\
+      \noindent \nopagebreak[4] A home and a country should leave us no more? \\
+      \noindent \nopagebreak[4] Their blood has washed out their foul footsteps' pollution. \\
+      \noindent \nopagebreak[4] No refuge could save the hireling and slave \\
+      \noindent \nopagebreak[4] From the terror of flight, or the gloom of the grave: \\
+      \noindent \nopagebreak[4] And the star-spangled banner in triumph doth wave \\
+      \noindent \nopagebreak[4] O'er the land of the free and the home of the brave! \\
+  }
+  \end{changemargin}
+  \pagebreak[1]
+    \begin{changemargin}{ 0.01in }{ 0.0in }
+  {
+    \small
+      \noindent \nopagebreak[4] Oh! thus be it ever, when freemen shall stand \\
+      \noindent \nopagebreak[4] Between their loved homes and the war's desolation! \\
+      \noindent \nopagebreak[4] Blest with victory and peace, may the Heaven-rescued land \\
+      \noindent \nopagebreak[4] Praise the Power that hath made and preserved us a nation. \\
+      \noindent \nopagebreak[4] Then conquer we must, when our cause it is just, \\
+      \noindent \nopagebreak[4] And this be our motto: ``In God is our trust.'' \\
+      \noindent \nopagebreak[4] And the star-spangled banner in triumph shall wave \\
+      \noindent \nopagebreak[4] O'er the land of the free and the home of the brave! \\
+  }
+  \end{changemargin}
+}
+\vskip 0in plus 1in minus 0in
+\vspace{-0.05in}
+\pagebreak[3]
+{
+  \samepage
+  \raggedbottom
+  \raggedright
+  \sloppy
+
+  \index{Kanada h\"umn}
+
+  \index{O Canada}
+  \vspace{0.2in}
+    \centerline{
+      \bfseries
+      \large O Canada
+    }
+  \nopagebreak[4]
+  \vspace{0.1in}
+  \nopagebreak[4]
+  \hrule height 0.05ex
+  \nopagebreak[4]
+  \vspace{-0.05in}
+
+  {\footnotesize R. S. Weir, A. B. Routhier \hfill C. Lavall\'{e}e }\\
+  \vspace{0.01in}
+
+
+
+  \pagebreak[1]
+    \begin{changemargin}{ 0.65in }{ 0.1in }
+  {
+    \small
+      \noindent \nopagebreak[4] O Canada! Our home and native land! \\
+      \noindent \nopagebreak[4] True patriot love in all thy sons command. \\
+      \noindent \nopagebreak[4] With glowing hearts we see thee rise, \\
+      \noindent \nopagebreak[4] The True North strong and free! \\
+      \noindent \nopagebreak[4] From far and wide, O Canada, \\
+      \noindent \nopagebreak[4] We stand on guard for thee. \\
+      \noindent \nopagebreak[4] God keep our land glorious and free! \\
+      \noindent \nopagebreak[4] O Canada, we stand on guard for thee! \\
+      \noindent \nopagebreak[4] O Canada, we stand on guard for thee! \\
+  }
+  \end{changemargin}
+  \pagebreak[1]
+    \begin{changemargin}{ 0.65in }{ 0.1in }
+  {
+    \small
+      \noindent \nopagebreak[4] \^{O} Canada! Terre de nos a\"ieux, \\
+      \noindent \nopagebreak[4] Ton front est ceint de fleurons glorieux. \\
+      \noindent \nopagebreak[4] Car ton bras sait porter l'\'{e}p\'{e}e, \\
+      \noindent \nopagebreak[4] Il sait porter la croix. \\
+      \noindent \nopagebreak[4] Ton histoire est une \'{e}pop\'{e}e, \\
+      \noindent \nopagebreak[4] Des plus brillants exploits. \\
+      \noindent \nopagebreak[4] Et ta valeur, de foi tremp\'{e}e, \\
+      \noindent \nopagebreak[4] Prot\'{e}gera nos foyers et nos droits, \\
+      \noindent \nopagebreak[4] Prot\'{e}gera nos foyers et nos droits. \\
+  }
+  \end{changemargin}
+}
+\vskip 0in plus 1in minus 0in
+\vspace{-0.05in}
+\pagebreak[3]
+{
+  \samepage
+  \raggedbottom
+  \raggedright
+  \sloppy
+
+
+  \index{Skautide h\"umn}
+  \vspace{0.2in}
+    \centerline{
+      \bfseries
+      \large Skautide h\"umn
+    }
+  \nopagebreak[4]
+  \vspace{0.1in}
+  \nopagebreak[4]
+  \hrule height 0.05ex
+  \nopagebreak[4]
+  \vspace{-0.05in}
+
+  {\footnotesize F. Kuhlbars \hfill F. A. Schulz }\\
+  \vspace{0.01in}
+
+
+
+  \pagebreak[1]
+    \begin{changemargin}{ 0.9in }{ 0.1in }
+  {
+    \small
+      \noindent \nopagebreak[4] Eestimaa, mu isamaa! \\
+      \noindent \nopagebreak[4] Kuis mull' armas oled sa! \\
+      \noindent \nopagebreak[4] Murravad ka tornid, tuuled \\
+      \noindent \nopagebreak[4] Taara viimsed tammepuud, \\
+      \noindent \nopagebreak[4] siiski h\"u\"uavad mu huuled: \\
+      \noindent \nopagebreak[4] :,: Eestimaa sull' annan suud! :,: \\
+  }
+  \end{changemargin}
+  \pagebreak[1]
+    \begin{changemargin}{ 0.9in }{ 0.1in }
+  {
+    \small
+      \noindent \nopagebreak[4] Eesti vaprad vanemad \\
+      \noindent \nopagebreak[4] vaimuvallast vaatavad. \\
+      \noindent \nopagebreak[4] Peas neil paistvad p\"arlikroonid, \\
+      \noindent \nopagebreak[4] v\~oidulaulud k\~oigil suus. \\
+      \noindent \nopagebreak[4] Neil on kuninglikud troonid \\
+      \noindent \nopagebreak[4] :,: kuldsed kandled palmipuust. :,: \\
+  }
+  \end{changemargin}
+  \pagebreak[1]
+    \begin{changemargin}{ 0.9in }{ 0.1in }
+  {
+    \small
+      \noindent \nopagebreak[4] Eestimaa, su mehemeel \\
+      \noindent \nopagebreak[4] pole mitte surnud veel! \\
+      \noindent \nopagebreak[4] Peab surm ka rohket l\~oikust \\
+      \noindent \nopagebreak[4] suure s\~ojak\"araga. \\
+      \noindent \nopagebreak[4] Truuks j\"a\"ame isamaale \\
+      \noindent \nopagebreak[4] :,: viimse veretilgani! :,: \\
+  }
+  \end{changemargin}
+}
+\vskip 0in plus 1in minus 0in
+\vspace{-0.05in}
+\pagebreak[3]
+\clearpage{
+  \samepage
+  \raggedbottom
+  \raggedright
+  \sloppy
+
+
+  \index{Gaidide h\"umn}
+  \vspace{0.2in}
+    \centerline{
+      \bfseries
+      \large Gaidide h\"umn
+    }
+  \nopagebreak[4]
+  \vspace{0.1in}
+  \nopagebreak[4]
+  \hrule height 0.05ex
+  \nopagebreak[4]
+  \vspace{-0.05in}
+
+  {\footnotesize P. Gr\"unfeldt \hfill K. T\"urnpu }\\
+  \vspace{0.01in}
+
+
+
+  \pagebreak[1]
+    \begin{changemargin}{ 0.8in }{ 0.1in }
+  {
+    \small
+      \noindent \nopagebreak[4] Eesti, mu armas, kallis kodumaa! \\
+      \noindent \nopagebreak[4] Mu ilus maa, mu p\"uha maa. \\
+      \noindent \nopagebreak[4] Ma l\"ahen l\"abi sinu eest, \\
+      \noindent \nopagebreak[4] su priiust kaitstes tulest, veest, \\
+      \noindent \nopagebreak[4] et seista sa v\~oiks vabana! \\
+  }
+  \end{changemargin}
+  \pagebreak[1]
+    \begin{changemargin}{ 0.8in }{ 0.1in }
+  {
+    \small
+      \noindent \nopagebreak[4] Koidu ja H\"amariku kodumaa! \\
+      \noindent \nopagebreak[4] Mu s\"unnimaa, mu laulumaa. \\
+      \noindent \nopagebreak[4] Kes oma maa ja merega \\
+      \noindent \nopagebreak[4] said vabastatud verega, \\
+      \noindent \nopagebreak[4] j\"a\"a seisma sa, mu Eestimaa! \\
+  }
+  \end{changemargin}
+  \pagebreak[1]
+    \begin{changemargin}{ 0.8in }{ 0.1in }
+  {
+    \small
+      \noindent \nopagebreak[4] Jumal sind kaitsku, kallis kodumaa \\
+      \noindent \nopagebreak[4] su rahvaga, su rahvaga! \\
+      \noindent \nopagebreak[4] Kui juhib Ta sind t\~oeteel \\
+      \noindent \nopagebreak[4] ja ustavaks j\"a\"ab sinu meel, \\
+      \noindent \nopagebreak[4] siis seisad sa, mu Eestimaa! \\
+  }
+  \end{changemargin}
+}
+\vskip 0in plus 1in minus 0in
+\vspace{-0.05in}
+\pagebreak[3]
+\cleardoublepage
+\null
+{
+  \samepage
+  \raggedbottom
+  \raggedright
+  \sloppy
+  \vspace{1.85in}
+  \centerline{
+    \underline{\large Laagrilaulud}
+  }
+}
+\cleardoublepage
+
+\begin{flushleft}
+\begin{onecolumn}
+  {
+    \sloppy
+    \centerline{ {\bf {\large Sisukord } } }
+    \vspace{0.1in}
+    \hrule height 0.05ex
+  }
+\printindex
+\end{onecolumn}
+\end{flushleft}
+
+\end{document}

@@ -72,11 +72,34 @@ class Project(yaml.YAMLObject):
   yaml_tag = u'!Project'
   yaml_loader = yaml.SafeLoader
 
-  def __init__(self, title, subtitle, parts):
+  def __init__(
+          self,
+          title,
+          subtitle,
+          parts,
+          page=None,
+          templatesdir=None,
+          outputfile=None):
     self.title = title
     self.subtitle = subtitle
     self.parts = parts
+    self.page = page
+    self.templatesdir = templatesdir
+    self.outputfile = outputfile
     self.content = None
+    self.default_page_width = '4.00in'
+    self.default_page_height = '6.00in'
+
+  def page_width(self):
+    return glom(self, 'page.width', default=self.default_page_width)
+
+  def page_height(self):
+    return glom(self, 'page.height', default=self.default_page_height)
+
+  @classmethod
+  def from_yaml(cls, loader, node):
+    fields = loader.construct_mapping(node)
+    return Project(**fields)
 
 
 class ProjectMeta(object):

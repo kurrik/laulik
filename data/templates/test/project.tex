@@ -1,0 +1,67 @@
+\documentclass[10pt]{book}
+\usepackage{layout}
+\usepackage[margin=.20in, bindingoffset=.4in, papersize={ {{page_width}}, {{page_height}} },  top=0.25in,  includefoot]{geometry}
+\usepackage{makeidx}
+\usepackage{pslatex}
+\usepackage[utf8]{inputenc}
+\usepackage{multicol}
+\usepackage{graphicx}
+\usepackage{bmpsize}
+\usepackage{wrapfig}
+\usepackage[export]{adjustbox}
+\usepackage{grffile}
+\newenvironment{changemargin}[2]{
+  \begin{list}{}{
+    \setlength{\topsep}{0pt}
+    \setlength{\leftmargin}{#1}
+    \setlength{\rightmargin}{#2}
+    \setlength{\listparindent}{\parindent}
+    \setlength{\itemindent}{\parindent}
+    \setlength{\parsep}{\parskip}
+  }
+  \item[]
+}{
+  \end{list}
+}
+\newcommand{\vcenteredinclude}[1]{\begingroup
+  \setbox0=\hbox{\includegraphics[height=0.1\textheight,keepaspectratio]{#1}}%
+\parbox{\wd0}{\box0}\endgroup}
+
+\makeindex
+
+\special{papersize={{page_width}}, {{page_height}} }
+\parskip .07in
+\pagestyle{plain}
+\widowpenalty=1000
+\clubpenalty=1000
+\raggedbottom
+\sloppy
+
+\begin{document}
+\rmfamily
+
+\begin{titlepage}
+  \null
+  \begin{center}
+    \vspace{1.5in}
+    {\LARGE {{title}} }\\
+    { {{subtitle}} }
+    \vfill
+  \end{center}
+\end{titlepage}
+
+{{content}}
+
+\begin{flushleft}
+\begin{onecolumn}
+  {
+    \sloppy
+    \centerline{ {\bf {\large Sisukord } } }
+    \vspace{0.1in}
+    \hrule height 0.05ex
+  }
+\printindex
+\end{onecolumn}
+\end{flushleft}
+
+\end{document}

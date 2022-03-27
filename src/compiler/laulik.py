@@ -42,11 +42,15 @@ class VerseFactory(object):
 
 
 class Config(object):
-  def __init__(self, datapath, buildpath):
+  def __init__(self, projectpath, datapath, buildpath, project):
+    self.projectpath = projectpath
+    templatesdir = project.templatesdir if project.templatesdir else 'templates'
+    outputfile = project.outputfile if project.outputfile else 'laulik.lytex'
+
     self.datapath = datapath
     self.buildpath = buildpath
-    self.outputpath = os.path.join(self.buildpath, 'laulik.lytex')
-    self.templatespath = os.path.join(self.datapath, 'templates')
+    self.outputpath = os.path.join(self.buildpath, outputfile)
+    self.templatespath = os.path.join(self.datapath, templatesdir)
 
     self.stache = pystache.Renderer(
         escape=lambda u: u,
@@ -58,8 +62,8 @@ class Config(object):
 
 class BuildLaulik:
   def __init__(self, projectpath, datapath, buildpath, *args, **kwargs):
-    self.projectpath = projectpath
-    self.config = Config(datapath, buildpath)
+    project = self.__load_yaml(projectpath)
+    self.config = Config(projectpath, datapath, buildpath, project)
 
   def __clear_output(self):
     if os.path.isfile(self.config.outputpath):
@@ -122,7 +126,7 @@ class BuildLaulik:
     self.__clear_output()
 
     rendered = io.StringIO()
-    project = self.__load_yaml(self.projectpath)
+    project = self.__load_yaml(self.config.projectpath)
     for part in project.parts:
       partpath = os.path.join(self.config.datapath, part)
       partdir = os.path.dirname(partpath)
