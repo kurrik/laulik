@@ -2,6 +2,11 @@
 title: "J\\\"a\\\"a Jumalaga, Mann"
 index:
   - Rotterdam
+layout:
+  verse:
+    width: 18em
+  refrain:
+    width: 16em
 paths:
   lyrics: jaaj001.tex
   music: jaaj001.ly

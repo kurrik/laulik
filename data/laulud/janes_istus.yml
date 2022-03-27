@@ -1,5 +1,8 @@
 --- !Laul
 title: "J\\\"anes istus"
+layout:
+  verse:
+    width: 14em
 margin:
   verse:
     l: 0.8in

@@ -3,6 +3,11 @@ title: "H\\~obedast lind"
 poet: J. Kork
 composer: J. Denver
 misc: "(Viisil: ,,Leaving On A Jet Plane{``})"
+layout:
+  verse:
+    width: 16em
+  refrain:
+    width: 13em
 margin:
   verse:
     l: 0.6in

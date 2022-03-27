@@ -2,6 +2,9 @@
 title: "Hoia, Jumal, Eestit"
 poet: L. Raudkepp
 composer: J. Aavik
+layout:
+  verse:
+    width: 9em
 margin:
   verse:
     l: 1.1in

@@ -3,6 +3,9 @@ title: Haanja miis
 poet: "J. R\\\"appo"
 composer: rahvalik viis
 misc: "(V\\~oru keeles)"
+layout:
+  verse:
+    width: 12em
 margin:
   verse:
     l: 0.9in

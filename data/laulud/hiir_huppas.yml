@@ -1,5 +1,8 @@
 --- !Laul
 title: "Hiir h\\\"uppas"
+layout:
+  verse:
+    width: 13em
 margin:
   verse:
     l: 0.95in

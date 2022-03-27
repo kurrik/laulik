@@ -1,5 +1,10 @@
 --- !Laul
 title: Hei vallerii
+layout:
+  verse:
+    width: 15em
+  refrain:
+    width: 12em
 margin:
   verse:
     l: 0.6in
