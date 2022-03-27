@@ -62,7 +62,7 @@
     \vspace{-0.05in}
   {{/image}}
   \nopagebreak[4]
-  \begin[noindent,line-width=3.2\in, staffsize=9, fontload]{lilypond}
+  \begin[noindent,line-width={{project.music_linewidth}}, staffsize={{project.music_staffsize}}, fontload]{lilypond}
   {{music}}
   \end{lilypond}
   \vspace{-0.1in}
@@ -70,19 +70,34 @@
 
 {{#verses}}
   \pagebreak[1]
-  {{#is_refrain}}
-    \begin{changemargin}{ {{margin_refrain_l}} }{ {{margin_refrain_r}} }
-  {{/is_refrain}}
-  {{^is_refrain}}
-    \begin{changemargin}{ {{margin_verse_l}} }{ {{margin_verse_r}} }
-  {{/is_refrain}}
+  {{#project.use_margin_layout}}
+    {{#is_refrain}}
+      \begin{changemargin}{ {{margin_refrain_l}} }{ {{margin_refrain_r}} }
+    {{/is_refrain}}
+    {{^is_refrain}}
+      \begin{changemargin}{ {{margin_verse_l}} }{ {{margin_verse_r}} }
+    {{/is_refrain}}
+  {{/project.use_margin_layout}}
+  {{#project.use_width_layout}}
+    {{#is_refrain}}
+      \begin{changewidth}{ {{layout_refrain_width}} }
+    {{/is_refrain}}
+    {{^is_refrain}}
+      \begin{changewidth}{ {{layout_verse_width}} }
+    {{/is_refrain}}
+  {{/project.use_width_layout}}
   {
     \small
     {{#lines}}
       \noindent \nopagebreak[4] {{.}} \\
     {{/lines}}
   }
-  \end{changemargin}
+  {{#project.use_margin_layout}}
+    \end{changemargin}
+  {{/project.use_margin_layout}}
+  {{#project.use_width_layout}}
+    \end{changewidth}
+  {{/project.use_width_layout}}
 {{/verses}}
 }
 \vskip 0in plus 1in minus 0in

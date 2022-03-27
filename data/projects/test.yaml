@@ -3,10 +3,11 @@ title: Test
 subtitle: Test build which happens fast
 templatesdir: templates/test
 debug: true
-layoutmode: margin
+layoutmode: width
 page:
   width: 6.00in
   height: 9.00in
+  fontsize: 12pt
 music:
   linewidth: 5.20\in
   staffsize: 9

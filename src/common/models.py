@@ -103,10 +103,14 @@ class Project(yaml.YAMLObject):
     self.templatesdir = templatesdir
     self.outputfile = outputfile
     self.content = None
+    self.default_page_fontsize = '10pt'
     self.default_page_width = '4.00in'
     self.default_page_height = '6.00in'
     self.default_music_linewidth = '3.2\in'
-    self.default_music_staffsize = 9
+    self.default_music_staffsize = '9'
+
+  def page_fontsize(self):
+    return glom(self, 'page.fontsize', default=self.default_page_fontsize)
 
   def page_width(self):
     return glom(self, 'page.width', default=self.default_page_width)

@@ -1,6 +1,6 @@
-\documentclass[10pt]{book}
+\documentclass[{{page_fontsize}}]{book}
 \usepackage{layout}
-\usepackage[margin=.20in, bindingoffset=.4in, papersize={4in, 6in},  top=0.25in,  includefoot]{geometry}
+\usepackage[margin=.20in, bindingoffset=.4in, papersize={ {{page_width}}, {{page_height}} },  top=0.25in,  includefoot]{geometry}
 \usepackage{makeidx}
 \usepackage{pslatex}
 \usepackage[utf8]{inputenc}
@@ -10,6 +10,26 @@
 \usepackage{wrapfig}
 \usepackage[export]{adjustbox}
 \usepackage{grffile}
+\usepackage[skins,breakable]{tcolorbox}
+
+\newtcolorbox{debugbox}[1][]{enhanced jigsaw,breakable,pad at break=1mm,
+  oversize,interior hidden,colframe=red,nobeforeafter=,#1}
+
+\newenvironment{changewidth}[1]{
+  \begin{list}{}{
+    \setlength{\topsep}{0pt}
+    \setlength{\leftmargin}{\dimexpr(\linewidth-#1)/2\relax}
+    \setlength{\rightmargin}{\dimexpr(\linewidth-#1)/2\relax}
+    \setlength{\listparindent}{\parindent}
+    \setlength{\itemindent}{\parindent}
+    \setlength{\parsep}{\parskip}
+  }
+  \item[]{{#debug}}\begin{debugbox}{{/debug}}
+}{
+  {{#debug}}\end{debugbox}{{/debug}}
+  \end{list}
+}
+
 \newenvironment{changemargin}[2]{
   \begin{list}{}{
     \setlength{\topsep}{0pt}
@@ -19,17 +39,19 @@
     \setlength{\itemindent}{\parindent}
     \setlength{\parsep}{\parskip}
   }
-  \item[]
+  \item[]{{#debug}}\begin{debugbox}{{/debug}}
 }{
+  {{#debug}}\end{debugbox}{{/debug}}
   \end{list}
 }
+
 \newcommand{\vcenteredinclude}[1]{\begingroup
   \setbox0=\hbox{\includegraphics[height=0.1\textheight,keepaspectratio]{#1}}%
 \parbox{\wd0}{\box0}\endgroup}
 
 \makeindex
 
-\special{papersize=4.00in, 6.00000in}
+\special{papersize={{page_width}}, {{page_height}} }
 \parskip .07in
 \pagestyle{plain}
 \widowpenalty=1000
