@@ -4,6 +4,11 @@ composer: T. Andra ja T. Tammaru
 index:
   - "2003 P\\~ohjarada laagrilaul"
 misc: "(2003 ,,P\\~ohjarada{``} laagrilaul)"
+layout:
+  verse:
+    width: 16em
+  refrain:
+    width: 13em
 margin:
   verse:
     l: 0.8in

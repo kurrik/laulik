@@ -5,6 +5,11 @@ poet: M. Kuhn
 misc: (2005 ,,Vanas\~ona{``} laagrilaul)
 index:
   - 2005 Vanas\~ona laagrilaul
+layout:
+  verse:
+    width: 14em
+  refrain:
+    width: 12em
 margin:
   verse:
     l: 0.7in

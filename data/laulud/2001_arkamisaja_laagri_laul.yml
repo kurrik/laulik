@@ -4,6 +4,11 @@ composer: G. Tamm
 index:
   - "2001 \\\"Arkamisaja laagri laul"
 misc: "(2001 ,,\\\"Arkamisaeg{``} laagrilaul)"
+layout:
+  verse:
+    width: 13em
+  refrain:
+    width: 13em
 margin:
   verse:
     l: 0.8in

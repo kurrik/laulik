@@ -5,6 +5,11 @@ composer: T. Tammaru
 index:
   - "1999 Metsav\\~olu laagrilaul"
 misc: "(1999 ,,Metsav\\~olu{``} laagrilaul)"
+layout:
+  verse:
+    width: 14em
+  refrain:
+    width: 14em
 margin:
   verse:
     l: 0.8in

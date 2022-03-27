@@ -3,6 +3,11 @@ title: "T\\\"ahekogu"
 index:
   - "1997 T\\\"ahekogu laagrilaul"
 misc: "(1997 ,,T\\\"ahekogu{``} laagrilaul, viisil: ,,Metsa l\\\"aksid sa{``})"
+layout:
+  verse:
+    width: 16em
+  refrain:
+    width: 13em
 margin:
   verse:
     l: 0.7in

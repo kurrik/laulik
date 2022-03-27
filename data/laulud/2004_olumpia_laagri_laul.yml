@@ -4,6 +4,11 @@ composer: L. Sarapik
 index:
   - "2004 Ol\\\"umpia laagrilaul"
 misc: "(2004 ,,Ol\\\"umpia{``} laagrilaul, refr\\\"a\\\"an viisil: Ol\\\"umpia m\\\"angude teema)"
+layout:
+  verse:
+    width: 14em
+  refrain:
+    width: 14em
 margin:
   verse:
     l: 0.9in

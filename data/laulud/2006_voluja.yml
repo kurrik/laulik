@@ -4,6 +4,11 @@ composer: G. Tamm
 index:
   - "2006 V\\~oluja suurlaagri laul"
 misc: "(2006 ,,V\\~oluja{``} suurlaagri laul)"
+layout:
+  verse:
+    width: 15em
+  refrain:
+    width: 13em
 margin:
   verse:
     l: 0.7in

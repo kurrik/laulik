@@ -4,6 +4,11 @@ composer: P. ja T. Fischgrund ja T. Tammaru
 index:
   - 1998 Tuletorn laagrilaul
 misc: "(1998 ,,Tuletorn{``} laagrilaul)"
+layout:
+  verse:
+    width: 13em
+  refrain:
+    width: 12em
 margin:
   verse:
     l: 0.9in

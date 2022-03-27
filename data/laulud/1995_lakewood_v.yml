@@ -6,6 +6,11 @@ index:
   - 1995 Gaidirada laagrilaul
   - Gaidirada laagrilaul
 misc: "(1995 ,,Gaidirada{``} laagrilaul)"
+layout:
+  verse:
+    width: 16em
+  refrain:
+    width: 15em
 margin:
   verse:
     l: 0.7in
