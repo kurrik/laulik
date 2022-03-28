@@ -27,7 +27,6 @@ if [ "$method" == "shell" ]; then
 else
   PORT=8080
   docker run \
-    -it \
     -p $PORT:5000 \
     -e "METHOD=$method" \
     -e "PROJECT=$project" \

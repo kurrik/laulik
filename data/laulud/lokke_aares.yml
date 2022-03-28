@@ -1,5 +1,10 @@
 --- !Laul
 title: "L\\~okke \\\"a\\\"ares"
+layout:
+  verse:
+    width: 16em
+  refrain:
+    width: 16em
 margin:
   verse:
     l: 0.6in

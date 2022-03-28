@@ -1,5 +1,8 @@
 --- !Laul
 title: Lihtne viisikene
+layout:
+  verse:
+    width: 17em
 margin:
   verse:
     l: 0.7in

@@ -1,5 +1,8 @@
 --- !Laul
 title: Mustjala pulmarong
+layout:
+  verse:
+    width: 15em
 margin:
   verse:
     l: 0.6in

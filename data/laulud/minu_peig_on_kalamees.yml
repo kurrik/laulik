@@ -1,6 +1,11 @@
 --- !Laul
 title: Minu peig on kalamees
 composer: "R. P\\\"ats"
+layout:
+  verse:
+    width: 10em
+  refrain:
+    width: 10em
 margin:
   verse:
     l: 1.0in

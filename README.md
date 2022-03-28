@@ -28,6 +28,14 @@ Build a single project:
 
     ./scripts/run.sh laulik voluja
 
+Build the test project by watching for changes to yaml files:
+
+    goat
+
+Note, needs `goat` which you can install with:
+
+    go install github.com/yosssi/goat@latest
+
 ### Shell access
 Get a shell in the docker container with:
 

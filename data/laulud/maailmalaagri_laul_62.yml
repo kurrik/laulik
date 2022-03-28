@@ -3,6 +3,11 @@ title: "Maailmalaagri Laul '62"
 poet: J. Kork
 composer: E. Stafenau
 misc: "Kotkaj\\\"arvel, Kanadas "
+layout:
+  verse:
+    width: 13em
+  refrain:
+    width: 12em
 margin:
   verse:
     l: 0.1in

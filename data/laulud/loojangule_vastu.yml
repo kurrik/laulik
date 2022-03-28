@@ -2,6 +2,11 @@
 title: "Loojangule vastu kappap \\\"uksik hobune"
 poet: H. Soop
 composer: K. Frenreisz
+layout:
+  verse:
+    width: 19em
+  refrain:
+    width: 17em
 margin:
   verse:
     l: 0.4in

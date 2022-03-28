@@ -1,4 +1,7 @@
 --- !Laul
 title: "Mmm, ma tahaks viibida"
+layout:
+  verse:
+    width: 18em
 paths:
   lyrics: mmm_ma_tahaks_viibida.tex

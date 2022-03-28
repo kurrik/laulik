@@ -1,5 +1,8 @@
 --- !Laul
 title: "Mets m\\\"uhiseb"
+layout:
+  verse:
+    width: 16em
 margin:
   verse:
     l: 0.8in

@@ -4,6 +4,12 @@ poet: "V. K\\\"oster"
 composer: "J\\\"arsum\\\"ae viis"
 index:
   - Valged kajakad kisavad rannal
+layout:
+  verse:
+    width: 13em
+  refrain:
+    width: 16em
+    indent: 3em
 margin:
   verse:
     l: 0.4in

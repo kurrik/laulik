@@ -1,4 +1,7 @@
 --- !Laul
 title: Laurentsius
+layout:
+  verse:
+    width: 18em
 paths:
   lyrics: laurentsius.tex

@@ -1,5 +1,8 @@
 --- !Laul
 title: Ma tahaksin kodus olla
+layout:
+  verse:
+    width: 13em
 margin:
   verse:
     l: 0.9in

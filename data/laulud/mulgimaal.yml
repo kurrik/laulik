@@ -1,5 +1,8 @@
 --- !Laul
 title: Mulgimaal
+layout:
+  verse:
+    width: 11em
 margin:
   verse:
     l: 1.0in

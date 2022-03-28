@@ -1,6 +1,11 @@
 --- !Laul
 title: Mats alati on tubli mees
 poet: A. Reinvald
+layout:
+  verse:
+    width: 13em
+  refrain:
+    width: 13em
 margin:
   verse:
     l: 0.65in

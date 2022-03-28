@@ -1,6 +1,11 @@
 --- !Laul
 title: "Me m\\~otted on priid"
 poet: "J. T\\\"atte"
+layout:
+  verse:
+    width: 10em
+  refrain:
+    width: 10em
 margin:
   verse:
     l: 0.9in

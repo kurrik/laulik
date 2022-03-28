@@ -1,0 +1,5 @@
+watchers:
+ - extension: yml
+   directory: data/laulud
+   tasks:
+    - command: "./scripts/run.sh laulik test"

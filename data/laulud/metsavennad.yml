@@ -2,6 +2,11 @@
 title: Metsavennad
 index:
   - Metsavendade laul
+layout:
+  verse:
+    width: 13em
+  refrain:
+    width: 13em
 margin:
   verse:
     l: 0.8in

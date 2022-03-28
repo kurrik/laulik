@@ -2,6 +2,9 @@
 title: "Meil aia\\\"a\\\"arne t\\\"anavas"
 poet: L. Koidula
 composer: eesti rahvaviis
+layout:
+  verse:
+    width: 12em
 margin:
   verse:
     l: 0.9in

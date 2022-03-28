@@ -1,5 +1,11 @@
 --- !Laul
 title: "Ma k\\~ondisin vainul"
 composer: eesti rahvaviis
+layout:
+  verse:
+    width: 20em
+  refrain:
+    width: 21em
+    indent: 2em
 paths:
   lyrics: ma_kondisin_vainul.tex
