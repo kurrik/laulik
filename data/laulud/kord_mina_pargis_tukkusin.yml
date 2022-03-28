@@ -3,6 +3,12 @@ title: Kord mina pargis
 index:
   - Hakkas nurgas liikuma
   - "S\\~odurid"
+layout:
+  verse:
+    width: 11em
+  refrain:
+    width: 14em
+    indent: 3em
 margin:
   verse:
     l: 0.7in

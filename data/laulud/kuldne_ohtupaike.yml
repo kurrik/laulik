@@ -1,4 +1,10 @@
 --- !Laul
 title: "Kuldne \\~ohtup\\\"aike"
+layout:
+  verse:
+    width: 17em
+  refrain:
+    width: 17em
+    indent: 2em
 paths:
   lyrics: kuldne_ohtupaike.tex

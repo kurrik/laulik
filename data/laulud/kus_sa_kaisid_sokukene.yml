@@ -4,5 +4,8 @@ poet: rahvaluule
 composer: eesti rahvaviis
 index:
   - Sokukene
+layout:
+  verse:
+    width: 17em
 paths:
   lyrics: kus_sa_kaisid_sokukene.tex

@@ -1,6 +1,9 @@
 --- !Laul
 title: Koit
 composer: "T. M\\\"agi"
+layout:
+  verse:
+    width: 16em
 margin:
   verse:
     l: 0.8in

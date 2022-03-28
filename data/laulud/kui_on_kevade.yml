@@ -1,6 +1,9 @@
 --- !Laul
 title: Kui on kevade
 poet: H. Tedder
+layout:
+  verse:
+    width: 14em
 margin:
   verse:
     l: 0.8in

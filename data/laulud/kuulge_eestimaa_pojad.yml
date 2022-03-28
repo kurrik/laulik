@@ -1,4 +1,10 @@
 --- !Laul
 title: Kuulge Eestimaa pojad
+layout:
+  verse:
+    width: 13em
+  refrain:
+    width: 15em
+    indent: 2em
 paths:
   lyrics: kuulge_eestimaa_pojad.tex

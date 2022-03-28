@@ -3,6 +3,11 @@ title: Kikilips
 poet: I. Linna
 composer: C. Richard
 misc: "(Viisil: ,,Lucky Lips{``})"
+layout:
+  verse:
+    width: 11em
+  refrain:
+    width: 10em
 margin:
   verse:
     l: 0.9in

@@ -2,5 +2,10 @@
 title: Kingsepa Antti
 poet: U. Kreen
 composer: Soome jenka
+layout:
+  verse:
+    width: 15em
+  refrain:
+    width: 15em
 paths:
   lyrics: kingsepa_antti.tex

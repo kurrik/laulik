@@ -2,6 +2,9 @@
 title: Kiigu mu paadike
 poet: Fr. Kuhlbars
 composer: Tirooli rahvaviis
+layout:
+  verse:
+    width: 13em
 margin:
   verse:
     l: 0.8in

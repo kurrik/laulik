@@ -2,6 +2,12 @@
 title: "Kotkaj\\\"arve Kai"
 poet: "H. J\\~oe"
 misc: "(Viisil: ,,Red River Rose{``})"
+layout:
+  verse:
+    width: 14em
+  refrain:
+    width: 15em
+    indent: 2em
 margin:
   verse:
     l: 0.6in

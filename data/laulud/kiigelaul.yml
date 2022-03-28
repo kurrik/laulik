@@ -3,6 +3,9 @@ title: Kiigelaul
 composer: "M. L\\\"udig"
 index:
   - "Veli, hella"
+layout:
+  verse:
+    width: 10em
 margin:
   verse:
     l: 0.9in

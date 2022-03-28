@@ -2,6 +2,12 @@
 title: "Kas sul on \\\"uks vana sohva?"
 index:
   - "Kuuvalgel \\\"o\\\"ol"
+layout:
+  verse:
+    width: 12em
+  refrain:
+    width: 15em
+    indent: 3em
 margin:
   verse:
     l: 0.45in

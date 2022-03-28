@@ -4,6 +4,9 @@ poet: rahvaluule
 composer: rahvaviis
 index:
   - "Meie elu "
+layout:
+  verse:
+    width: 14em
 margin:
   verse:
     l: 0.7in

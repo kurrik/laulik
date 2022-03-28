@@ -1,6 +1,9 @@
 --- !Laul
 title: "Kaugel, kaugel"
 misc: "(Viisil: ,,Red River Valley{``})"
+layout:
+  verse:
+    width: 13em
 margin:
   verse:
     l: 0.8in
