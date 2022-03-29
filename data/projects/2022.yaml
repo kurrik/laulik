@@ -1,6 +1,14 @@
 --- !Project
 title: Järvemetsa laulik
 subtitle: 2022 TBD Suurlaager
+layoutmode: width
+page:
+  width: 6.00in
+  height: 9.00in
+  fontsize: 12pt
+music:
+  linewidth: 5.20\in
+  staffsize: 9
 parts:
   - content/voluja/00001_intro.yml
   - content/voluja/00002_ametlikud_laulud.yml
