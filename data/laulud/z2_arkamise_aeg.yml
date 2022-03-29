@@ -3,5 +3,10 @@ title: "\\\"Arkamise aeg"
 composer: R. Eespere
 index:
   - "Meri siin seisma j\\\"ai"
+layout:
+  verse:
+    width: 16em
+  refrain:
+    width: 15em
 paths:
   lyrics: z2_arkamise_aeg.tex

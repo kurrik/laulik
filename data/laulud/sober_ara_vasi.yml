@@ -2,6 +2,9 @@
 title: "S\\~ober \\\"ara v\\\"asi"
 index:
   - Matkalaul
+layout:
+  verse:
+    width: 14em
 margin:
   verse:
     l: 0.7in

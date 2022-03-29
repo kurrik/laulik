@@ -1,4 +1,10 @@
 --- !Laul
 title: "Vallerii, valleraa"
+layout:
+  verse:
+    width: 11em
+  refrain:
+    width: 16em
+    indent: 4em
 paths:
   lyrics: vallerii_valleraa.tex

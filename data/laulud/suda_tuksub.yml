@@ -2,6 +2,9 @@
 title: "S\\\"uda tuksub"
 poet: rahvasuust
 composer: K. A. Hermann
+layout:
+  verse:
+    width: 11em
 margin:
   verse:
     l: 0.95in

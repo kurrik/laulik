@@ -1,5 +1,10 @@
 --- !Laul
 title: "Taat \\\"ara maga"
+layout:
+  verse:
+    width: 17em
+  refrain:
+    width: 11em
 margin:
   verse:
     l: 0.6in

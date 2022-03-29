@@ -1,4 +1,7 @@
 --- !Laul
 title: "\\\"O\\\"o pime"
+layout:
+  verse:
+    width: 21em
 paths:
   lyrics: z3_oo_pime.tex

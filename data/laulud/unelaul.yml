@@ -3,6 +3,12 @@ title: Unelaul
 index:
   - "N\\\"u\\\"ud uni tule ruttuga"
   - "Meil l\\~opnud t\\\"o\\\"oke"
+layout:
+  verse:
+    width: 8em
+  refrain:
+    width: 10em
+    indent: 2em
 margin:
   verse:
     l: 0.8in

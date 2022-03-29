@@ -3,6 +3,11 @@ title: "\\\"Oine tuul"
 poet: J. Kork
 composer: R. Zimmerman
 misc: "(Viisil: ,,Blowin' in the Wind{``})"
+layout:
+  verse:
+    width: 17em
+  refrain:
+    width: 15em
 margin:
   verse:
     l: 0.4in

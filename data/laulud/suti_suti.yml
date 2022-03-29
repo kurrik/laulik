@@ -1,5 +1,11 @@
 --- !Laul
 title: "S\\\"uti, s\\\"uti"
+layout:
+  verse:
+    width: 12em
+  refrain:
+    width: 15em
+    indent: 3em
 margin:
   verse:
     l: 0.7in

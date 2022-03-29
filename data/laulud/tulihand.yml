@@ -1,5 +1,11 @@
 --- !Laul
 title: "Tulih\\\"and"
+layout:
+  verse:
+    width: 12em
+  refrain:
+    width: 13em
+    indent: 3em
 margin:
   verse:
     l: 0.8in

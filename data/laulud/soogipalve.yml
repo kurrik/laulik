@@ -1,6 +1,9 @@
 --- !Laul
 title: "S\\\"o\\\"ogipalve"
 misc: "(Viisil: ,,Mu s\\\"uda, \\\"arka \\\"ules{``})"
+layout:
+  verse:
+    width: 9em
 margin:
   verse:
     l: 1.1in

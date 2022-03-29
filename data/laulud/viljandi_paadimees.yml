@@ -4,6 +4,11 @@ poet: S. Lipp
 composer: A. Vinters
 index:
   - "K\\\"ae ulatab noor paadimees"
+layout:
+  verse:
+    width: 19em
+  refrain:
+    width: 18em
 margin:
   verse:
     l: 0.3in

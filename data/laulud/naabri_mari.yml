@@ -2,6 +2,11 @@
 title: Naabri Mari
 poet: K. A. Hermann
 composer: eesti rahvaviis
+layout:
+  verse:
+    width: 12em
+  refrain:
+    width: 12em
 margin:
   verse:
     l: 0.9in

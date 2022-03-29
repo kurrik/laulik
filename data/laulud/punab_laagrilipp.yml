@@ -3,5 +3,10 @@ title: "Punab laagrilipp siin k\\~orgel \\\"ule puude"
 poet: J. Viiding
 index:
   - 50ndad
+layout:
+  verse:
+    width: 16em
+  refrain:
+    width: 15em
 paths:
   lyrics: punab_laagrilipp.tex

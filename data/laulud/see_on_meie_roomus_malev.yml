@@ -6,6 +6,11 @@ index:
   - Eesti Gaidide Malev USAs laul
   - "Silmades s\\\"adelev \\~onn"
 misc: (Eesti Gaidide Malev USAs laul)
+layout:
+  verse:
+    width: 14em
+  refrain:
+    width: 12em
 margin:
   verse:
     l: 0.75in

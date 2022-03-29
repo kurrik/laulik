@@ -4,6 +4,12 @@ poet: E. Vetemaa
 composer: "\\\"U. Vinter"
 index:
   - "Laul P\\~ohjamaast"
+layout:
+  verse:
+    width: 11em
+  refrain:
+    width: 12em
+    indent: 2em
 margin:
   verse:
     l: 1.0in

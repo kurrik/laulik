@@ -2,6 +2,11 @@
 title: Noorus on ilus
 poet: "M. K\\\"orber"
 composer: saksa tudengilaul
+layout:
+  verse:
+    width: 15em
+  refrain:
+    width: 15em
 margin:
   verse:
     l: 0.8in

@@ -1,4 +1,9 @@
 --- !Laul
 title: Superesto
+layout:
+  verse:
+    width: 20em
+  refrain:
+    width: 15em
 paths:
   lyrics: superesto.tex

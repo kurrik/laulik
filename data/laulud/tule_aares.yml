@@ -1,5 +1,11 @@
 --- !Laul
 title: "Tule \\\"a\\\"ares\t"
+layout:
+  verse:
+    width: 12em
+  refrain:
+    width: 12em
+    indent: 2em
 margin:
   verse:
     l: 0.9in

@@ -1,4 +1,9 @@
 --- !Laul
 title: "\\\"Uks mees n\\\"agi unes taevalikku \\~oiglust"
+layout:
+  verse:
+    width: 18em
+  refrain:
+    width: 15em
 paths:
   lyrics: z4_uks_mees_nagi_unes.tex

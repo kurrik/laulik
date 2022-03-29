@@ -2,6 +2,12 @@
 title: Saaremaa valss
 poet: D. Vaarandi
 composer: R. Valgre
+layout:
+  verse:
+    width: 16em
+  refrain:
+    width: 16em
+    indent: 2em
 margin:
   verse:
     l: 0.6in

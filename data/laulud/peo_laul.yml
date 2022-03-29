@@ -1,4 +1,9 @@
 --- !Laul
 title: Peo laul
+layout:
+  verse:
+    width: 18em
+  refrain:
+    width: 14em
 paths:
   lyrics: peo_laul.tex

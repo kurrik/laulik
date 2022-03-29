@@ -1,5 +1,8 @@
 --- !Laul
 title: "V\\\"aike peiu"
+layout:
+  verse:
+    width: 15em
 margin:
   verse:
     l: 0.7in

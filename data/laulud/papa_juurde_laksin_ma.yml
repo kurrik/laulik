@@ -1,5 +1,8 @@
 --- !Laul
 title: "Papa juurde l\\\"aksin ma"
+layout:
+  verse:
+    width: 16em
 margin:
   verse:
     l: 0.7in

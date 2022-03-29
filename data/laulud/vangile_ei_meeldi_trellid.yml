@@ -1,5 +1,11 @@
 --- !Laul
 title: Vangile ei meeldi trellid
+layout:
+  verse:
+    width: 13em
+  refrain:
+    width: 15em
+    indent: 3em
 margin:
   verse:
     l: 0.8in

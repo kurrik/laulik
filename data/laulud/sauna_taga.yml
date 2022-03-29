@@ -1,5 +1,11 @@
 --- !Laul
 title: Sauna taga
 poet: H. J. Schmalz
+layout:
+  verse:
+    width: 12em
+  refrain:
+    width: 14em
+    indent: 3em
 paths:
   lyrics: sauna_taga.tex

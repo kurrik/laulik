@@ -1,5 +1,8 @@
 --- !Laul
 title: "V\\\"aike lauluke"
+layout:
+  verse:
+    width: 17em
 margin:
   verse:
     l: 0.55in

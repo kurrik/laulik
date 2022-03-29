@@ -3,6 +3,12 @@ title: Tallinna teel
 poet: Priit Aruvald
 composer: Gordon Lightfoot
 misc: "(Viisil: ,,Alberta Bound``)"
+layout:
+  verse:
+    width: 12em
+  refrain:
+    width: 12em
+    indent: 2em
 margin:
   verse:
     l: 0.75in

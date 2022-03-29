@@ -2,6 +2,11 @@
 title: Vana mehe laul
 poet: J. Viiding
 composer: O. Ehala
+layout:
+  verse:
+    width: 15em
+  refrain:
+    width: 14em
 margin:
   verse:
     l: 0.65in

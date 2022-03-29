@@ -2,5 +2,11 @@
 title: Postipoiss
 poet: J. Pori
 composer: A. Marcs
+layout:
+  verse:
+    width: 16em
+  refrain:
+    width: 16em
+    indent: 2em
 paths:
   lyrics: postipoiss.tex

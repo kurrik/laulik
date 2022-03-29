@@ -1,4 +1,9 @@
 --- !Laul
 title: "Tiideratas, taaderatas"
+layout:
+  verse:
+    width: 17em
+  refrain:
+    width: 11em
 paths:
   lyrics: tiideratas_taaderatas.tex

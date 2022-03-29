@@ -2,6 +2,9 @@
 title: Vanemate laul
 poet: "P. Fischgrund, T. Tammaru, L. Sarapik, M. Ets"
 composer: P. Fischgrund
+layout:
+  verse:
+    width: 16em
 margin:
   verse:
     l: 0.6in

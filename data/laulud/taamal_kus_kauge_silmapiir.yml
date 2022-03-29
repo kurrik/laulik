@@ -1,5 +1,10 @@
 --- !Laul
 title: "Taamal, kus kaugel silmapiir"
+layout:
+  verse:
+    width: 15em
+  refrain:
+    width: 12em
 margin:
   verse:
     l: 0.7in

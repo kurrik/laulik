@@ -2,6 +2,12 @@
 title: Saaremaa
 index:
   - Ma vaatan paadist kiikriga
+layout:
+  verse:
+    width: 12em
+  refrain:
+    width: 12em
+    indent: 2em
 margin:
   verse:
     l: 0.7in

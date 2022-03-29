@@ -3,6 +3,12 @@ title: "P\\\"aike veerend"
 index:
   - "Tursam\\\"ae polka"
   - Suvihari
+layout:
+  verse:
+    width: 13em
+  refrain:
+    width: 15em
+    indent: 3em
 margin:
   verse:
     l: 0.9in

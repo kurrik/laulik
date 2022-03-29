@@ -1,6 +1,12 @@
 --- !Laul
 title: "T\\\"udruk"
 composer: M. Nuude
+layout:
+  verse:
+    width: 12em
+  refrain:
+    width: 14em
+    indent: 2em
 margin:
   verse:
     l: 0.6in

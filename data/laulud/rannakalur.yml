@@ -1,6 +1,9 @@
 --- !Laul
 title: Rannakalur
 composer: K. Merilaas
+layout:
+  verse:
+    width: 11em
 margin:
   verse:
     l: 0.9in

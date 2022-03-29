@@ -3,6 +3,12 @@ title: Oi aegu ammuseid
 poet: K. Kikerpuu
 composer: B. Fomin
 misc: "(Viisil: ,,Those Were the Days{``})"
+layout:
+  verse:
+    width: 16em
+  refrain:
+    width: 16em
+    indent: 2em
 margin:
   verse:
     l: 0.5in

@@ -3,5 +3,11 @@ title: Tuul ja liiv
 poet: J. Kork
 composer: T. Paxton
 misc: "(Viisil: ,,Last Thing On My Mind{``})"
+layout:
+  verse:
+    width: 16em
+  refrain:
+    width: 17em
+    indent: 3em
 paths:
   lyrics: tuul_ja_liiv.tex

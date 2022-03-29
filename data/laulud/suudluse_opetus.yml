@@ -1,5 +1,8 @@
 --- !Laul
 title: "Suudluse \\~opetus"
+layout:
+  verse:
+    width: 12em
 margin:
   verse:
     l: 0.9in

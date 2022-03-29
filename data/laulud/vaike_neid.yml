@@ -2,5 +2,8 @@
 title: "V\\\"aike neid, oota vaid"
 poet: "J. T\\\"atte"
 composer: E. Taube
+layout:
+  verse:
+    width: 17em
 paths:
   lyrics: vaike_neid.tex

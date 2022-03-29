@@ -1,6 +1,11 @@
 --- !Laul
 title: Vana viis
 composer: I. Berlin
+layout:
+  verse:
+    width: 13em
+  refrain:
+    width: 12em
 margin:
   verse:
     l: 0.8in

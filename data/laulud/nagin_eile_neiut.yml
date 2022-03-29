@@ -1,5 +1,10 @@
 --- !Laul
 title: "N\\\"agin eile neiut"
 composer: P. Kopvillem
+layout:
+  verse:
+    width: 19em
+  refrain:
+    width: 15em
 paths:
   lyrics: nagin_eile_neiut.tex

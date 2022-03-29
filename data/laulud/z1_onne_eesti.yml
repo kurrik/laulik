@@ -1,6 +1,9 @@
 --- !Laul
 title: "\\~Onne, Eesti!"
 composer: V. Juhandi
+layout:
+  verse:
+    width: 12em
 margin:
   verse:
     l: 1.0in

@@ -2,5 +2,8 @@
 title: "Raha paneb rattad k\\\"aima"
 poet: O. Arro
 composer: G. Malmstein
+layout:
+  verse:
+    width: 18em
 paths:
   lyrics: raha_paneb_rattad_kaima.tex
