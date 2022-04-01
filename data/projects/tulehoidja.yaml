@@ -10,16 +10,19 @@ music:
   linewidth: 5.20\in
   staffsize: 9
 parts:
-  - content/voluja/00001_intro.yml
-  - content/voluja/00002_ametlikud_laulud.yml
+  - content/tulehoidja/00001_intro.yml
+  - content/tulehoidja/00002_ametlikud_laulud.yml
   - laulud/01_eesti_hümn.yml
-  - laulud/02_eesti_lipp.yml
-  - laulud/03_ameerika_humn.yml
-  - laulud/04_kanada_humn.yml
-  - laulud/05_skautide_humn.yml
   - content/clearpage.yml
+  - laulud/02_eesti_lipp.yml
+  - content/clearpage.yml
+  - laulud/03_ameerika_humn.yml
+  - content/clearpage.yml
+  - laulud/04_kanada_humn.yml
+  - content/clearpage.yml
+  - laulud/05_skautide_humn.yml
   - laulud/06_gaidide_humn.yml
-  - content/voluja/00003_laagrilaulud.yml
+  - content/tulehoidja/00003_laagrilaulud.yml
   - laulud/1949_meid_laiali.yml
   - laulud/1954_kalevite_samm.yml
   - laulud/1959_rannikmaa_laul.yml
@@ -44,13 +47,12 @@ parts:
   - laulud/1997_tahekogu_laagri_laul.yml
   - laulud/1998_tuletorn_laagri_laul.yml
   - laulud/1999_metsavolu_laagri_laul.yml
-  - content/clearpage.yml
   - laulud/2001_arkamisaja_laagri_laul.yml
   - laulud/2003_pohjarada_laagri_laul.yml
   - laulud/2004_olumpia_laagri_laul.yml
   - laulud/2005_vanasõna.yml
-  - laulud/2006_voluja.yml
-  - content/voluja/00004_lemmiklaulud.yml
+  - laulud/2006_tulehoidja.yml
+  - content/tulehoidja/00004_lemmiklaulud.yml
   - laulud/ajaratas.yml
   - laulud/ants_oli_aus_saunamees.yml
   - laulud/armsad_sobrad.yml
@@ -99,13 +101,11 @@ parts:
   - laulud/kuldne_ohtupaike.yml
   - laulud/kus_sa_kaisid_sokukene.yml
   - laulud/kuulge_eestimaa_pojad.yml
-  - content/clearpage.yml
   - laulud/laul_lakewoodi_liivast.yml
   - laulud/laurentsius.yml
   - laulud/lepalind.yml
   - laulud/lihtne_viisikene.yml
   - laulud/liisa.yml
-  - content/clearpage.yml
   - laulud/loojangule_vastu.yml
   - laulud/labi_paeva_ja_oo.yml
   - laulud/lokke_aares.yml
@@ -136,7 +136,6 @@ parts:
   - content/clearpage.yml
   - laulud/papa_juurde_laksin_ma.yml
   - laulud/parvepoisid.yml
-  - content/clearpage.yml
   - laulud/peo_laul.yml
   - laulud/postipoiss.yml
   - laulud/punab_laagrilipp.yml
@@ -154,7 +153,6 @@ parts:
   - laulud/superesto.yml
   - laulud/suudluse_opetus.yml
   - laulud/suvi.yml
-  - content/clearpage.yml
   - laulud/sober_ara_vasi.yml
   - laulud/soogipalve.yml
   - content/clearpage.yml
@@ -171,7 +169,6 @@ parts:
   - laulud/tulihand.yml
   - laulud/tuul_ja_liiv.yml
   - laulud/tana_oosel_naudin_elu.yml
-  - content/clearpage.yml
   - laulud/tudruk.yml
   - laulud/uhti-uhti_uhkesti.yml
   - laulud/unelaul.yml
@@ -191,14 +188,13 @@ parts:
   - laulud/z2_arkamise_aeg.yml
   - laulud/z3_oine_tuul.yml
   - laulud/z3_oo_pime.yml
-  - content/vspace_push_down.yml
   - laulud/z4_uhte_laulu.yml
   - laulud/z4_uks_mees_nagi_unes.yml
-  - content/voluja/00005_autogrammid.yml
-  - content/voluja/00005_autogrammid.yml
-  - content/voluja/00005_autogrammid.yml
-  - content/voluja/00005_autogrammid.yml
-  - content/voluja/00005_autogrammid.yml
-  - content/voluja/00005_autogrammid.yml
-  - content/voluja/00005_autogrammid.yml
-  - content/voluja/00005_autogrammid.yml
+  - content/tulehoidja/00005_autogrammid.yml
+  - content/tulehoidja/00005_autogrammid.yml
+  - content/tulehoidja/00005_autogrammid.yml
+  - content/tulehoidja/00005_autogrammid.yml
+  - content/tulehoidja/00005_autogrammid.yml
+  - content/tulehoidja/00005_autogrammid.yml
+  - content/tulehoidja/00005_autogrammid.yml
+  - content/tulehoidja/00005_autogrammid.yml
